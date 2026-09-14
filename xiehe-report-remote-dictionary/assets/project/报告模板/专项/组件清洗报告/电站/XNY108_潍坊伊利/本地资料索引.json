@@ -1,0 +1,137 @@
+{
+  "sources": [
+    {
+      "id": "C05",
+      "station": "潍坊伊利",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/组件清洗报告/潍坊伊利/南网能源-潍坊伊利乳业分布式电站-2026年度第1次清洗报告.docx",
+      "sha256": "80cd81ffe138aad6b5d04aad0b3ef1d3878f6b844dee984b80cd7a9a878febab",
+      "format": ".docx",
+      "sha256_now": "80cd81ffe138aad6b5d04aad0b3ef1d3878f6b844dee984b80cd7a9a878febab",
+      "signatures": {
+        "word/styles.xml": "7672876621744e7b95129bef376296c3206ea3f21007af4abf3a23c400700bc9",
+        "word/numbering.xml": "9a5b94cf3bc9d93dd9f6a567213d2b172339f3bdc858a7944946823519e9389d",
+        "word/theme/theme1.xml": "877930300f41fcf60d3edea108678078177c4c20b65ced288432470652e6b4a1"
+      },
+      "flow": [
+        "清洗原则及概述",
+        "↓",
+        "办理进厂施工手续",
+        "↓",
+        "办理签署清洗安全协议书、清洗工作票、安全交底",
+        "↓",
+        "清洗过程安全监护、拍照、录视频",
+        "↓",
+        "清洗验收",
+        "↓",
+        "电站效率分析"
+      ],
+      "table_count": 7,
+      "photo_pairs": 2,
+      "overview_labels": [
+        "清洗起止时间",
+        "清洗装机容量（MW）",
+        "项目污染物类型",
+        "清洗方式（干洗、清洗剂、清水等）",
+        "清洗设备（拖布、电动毛刷等）",
+        "清洗人数"
+      ],
+      "safety_labels": [
+        "作业安全风险控制卡",
+        "清洗工作票",
+        "安全交底"
+      ],
+      "efficiency_headers": [
+        "日期/清洗前",
+        "日发电量(kWh）",
+        "满发小时数（h）",
+        "辐照(MJ/m2）",
+        "系统效率（%）"
+      ],
+      "section_geometry": [
+        {
+          "width": 7560310,
+          "height": 10692130,
+          "left": 1143000,
+          "right": 1143000,
+          "top": 914400,
+          "bottom": 914400
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "station": "潍坊伊利",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/组件清洗报告/潍坊伊利/南网能源-潍坊伊利乳业分布式电站-2026年度第2次清洗报告(2).docx",
+      "sha256": "085fad0bd95687cc8e15d5fcc9c4d24cb38d627a1c8e302415c1b9a371da290a",
+      "format": ".docx",
+      "sha256_now": "085fad0bd95687cc8e15d5fcc9c4d24cb38d627a1c8e302415c1b9a371da290a",
+      "signatures": {
+        "word/styles.xml": "7672876621744e7b95129bef376296c3206ea3f21007af4abf3a23c400700bc9",
+        "word/numbering.xml": "9a5b94cf3bc9d93dd9f6a567213d2b172339f3bdc858a7944946823519e9389d",
+        "word/theme/theme1.xml": "877930300f41fcf60d3edea108678078177c4c20b65ced288432470652e6b4a1"
+      },
+      "flow": [
+        "清洗原则及概述",
+        "↓",
+        "办理进厂施工手续",
+        "↓",
+        "办理签署清洗安全协议书、清洗工作票、安全交底",
+        "↓",
+        "清洗过程安全监护、拍照、录视频",
+        "↓",
+        "清洗验收",
+        "↓",
+        "电站效率分析"
+      ],
+      "table_count": 7,
+      "photo_pairs": 2,
+      "overview_labels": [
+        "清洗起止时间",
+        "清洗装机容量（MW）",
+        "项目污染物类型",
+        "清洗方式（干洗、清洗剂、清水等）",
+        "清洗设备（拖布、电动毛刷等）",
+        "清洗人数"
+      ],
+      "safety_labels": [
+        "作业安全风险控制卡",
+        "清洗工作票",
+        "安全交底"
+      ],
+      "efficiency_headers": [
+        "日期/清洗前",
+        "日发电量(kWh）",
+        "满发小时数（h）",
+        "辐照(MJ/m2）",
+        "系统效率（%）"
+      ],
+      "section_geometry": [
+        {
+          "width": 7560310,
+          "height": 10692130,
+          "left": 1143000,
+          "right": 1143000,
+          "top": 914400,
+          "bottom": 914400
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "station": "潍坊伊利",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/组件清洗报告/潍坊伊利/潍坊伊利第一次清洗验收单.pdf",
+      "sha256": "14014579eccdb486a9600a617a35d488974d4e122ccec0f1cab076e53a759d53",
+      "format": ".pdf",
+      "sha256_now": "14014579eccdb486a9600a617a35d488974d4e122ccec0f1cab076e53a759d53"
+    },
+    {
+      "id": "C08",
+      "station": "潍坊伊利",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/组件清洗报告/潍坊伊利/潍坊伊利第二次清洗验收单.pdf",
+      "sha256": "5fb76dafc02f78508bc549ef2c3c3a35da5df7c60292876ba85671420d99ed69",
+      "format": ".pdf",
+      "sha256_now": "5fb76dafc02f78508bc549ef2c3c3a35da5df7c60292876ba85671420d99ed69"
+    }
+  ],
+  "history_use": "只用于结构和历史差异核对；不得作为当次实际数值、照片或签名。"
+}

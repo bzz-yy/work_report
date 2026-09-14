@@ -1,0 +1,19 @@
+{
+  "station_id": "XNY080",
+  "sources": [
+    {
+      "template_id": "DJ-01",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/定检报告/中石油济柴/中石油济柴光伏电站2026年上半年定检报告.docx",
+      "sha256": "587bfda495e4330c4fe8a1fe7f00cc9dd49d7c6017a13101d3a093e9bee7f323",
+      "period": "2026-H1",
+      "source_type": "historical_filled_report"
+    },
+    {
+      "template_id": "DJ-02",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/定检报告/中石油济柴/中石油济柴光伏电站2026上半年定检报告.docx",
+      "sha256": "de980eb56e91d98e5730a1b30cff3dd0d28bc188c1334a3274c2a978446c91c6",
+      "period": "2026-H1",
+      "source_type": "historical_filled_report"
+    }
+  ]
+}

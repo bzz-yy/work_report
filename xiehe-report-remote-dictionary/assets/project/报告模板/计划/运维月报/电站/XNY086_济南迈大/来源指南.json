@@ -1,0 +1,2544 @@
+{
+  "schema_version": 1,
+  "station_id": "XNY086",
+  "powerplus_station_id": 3600411,
+  "template_id": "NW-MONTHLY-STD-01",
+  "source_catalog_guides": "remote:dictionary_readonly#/lookup_guides",
+  "online_files": {
+    "lookup_guide_id": "powerplus_files",
+    "station_resource_refs": [
+      "entry_handover_folder_id",
+      "handover_pdf_id",
+      "intake_archive_id"
+    ],
+    "navigation": [
+      "进入该资料管理页面，选择南网济南迈大食品（平台编码3600411）",
+      "打开电站入场交接文件目录（本次目录ID9976）",
+      "交接单：济南迈大交接单.pdf（文件ID9995），第1页可核对项目名及5.88MW；资料上传2026-01-28",
+      "入场包：南网济南迈大食品入场资料.zip（文件ID26697）；以下为包内已验证的小文件，不需要将整个1GB包都读入才能定位"
+    ],
+    "files": [
+      {
+        "name": "迈大安全工器具台账.xlsx",
+        "sheet": "Sheet1",
+        "range": "A3:J8",
+        "use": "名称、厂家、规格、数量及旧有效期；没有报告FBSPQ2唯一编号"
+      },
+      {
+        "name": "安全工器具检测报告-济南迈大电站.pdf",
+        "pages": [
+          1,
+          4
+        ],
+        "use": "旧检测样品号、2025-11-14试验及2026-05-13下次日期，不用于确认六月新检验"
+      },
+      {
+        "name": "济南迈大电站基础信息及设备台账.xlsx",
+        "sheet": "01 电站基础管理信息",
+        "identity_cell": "B4",
+        "identity": "XNY086",
+        "value_cell": "M4",
+        "unit": "MWp",
+        "use": "5.879965MWp历史资料行；排除第3行样例，非六月变更记录"
+      },
+      {
+        "name": "10kV接地线(棒)检测报告 (1).pdf",
+        "pages": [
+          1,
+          2,
+          3
+        ],
+        "use": "源检验日期、合格结论和建议下检日期可作有效期档案候选；需核证书管理号与报告资产编号对应及截面冲突。"
+      },
+      {
+        "name": "10kV接地线(棒)检测报告 (2).pdf",
+        "pages": [
+          1,
+          2,
+          3
+        ],
+        "use": "源检验日期、合格结论和建议下检日期可作有效期档案候选；需核证书管理号与报告资产编号对应及截面冲突。"
+      }
+    ],
+    "source_time_limit": "资料定位后核本站或已明确共享范围、物品资产号与样品号对应、型号和版本。采用报告期最近适用检验，不能跳过不合格或未通过记录去挑最近合格；建议下检日期不保证期间持续安全。有效档案可跨月使用，不要求每月新记录；调拨、替换、失效和后续检验须跟踪。",
+    "auto_fill_allowed": false
+  },
+  "period_reviews": {
+    "2026-06": {
+      "F001": {
+        "field_id": "F001",
+        "label": "电站名称",
+        "review_status": "identity_config",
+        "reason": "现有报告命名配置可执行；不将平台全名强行替换项目报告约定名。",
+        "lookup_guide_ids": [
+          "powerplus_archive"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F001"
+          }
+        ]
+      },
+      "F002": {
+        "field_id": "F002",
+        "label": "报告年份",
+        "review_status": "request_derived",
+        "reason": "来自本次明确年月请求。",
+        "lookup_guide_ids": [],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "分别定义年份与月份；期间缺失或冲突应停止澄清，不能保留待填继续生成。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F002"
+          }
+        ]
+      },
+      "F003": {
+        "field_id": "F003",
+        "label": "报告月份",
+        "review_status": "request_derived",
+        "reason": "来自本次明确年月请求。",
+        "lookup_guide_ids": [],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "分别定义年份与月份；期间缺失或冲突应停止澄清，不能保留待填继续生成。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F003"
+          }
+        ]
+      },
+      "F004": {
+        "field_id": "F004",
+        "label": "当月总发电量",
+        "review_status": "direct_verified",
+        "reason": "六月809040 kWh本轮直接取得；年度一月缺结算，不影响六月单值。",
+        "lookup_guide_ids": [
+          "powerplus_bills",
+          "powerplus_bill_attachments"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "附件独立返回四项值及表号、方向、倍率、表底、日期、公式、来源哈希；不能覆盖原结算标量0。",
+            "模板选择附件复核来源，本站限定2/3月；只选一来源，不相加；冲突按source_controls处理。",
+            "六月无附件且消纳/上网原始0待核，不能输出真实0；站用缺正向表底也待填。",
+            "反向发电方向仅为迈大源表证据；其他站不能强制沿用该方向或计量拓扑。",
+            "原表H14=H10-H12，不再减H9站用电；此平衡式只在该已核实计量边界采用。",
+            "02!L7实际引用K5而非K7；两期K5=K7=6000无差。实现应检查第二表声明倍率与公式引用一致，以后不同则拦截复核。",
+            "两发电表正向用电侧各倍率4000；03页为2021/占位站号及表号示例，必须排除。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F004"
+          }
+        ]
+      },
+      "F005": {
+        "field_id": "F005",
+        "label": "当月消纳电量",
+        "review_status": "partial",
+        "reason": "六月两个结算标量均为待确认0，六月结算附件数组为空；尚无六月关口表底。二月能从附件重算，三月直接值与附件一致。",
+        "lookup_guide_ids": [
+          "powerplus_bills",
+          "powerplus_bill_attachments",
+          "powerplus_pv_month"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "附件独立返回四项值及表号、方向、倍率、表底、日期、公式、来源哈希；不能覆盖原结算标量0。",
+            "模板选择附件复核来源，本站限定2/3月；只选一来源，不相加；冲突按source_controls处理。",
+            "六月无附件且消纳/上网原始0待核，不能输出真实0；站用缺正向表底也待填。",
+            "反向发电方向仅为迈大源表证据；其他站不能强制沿用该方向或计量拓扑。",
+            "原表H14=H10-H12，不再减H9站用电；此平衡式只在该已核实计量边界采用。",
+            "02!L7实际引用K5而非K7；两期K5=K7=6000无差。实现应检查第二表声明倍率与公式引用一致，以后不同则拦截复核。",
+            "两发电表正向用电侧各倍率4000；03页为2021/占位站号及表号示例，必须排除。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F005"
+          }
+        ]
+      },
+      "F006": {
+        "field_id": "F006",
+        "label": "当月上网电量",
+        "review_status": "partial",
+        "reason": "六月标量0未获准，两个关口6月表底尚缺；2月和3月附件可计算172080/315480 kWh。",
+        "lookup_guide_ids": [
+          "powerplus_bills",
+          "powerplus_bill_attachments",
+          "powerplus_pv_month"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "附件独立返回四项值及表号、方向、倍率、表底、日期、公式、来源哈希；不能覆盖原结算标量0。",
+            "模板选择附件复核来源，本站限定2/3月；只选一来源，不相加；冲突按source_controls处理。",
+            "六月无附件且消纳/上网原始0待核，不能输出真实0；站用缺正向表底也待填。",
+            "反向发电方向仅为迈大源表证据；其他站不能强制沿用该方向或计量拓扑。",
+            "原表H14=H10-H12，不再减H9站用电；此平衡式只在该已核实计量边界采用。",
+            "02!L7实际引用K5而非K7；两期K5=K7=6000无差。实现应检查第二表声明倍率与公式引用一致，以后不同则拦截复核。",
+            "两发电表正向用电侧各倍率4000；03页为2021/占位站号及表号示例，必须排除。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F006"
+          }
+        ]
+      },
+      "F007": {
+        "field_id": "F007",
+        "label": "当月站用电量",
+        "review_status": "partial",
+        "reason": "已批准1月独立站用月台账及2、3月结算附件表底来源；4月至本报告月的对应站用输入仍需实际查询，缺月不补0。",
+        "lookup_guide_ids": [
+          "powerplus_bill_attachments",
+          "powerplus_pv_month"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "附件独立返回四项值及表号、方向、倍率、表底、日期、公式、来源哈希；不能覆盖原结算标量0。",
+            "模板选择附件复核来源，本站限定2/3月；只选一来源，不相加；冲突按source_controls处理。",
+            "六月无附件且消纳/上网原始0待核，不能输出真实0；站用缺正向表底也待填。",
+            "反向发电方向仅为迈大源表证据；其他站不能强制沿用该方向或计量拓扑。",
+            "原表H14=H10-H12，不再减H9站用电；此平衡式只在该已核实计量边界采用。",
+            "02!L7实际引用K5而非K7；两期K5=K7=6000无差。实现应检查第二表声明倍率与公式引用一致，以后不同则拦截复核。",
+            "两发电表正向用电侧各倍率4000；03页为2021/占位站号及表号示例，必须排除。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F007"
+          }
+        ],
+        "document_reason": "已批准独立运营用电月台账的一月业务行及二、三月表底复算；容器结算期与业务期分别保存。该批准不解锁其他缺失月份或一月发电量。"
+      },
+      "F008": {
+        "field_id": "F008",
+        "label": "当月满发小时",
+        "review_status": "input_missing",
+        "reason": "六月电量已实取；当前API容量5.88没有历史有效期和单位/直交流口径，尚缺六月可采用容量。",
+        "lookup_guide_ids": [
+          "powerplus_bills",
+          "powerplus_archive"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "可登记公式并传播缺输入；当前5.88无历史单位/有效期，1060.75无独立年度目标，不以历史数自动填。",
+            "2位及月先取整顺序有样本；无舍入中点样本，HALF_UP可按项目显示政策采用，但不是被样本唯一证明。",
+            "其他站只保留候选算法，不继承迈大采用条件；月内容量变化另有明确算法。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F008"
+          }
+        ]
+      },
+      "F009": {
+        "field_id": "F009",
+        "label": "当月累计辐照",
+        "review_status": "input_missing",
+        "reason": "1—7月月报、1月及6月日报本轮为空；8月阳性记录resource相关字段也为空。设备树返回业务错误00000，未定位本站气象测点；光资源比例台账候选空。",
+        "lookup_guide_ids": [
+          "powerplus_pv_month",
+          "powerplus_irradiance_series"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "积分需明确时间单位：W/㎡按小时积分再/1000得到kWh/㎡；秒积分需/3600000。",
+            "缺测点、辐射面、单位、采样完整性/重置规则则不启用；保留样本3位精度，不因跨站同值而共用。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F009"
+          }
+        ]
+      },
+      "F010": {
+        "field_id": "F010",
+        "label": "当月受累损失电量",
+        "review_status": "partial",
+        "reason": "损失组本轮唯一事件为2026-05-01至04限电损失24658 kWh；六月未获完整无事件证明，不能填0。二月47526.82 kWh仍无独立事件输入。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "可保留五月事件级真实值，未证明来源覆盖完整之前不升格为全月受累总量。",
+            "二月47526.82缺独立事件；六月未获完整无事件证据，不填0；年度累计不能用部分和。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F010"
+          }
+        ]
+      },
+      "F011": {
+        "field_id": "F011",
+        "label": "累计发电量",
+        "review_status": "input_missing",
+        "reason": "本轮2—6月电量齐备；1月301280仅在完成月报出现，本轮结算、光伏月报/日报、发电资料目录未得其独立源。",
+        "lookup_guide_ids": [
+          "powerplus_bills",
+          "powerplus_pv_month"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "原始kWh完整月集合求和后显示转换，不求和已舍入万kWh。",
+            "一月站用4760不是一月发电301280，不能混用。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F011"
+          }
+        ]
+      },
+      "F012": {
+        "field_id": "F012",
+        "label": "累计满发小时",
+        "review_status": "input_missing",
+        "reason": "一月电量及各月可采用有效容量缺失。",
+        "lookup_guide_ids": [
+          "powerplus_bills",
+          "powerplus_archive"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "可登记公式并传播缺输入；当前5.88无历史单位/有效期，1060.75无独立年度目标，不以历史数自动填。",
+            "2位及月先取整顺序有样本；无舍入中点样本，HALF_UP可按项目显示政策采用，但不是被样本唯一证明。",
+            "其他站只保留候选算法，不继承迈大采用条件；月内容量变化另有明确算法。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F012"
+          }
+        ]
+      },
+      "F013": {
+        "field_id": "F013",
+        "label": "可研完成率",
+        "review_status": "input_missing",
+        "reason": "缺完整累计小时输入及独立可研年度目标；1060.75只在既有报告出现。",
+        "lookup_guide_ids": [
+          "powerplus_archive",
+          "powerplus_annual_target"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "可登记公式并传播缺输入；当前5.88无历史单位/有效期，1060.75无独立年度目标，不以历史数自动填。",
+            "2位及月先取整顺序有样本；无舍入中点样本，HALF_UP可按项目显示政策采用，但不是被样本唯一证明。",
+            "其他站只保留候选算法，不继承迈大采用条件；月内容量变化另有明确算法。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F013"
+          }
+        ]
+      },
+      "F014": {
+        "field_id": "F014",
+        "label": "年度可研小时",
+        "review_status": "not_found",
+        "reason": "当前档案designUtilizationHours=null；PowerGenPlan/PowerStats候选筛本站为空；生产任务书/交付任务书目录为空。未取得1060.75的独立年度依据。",
+        "lookup_guide_ids": [
+          "powerplus_archive",
+          "powerplus_annual_target",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "MW不自动等于交流容量，MWp与MW业务定义待核，不能靠符号判交直流。",
+            "站配置保存有效期间/版本证据与源参数，通用规则不保存5.88或1060.75实值。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F014"
+          }
+        ],
+        "manual_locations": [
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/济南迈大交接单.pdf",
+            "pages": [
+              1,
+              2,
+              3
+            ],
+            "file_name": "济南迈大交接单.pdf"
+          },
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/济南迈大电站基础信息及设备台账.xlsx",
+            "sheet": "01 电站基础管理信息",
+            "identity_cell": "B4",
+            "label_cell": "M2",
+            "value_cell": "M4",
+            "sample_row_3_excluded": true,
+            "as_of_date": "not stated in worksheet; present in February2026 intake archive",
+            "file_name": "济南迈大电站基础信息及设备台账.xlsx"
+          }
+        ]
+      },
+      "F015": {
+        "field_id": "F015",
+        "label": "装机容量",
+        "review_status": "partial",
+        "reason": "当前stationCapacity/designCapacity均5.88，dcStationCapacity、ratedCapacityActual/Instal、stationPeriodList为空，无法证明2026-06有效单位口径。",
+        "lookup_guide_ids": [
+          "powerplus_archive",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "MW不自动等于交流容量，MWp与MW业务定义待核，不能靠符号判交直流。",
+            "站配置保存有效期间/版本证据与源参数，通用规则不保存5.88或1060.75实值。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F015"
+          }
+        ],
+        "manual_locations": [
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/济南迈大交接单.pdf",
+            "page": 1,
+            "file_name": "济南迈大交接单.pdf"
+          },
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/济南迈大电站基础信息及设备台账.xlsx",
+            "sheet": "01 电站基础管理信息",
+            "identity_cell": "B4",
+            "label_cell": "M2",
+            "value_cell": "M4",
+            "sample_row_3_excluded": true,
+            "as_of_date": "not stated in worksheet; present in February2026 intake archive",
+            "file_name": "济南迈大电站基础信息及设备台账.xlsx"
+          }
+        ]
+      },
+      "F016": {
+        "field_id": "F016",
+        "label": "运行数据分析",
+        "review_status": "partial",
+        "reason": "电量输入由能源组核验可供摘要；本组未取得六月组件积灰观测/清洗前后测量，历史因果句不能照搬。",
+        "lookup_guide_ids": [
+          "powerplus_pv_month",
+          "powerplus_bills",
+          "powerplus_other_work",
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "原因句需事件证据；基期缺失/为0不出同比环比比例。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F016"
+          }
+        ]
+      },
+      "F017": {
+        "field_id": "F017",
+        "label": "故障处理情况",
+        "review_status": "input_missing",
+        "reason": "本站消缺工单本轮无记录，损失台账仅五月限电事件；未取得六月全部故障记录及完整性确认，不能据此写无故障。",
+        "lookup_guide_ids": [
+          "powerplus_fault",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "处置文字按报告截止时间截取，不把月后最终完结倒写当月底已完成。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F017"
+          }
+        ]
+      },
+      "F018": {
+        "field_id": "F018",
+        "label": "本月设备故障损失电量",
+        "review_status": "input_missing",
+        "reason": "六月及年内完整设备故障事件/逐月明确零值证据未取得；五月唯一条记录为fault_type=1其他缺陷、xdss限电，不能计为设备故障也不能因此认定设备故障合计为0。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "源字段名称含故障不决定业务分类；按具体power_loss和获准范围。",
+            "按原始kWh求和；分类不明、跨月无分月数据、损失缺项不能出总量。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F018"
+          }
+        ]
+      },
+      "F019": {
+        "field_id": "F019",
+        "label": "累计受累损失电量",
+        "review_status": "partial",
+        "reason": "五月24658kWh线上已取得且与历史2.4658万kWh一致；二月47526.82kWh未找到线上事件，其他零月份缺覆盖证明，禁止用部分和24658kWh充年度累计。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "按原始kWh聚合后转万kWh，避免月显示舍入再相加。",
+            "首年/首年度与自然年口径尚需明确；2026样本一致不推所有站未来期间。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F019"
+          }
+        ]
+      },
+      "F020": {
+        "field_id": "F020",
+        "label": "累计设备故障损失电量",
+        "review_status": "input_missing",
+        "reason": "六月及年内完整设备故障事件/逐月明确零值证据未取得；五月唯一条记录为fault_type=1其他缺陷、xdss限电，不能计为设备故障也不能因此认定设备故障合计为0。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "源字段名称含故障不决定业务分类；按具体power_loss和获准范围。",
+            "按原始kWh求和；分类不明、跨月无分月数据、损失缺项不能出总量。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F020"
+          }
+        ]
+      },
+      "F021": {
+        "field_id": "F021",
+        "label": "安全学习培训情况",
+        "review_status": "input_missing",
+        "reason": "尚未取得本站2026-06已开展培训的事件记录、签到/纪要或学习台账；六月安全工单仅证明5项检查。",
+        "lookup_guide_ids": [
+          "powerplus_other_work",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F021"
+          }
+        ]
+      },
+      "F022": {
+        "field_id": "F022",
+        "label": "低压电工应取证人数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06有效人员名册、低压电工证应持证职责关系及统计范围。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_after_correction",
+          "corrections": [
+            "“月末”只有既有建议分类支持，未有独立统计制度或人员名册证明。cutoff_policy.status必须pending_confirmation；method以获准cutoff为参数，不将月末写成已验证业务事实。",
+            "缺人员归属历史、岗位证类要求或统计时点任一输入均待填。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F022"
+          }
+        ]
+      },
+      "F023": {
+        "field_id": "F023",
+        "label": "低压电工已取证人数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06应持证人员集合及低压电工证逐人有效证据。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_after_correction",
+          "corrections": [
+            "原表为“已完成取证”，meaning/formula却强制筛“有效资质”。已取得与当前有效要分开，不能借安全建议替代报告业务定义。qualification_count_policy=acquired_as_of或valid_as_of须确认；未定口径不自动计数。",
+            "共用同一已确认人员集合、证类和统计时点；certified<=required只有确认同集合/子集时才作为校验，不因数字相等推定全部取得。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F023"
+          }
+        ]
+      },
+      "F024": {
+        "field_id": "F024",
+        "label": "低压电工取证进展",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 低压电工证取证办理进度；历史6月空白不能自动解释为无事项。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F024"
+          }
+        ]
+      },
+      "F025": {
+        "field_id": "F025",
+        "label": "高压电工应取证人数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06有效人员名册、高压电工证应持证职责关系及统计范围。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_after_correction",
+          "corrections": [
+            "“月末”只有既有建议分类支持，未有独立统计制度或人员名册证明。cutoff_policy.status必须pending_confirmation；method以获准cutoff为参数，不将月末写成已验证业务事实。",
+            "缺人员归属历史、岗位证类要求或统计时点任一输入均待填。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F025"
+          }
+        ]
+      },
+      "F026": {
+        "field_id": "F026",
+        "label": "高压电工已取证人数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06应持证人员集合及高压电工证逐人有效证据。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_after_correction",
+          "corrections": [
+            "原表为“已完成取证”，meaning/formula却强制筛“有效资质”。已取得与当前有效要分开，不能借安全建议替代报告业务定义。qualification_count_policy=acquired_as_of或valid_as_of须确认；未定口径不自动计数。",
+            "共用同一已确认人员集合、证类和统计时点；certified<=required只有确认同集合/子集时才作为校验，不因数字相等推定全部取得。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F026"
+          }
+        ]
+      },
+      "F027": {
+        "field_id": "F027",
+        "label": "高压电工取证进展",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 高压电工证取证办理进度；历史6月空白不能自动解释为无事项。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F027"
+          }
+        ]
+      },
+      "F028": {
+        "field_id": "F028",
+        "label": "调度受令应取证人数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06有效人员名册、调度受令证应持证职责关系及统计范围。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_after_correction",
+          "corrections": [
+            "“月末”只有既有建议分类支持，未有独立统计制度或人员名册证明。cutoff_policy.status必须pending_confirmation；method以获准cutoff为参数，不将月末写成已验证业务事实。",
+            "缺人员归属历史、岗位证类要求或统计时点任一输入均待填。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F028"
+          }
+        ]
+      },
+      "F029": {
+        "field_id": "F029",
+        "label": "调度受令已取证人数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06应持证人员集合及调度受令证逐人有效证据。六个月原报告均0只证明历史填报，不能据此配置永久0。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_after_correction",
+          "corrections": [
+            "原表为“已完成取证”，meaning/formula却强制筛“有效资质”。已取得与当前有效要分开，不能借安全建议替代报告业务定义。qualification_count_policy=acquired_as_of或valid_as_of须确认；未定口径不自动计数。",
+            "共用同一已确认人员集合、证类和统计时点；certified<=required只有确认同集合/子集时才作为校验，不因数字相等推定全部取得。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F029"
+          }
+        ]
+      },
+      "F030": {
+        "field_id": "F030",
+        "label": "调度受令取证进展",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 调度受令证取证办理进度；历史6月空白不能自动解释为无事项。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F030"
+          }
+        ]
+      },
+      "F031": {
+        "field_id": "F031",
+        "label": "电气一种票收票数",
+        "review_status": "input_missing",
+        "reason": "未取得本站2026-06完整电气一种票收票明细与收票归属时间；已见旧扫描票不能替代当期。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F031"
+          }
+        ]
+      },
+      "F032": {
+        "field_id": "F032",
+        "label": "电气一种票合格数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 电气一种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F032"
+          }
+        ]
+      },
+      "F033": {
+        "field_id": "F033",
+        "label": "电气一种票不合格数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 电气一种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F033"
+          }
+        ]
+      },
+      "F034": {
+        "field_id": "F034",
+        "label": "电气一种票合格率",
+        "review_status": "input_missing",
+        "reason": "计算关系已反推并复算；仍缺电气一种票同站同月经核实的收票、合格/不合格数及评价完整性。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_with_scope_conditions",
+          "corrections": [
+            "接受合格/收票×100及完整评价门控；0分母“/”的样本采用边界为迈大2026-02至07，不自动升级成所有站业务口径。",
+            "非整数精度没有样本，继续pending；不能凭0/100推断两位。只有确认收票/合格/不合格全为0才显示“/”，缺源不是0票。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F034"
+          }
+        ]
+      },
+      "F035": {
+        "field_id": "F035",
+        "label": "电气一种票备注",
+        "review_status": "input_missing",
+        "reason": "尚未取得本站2026-06 电气一种票的质量评价备注及异常闭环明细。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F035"
+          }
+        ]
+      },
+      "F036": {
+        "field_id": "F036",
+        "label": "电气二种票收票数",
+        "review_status": "input_missing",
+        "reason": "未取得本站2026-06完整电气二种票收票明细与收票归属时间；已见旧扫描票不能替代当期。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F036"
+          }
+        ]
+      },
+      "F037": {
+        "field_id": "F037",
+        "label": "电气二种票合格数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 电气二种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F037"
+          }
+        ]
+      },
+      "F038": {
+        "field_id": "F038",
+        "label": "电气二种票不合格数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 电气二种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F038"
+          }
+        ]
+      },
+      "F039": {
+        "field_id": "F039",
+        "label": "电气二种票合格率",
+        "review_status": "input_missing",
+        "reason": "计算关系已反推并复算；仍缺电气二种票同站同月经核实的收票、合格/不合格数及评价完整性。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_with_scope_conditions",
+          "corrections": [
+            "接受合格/收票×100及完整评价门控；0分母“/”的样本采用边界为迈大2026-02至07，不自动升级成所有站业务口径。",
+            "非整数精度没有样本，继续pending；不能凭0/100推断两位。只有确认收票/合格/不合格全为0才显示“/”，缺源不是0票。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F039"
+          }
+        ]
+      },
+      "F040": {
+        "field_id": "F040",
+        "label": "电气二种票备注",
+        "review_status": "input_missing",
+        "reason": "尚未取得本站2026-06 电气二种票的质量评价备注及异常闭环明细。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F040"
+          }
+        ]
+      },
+      "F041": {
+        "field_id": "F041",
+        "label": "书面布置作业票收票数",
+        "review_status": "input_missing",
+        "reason": "未取得本站2026-06完整书面布置作业票收票明细与收票归属时间；已见旧扫描票不能替代当期。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F041"
+          }
+        ]
+      },
+      "F042": {
+        "field_id": "F042",
+        "label": "书面布置作业票合格数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 书面布置作业票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F042"
+          }
+        ]
+      },
+      "F043": {
+        "field_id": "F043",
+        "label": "书面布置作业票不合格数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 书面布置作业票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F043"
+          }
+        ]
+      },
+      "F044": {
+        "field_id": "F044",
+        "label": "书面布置作业票合格率",
+        "review_status": "input_missing",
+        "reason": "计算关系已反推并复算；仍缺书面布置作业票同站同月经核实的收票、合格/不合格数及评价完整性。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_with_scope_conditions",
+          "corrections": [
+            "接受合格/收票×100及完整评价门控；0分母“/”的样本采用边界为迈大2026-02至07，不自动升级成所有站业务口径。",
+            "非整数精度没有样本，继续pending；不能凭0/100推断两位。只有确认收票/合格/不合格全为0才显示“/”，缺源不是0票。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F044"
+          }
+        ]
+      },
+      "F045": {
+        "field_id": "F045",
+        "label": "书面布置作业票备注",
+        "review_status": "input_missing",
+        "reason": "尚未取得本站2026-06 书面布置作业票的质量评价备注及异常闭环明细。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F045"
+          }
+        ]
+      },
+      "F046": {
+        "field_id": "F046",
+        "label": "电气操作票收票数",
+        "review_status": "input_missing",
+        "reason": "未取得本站2026-06完整电气操作票收票明细与收票归属时间；已见旧扫描票不能替代当期。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F046"
+          }
+        ]
+      },
+      "F047": {
+        "field_id": "F047",
+        "label": "电气操作票合格数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 电气操作票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F047"
+          }
+        ]
+      },
+      "F048": {
+        "field_id": "F048",
+        "label": "电气操作票不合格数",
+        "review_status": "input_missing",
+        "reason": "缺本站2026-06 电气操作票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F048"
+          }
+        ]
+      },
+      "F049": {
+        "field_id": "F049",
+        "label": "电气操作票合格率",
+        "review_status": "input_missing",
+        "reason": "计算关系已反推并复算；仍缺电气操作票同站同月经核实的收票、合格/不合格数及评价完整性。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_with_scope_conditions",
+          "corrections": [
+            "接受合格/收票×100及完整评价门控；0分母“/”的样本采用边界为迈大2026-02至07，不自动升级成所有站业务口径。",
+            "非整数精度没有样本，继续pending；不能凭0/100推断两位。只有确认收票/合格/不合格全为0才显示“/”，缺源不是0票。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F049"
+          }
+        ]
+      },
+      "F050": {
+        "field_id": "F050",
+        "label": "电气操作票备注",
+        "review_status": "input_missing",
+        "reason": "尚未取得本站2026-06 电气操作票的质量评价备注及异常闭环明细。",
+        "lookup_guide_ids": [
+          "powerplus_ticket_personnel",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "energy_research",
+          "disposition": "approve_rule_only",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F050"
+          }
+        ]
+      },
+      "F051": {
+        "field_id": "F051",
+        "label": "电站简称",
+        "review_status": "identity_config",
+        "reason": "无数值缺项；当前档案stationNameShort=null不影响已有有依据的本站简称配置。",
+        "lookup_guide_ids": [
+          "powerplus_archive"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F051"
+          }
+        ]
+      },
+      "F052": {
+        "field_id": "F052",
+        "label": "发电量台账·月份",
+        "review_status": "request_derived",
+        "reason": "月份标签不要求平台取数，数值缺项仍保留该月行。",
+        "lookup_guide_ids": [],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F052"
+          }
+        ]
+      },
+      "F053": {
+        "field_id": "F053",
+        "label": "发电量台账·实际容量",
+        "review_status": "partial",
+        "reason": "当前档案仅数值5.88无历史期/明确MWp，1—6月有效容量未完成独立核验。",
+        "lookup_guide_ids": [
+          "powerplus_archive",
+          "powerplus_files"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "MW不自动等于交流容量，MWp与MW业务定义待核，不能靠符号判交直流。",
+            "站配置保存有效期间/版本证据与源参数，通用规则不保存5.88或1060.75实值。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F053"
+          }
+        ],
+        "manual_locations": [
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/济南迈大电站基础信息及设备台账.xlsx",
+            "sheet": "01 电站基础管理信息",
+            "identity_cell": "B4",
+            "label_cell": "M2",
+            "value_cell": "M4",
+            "sample_row_3_excluded": true,
+            "as_of_date": "not stated in worksheet; present in February2026 intake archive",
+            "file_name": "济南迈大电站基础信息及设备台账.xlsx"
+          }
+        ]
+      },
+      "F054": {
+        "field_id": "F054",
+        "label": "发电量台账·月实际发电量",
+        "review_status": "partial",
+        "reason": "2—7月本轮均取得；1月无独立源。累计待填。",
+        "lookup_guide_ids": [
+          "powerplus_bills",
+          "powerplus_bill_attachments",
+          "powerplus_pv_month"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "附件独立返回四项值及表号、方向、倍率、表底、日期、公式、来源哈希；不能覆盖原结算标量0。",
+            "模板选择附件复核来源，本站限定2/3月；只选一来源，不相加；冲突按source_controls处理。",
+            "六月无附件且消纳/上网原始0待核，不能输出真实0；站用缺正向表底也待填。",
+            "反向发电方向仅为迈大源表证据；其他站不能强制沿用该方向或计量拓扑。",
+            "原表H14=H10-H12，不再减H9站用电；此平衡式只在该已核实计量边界采用。",
+            "02!L7实际引用K5而非K7；两期K5=K7=6000无差。实现应检查第二表声明倍率与公式引用一致，以后不同则拦截复核。",
+            "两发电表正向用电侧各倍率4000；03页为2021/占位站号及表号示例，必须排除。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F054"
+          }
+        ]
+      },
+      "F055": {
+        "field_id": "F055",
+        "label": "发电量台账·月核减电量",
+        "review_status": "partial",
+        "reason": "仅五月限电24658具本轮独立事件；二月47526.82缺源，其余月份缺完整零值依据。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "可保留五月事件级真实值，未证明来源覆盖完整之前不升格为全月受累总量。",
+            "二月47526.82缺独立事件；六月未获完整无事件证据，不填0；年度累计不能用部分和。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F055"
+          }
+        ]
+      },
+      "F056": {
+        "field_id": "F056",
+        "label": "发电量台账·月辐照量",
+        "review_status": "input_missing",
+        "reason": "1—7月月报和主要日值查询未得辐照输入；光资源比例候选无记录，COI气象设备未定位。",
+        "lookup_guide_ids": [
+          "powerplus_pv_month",
+          "powerplus_irradiance_series"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "积分需明确时间单位：W/㎡按小时积分再/1000得到kWh/㎡；秒积分需/3600000。",
+            "缺测点、辐射面、单位、采样完整性/重置规则则不启用；保留样本3位精度，不因跨站同值而共用。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F056"
+          }
+        ]
+      },
+      "F057": {
+        "field_id": "F057",
+        "label": "发电量台账·月等效利用小时数",
+        "review_status": "input_missing",
+        "reason": "六月可用电量但容量有效期未核；一月电量缺源，累计也缺输入。",
+        "lookup_guide_ids": [
+          "powerplus_bills",
+          "powerplus_archive"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "可登记公式并传播缺输入；当前5.88无历史单位/有效期，1060.75无独立年度目标，不以历史数自动填。",
+            "2位及月先取整顺序有样本；无舍入中点样本，HALF_UP可按项目显示政策采用，但不是被样本唯一证明。",
+            "其他站只保留候选算法，不继承迈大采用条件；月内容量变化另有明确算法。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F057"
+          }
+        ]
+      },
+      "F058": {
+        "field_id": "F058",
+        "label": "发电量台账·月站用电量",
+        "review_status": "partial",
+        "reason": "已批准1月独立站用月台账及2、3月结算附件表底来源；4月至本报告月的对应站用输入仍需实际查询，缺月不补0。",
+        "lookup_guide_ids": [
+          "powerplus_bill_attachments",
+          "powerplus_pv_month"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "附件独立返回四项值及表号、方向、倍率、表底、日期、公式、来源哈希；不能覆盖原结算标量0。",
+            "模板选择附件复核来源，本站限定2/3月；只选一来源，不相加；冲突按source_controls处理。",
+            "六月无附件且消纳/上网原始0待核，不能输出真实0；站用缺正向表底也待填。",
+            "反向发电方向仅为迈大源表证据；其他站不能强制沿用该方向或计量拓扑。",
+            "原表H14=H10-H12，不再减H9站用电；此平衡式只在该已核实计量边界采用。",
+            "02!L7实际引用K5而非K7；两期K5=K7=6000无差。实现应检查第二表声明倍率与公式引用一致，以后不同则拦截复核。",
+            "两发电表正向用电侧各倍率4000；03页为2021/占位站号及表号示例，必须排除。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。",
+            "一月4760在两份独立站用台账的B37/C37真实存在，标题明确覆盖至2026年1月，用途为光伏运营用电，两个副本一致，无已发现冲突；原台账本身可作直接来源，不必额外要求表底。",
+            "区分来源结算附件月份2026-02/03与台账业务月份2026-01；查找必须按已审附件位置和业务月份行，不把来源文件月份强制当台账全部行月份。",
+            "一月站用获准不解锁一月发电或全年累计；本次年度累计仍缺4—6月等输入。",
+            "三月台账标题仍截至一月但行扩至三月，应记录旧表头，按行核月，不能据此排除一月或把整表当2021示例。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F058"
+          }
+        ],
+        "document_reason": "已批准独立运营用电月台账的一月业务行及二、三月表底复算；容器结算期与业务期分别保存。该批准不解锁其他缺失月份或一月发电量。"
+      },
+      "F059": {
+        "field_id": "F059",
+        "label": "月度作业计划·序号",
+        "review_status": "derived_verified",
+        "reason": "计划集合仅部分可取得；序号算法本身不缺数据接口，但须依赖通过审核的计划记录。",
+        "lookup_guide_ids": [
+          "powerplus_plan_triggers"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "triggerDay是应下发时间，不冒称实际现场开始；due_time=2026-07-01，不伪造成6月30期限。",
+            "源计划一条或按明确编号子项呈现，不复制历史四行，不推定风险或措施。",
+            "序号从已准入集合生成；覆盖不足写明，不把未知集合当0条。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F059"
+          }
+        ]
+      },
+      "F060": {
+        "field_id": "F060",
+        "label": "月度作业计划·工作内容",
+        "review_status": "partial",
+        "reason": "六月安全检查计划说明已得；原月报灭火器/箱变/场站/逆变器四行的完整分项安排及现场风险仍未取得。新来源应一条源计划一行或按明确编号子项保留原文，不把历史四行硬复制。",
+        "lookup_guide_ids": [
+          "powerplus_plan_triggers"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "triggerDay是应下发时间，不冒称实际现场开始；due_time=2026-07-01，不伪造成6月30期限。",
+            "源计划一条或按明确编号子项呈现，不复制历史四行，不推定风险或措施。",
+            "序号从已准入集合生成；覆盖不足写明，不把未知集合当0条。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F060"
+          }
+        ]
+      },
+      "F061": {
+        "field_id": "F061",
+        "label": "月度作业计划·主要风险点",
+        "review_status": "input_missing",
+        "reason": "计划说明及安全执行记录可取，但没有与六月具体作业逐行关联的主要风险点、风险等级和现场管控措施；安全计划泛化条款不证明当次低风险。",
+        "lookup_guide_ids": [
+          "powerplus_plan_triggers",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "保留作业/风险评估版本的候选关联方法；目前不能自动填历史低风险和措施。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F061"
+          }
+        ]
+      },
+      "F062": {
+        "field_id": "F062",
+        "label": "月度作业计划·作业风险等级",
+        "review_status": "input_missing",
+        "reason": "计划说明及安全执行记录可取，但没有与六月具体作业逐行关联的主要风险点、风险等级和现场管控措施；安全计划泛化条款不证明当次低风险。",
+        "lookup_guide_ids": [
+          "powerplus_plan_triggers",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "保留作业/风险评估版本的候选关联方法；目前不能自动填历史低风险和措施。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F062"
+          }
+        ]
+      },
+      "F063": {
+        "field_id": "F063",
+        "label": "月度作业计划·现场管控措施",
+        "review_status": "input_missing",
+        "reason": "计划说明及安全执行记录可取，但没有与六月具体作业逐行关联的主要风险点、风险等级和现场管控措施；安全计划泛化条款不证明当次低风险。",
+        "lookup_guide_ids": [
+          "powerplus_plan_triggers",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "保留作业/风险评估版本的候选关联方法；目前不能自动填历史低风险和措施。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F063"
+          }
+        ]
+      },
+      "F064": {
+        "field_id": "F064",
+        "label": "本月工作总结·序号",
+        "review_status": "derived_verified",
+        "reason": "已核验规则，实际采用须按本站期间与当前来源质量判断。",
+        "lookup_guide_ids": [
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "F064通用规则中的current_verified_count=5删除；它是当次观察，应留运行结果，即使count_not_constant=true也不应保存在通用规则。",
+            "rowIndex仅定位线索，跨修订不保证稳定；同次版本一致才用于记录定位/去重。",
+            "5条安全检查不等于原报告定检、结算、巡检等全部工作。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F064"
+          }
+        ]
+      },
+      "F065": {
+        "field_id": "F065",
+        "label": "本月工作总结·一级类别",
+        "review_status": "partial",
+        "reason": "六月五条安全检查实值已取，可直接填该已知集合；原月报结算/全站定检/蓄电池内阻/日常巡检等六类工作不能由这5条推定全部覆盖。",
+        "lookup_guide_ids": [
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "F064通用规则中的current_verified_count=5删除；它是当次观察，应留运行结果，即使count_not_constant=true也不应保存在通用规则。",
+            "rowIndex仅定位线索，跨修订不保证稳定；同次版本一致才用于记录定位/去重。",
+            "5条安全检查不等于原报告定检、结算、巡检等全部工作。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F065"
+          }
+        ]
+      },
+      "F066": {
+        "field_id": "F066",
+        "label": "本月工作总结·二级类别",
+        "review_status": "input_missing",
+        "reason": "OtherWorkOrder只有安全管理一级类别，未给二级类别；不得把过程文本自动改成历史巡检维护分类。",
+        "lookup_guide_ids": [
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F066"
+          }
+        ]
+      },
+      "F067": {
+        "field_id": "F067",
+        "label": "本月工作总结·工作内容",
+        "review_status": "partial",
+        "reason": "六月五条安全检查实值已取，可直接填该已知集合；原月报结算/全站定检/蓄电池内阻/日常巡检等六类工作不能由这5条推定全部覆盖。",
+        "lookup_guide_ids": [
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "F064通用规则中的current_verified_count=5删除；它是当次观察，应留运行结果，即使count_not_constant=true也不应保存在通用规则。",
+            "rowIndex仅定位线索，跨修订不保证稳定；同次版本一致才用于记录定位/去重。",
+            "5条安全检查不等于原报告定检、结算、巡检等全部工作。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F067"
+          }
+        ]
+      },
+      "F068": {
+        "field_id": "F068",
+        "label": "下月工作计划·序号",
+        "review_status": "derived_verified",
+        "reason": "计划集合仅部分可取得；序号算法本身不缺数据接口，但须依赖通过审核的计划记录。",
+        "lookup_guide_ids": [
+          "powerplus_plan_triggers"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "六月报告中七月两条只列候选和版本缺口；有六月末快照/变更历史或同期确认后才采纳。",
+            "不以当前triggerStatus或七月完成工单倒推六月末已确认安排。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F068"
+          }
+        ]
+      },
+      "F069": {
+        "field_id": "F069",
+        "label": "下月工作计划·工作内容",
+        "review_status": "partial",
+        "reason": "已取得下一月候选计划，但当前记录修改时间晚于报告期末且缺历史内容版本，不能将当前文字当作当时期末计划。",
+        "lookup_guide_ids": [
+          "powerplus_plan_triggers"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "六月报告中七月两条只列候选和版本缺口；有六月末快照/变更历史或同期确认后才采纳。",
+            "不以当前triggerStatus或七月完成工单倒推六月末已确认安排。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F069"
+          }
+        ]
+      },
+      "F070": {
+        "field_id": "F070",
+        "label": "需协助事项·序号",
+        "review_status": "input_missing",
+        "reason": "没有取得June需要协助的事项集合或无事项确认，不能因历史多月无而永久填无。",
+        "lookup_guide_ids": [
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F070"
+          }
+        ]
+      },
+      "F071": {
+        "field_id": "F071",
+        "label": "需协助事项·需协助事项",
+        "review_status": "input_missing",
+        "reason": "所查工单/任务/资料未取得明确需协助事项字段或无事项声明；0条工单不证明无协助。",
+        "lookup_guide_ids": [
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": []
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F071"
+          }
+        ]
+      },
+      "F072": {
+        "field_id": "F072",
+        "label": "发电损失记录·停电时间",
+        "review_status": "partial",
+        "reason": "本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "源只有日期，不补造时分。",
+            "限电损失是类别，具体原因缺失需单列，不能把类别当完整原因。",
+            "事件/原始kWh成组，跨月无分月数据不能按天数线性分摊。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F072"
+          }
+        ]
+      },
+      "F073": {
+        "field_id": "F073",
+        "label": "发电损失记录·停电容量",
+        "review_status": "input_missing",
+        "reason": "本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "仅在实际影响设备、逐台容量和期间均确定时汇总；当前容量不自动适用历史停电。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F073"
+          }
+        ]
+      },
+      "F074": {
+        "field_id": "F074",
+        "label": "发电损失记录·停电原因",
+        "review_status": "partial",
+        "reason": "本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "源只有日期，不补造时分。",
+            "限电损失是类别，具体原因缺失需单列，不能把类别当完整原因。",
+            "事件/原始kWh成组，跨月无分月数据不能按天数线性分摊。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F074"
+          }
+        ]
+      },
+      "F075": {
+        "field_id": "F075",
+        "label": "发电损失记录·损失电量",
+        "review_status": "partial",
+        "reason": "本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "源只有日期，不补造时分。",
+            "限电损失是类别，具体原因缺失需单列，不能把类别当完整原因。",
+            "事件/原始kWh成组，跨月无分月数据不能按天数线性分摊。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F075"
+          }
+        ]
+      },
+      "F076": {
+        "field_id": "F076",
+        "label": "隐患记录·序号",
+        "review_status": "input_missing",
+        "reason": "没有当期已确认隐患集合；五条安全检查正常不能证明历史火灾风险仍作为待治理隐患。",
+        "lookup_guide_ids": [
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "筛选期内新发现及月末未闭环隐患合理，但措施/销项状态要截至月末，不能把月后完成回填为月末完成。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F076"
+          }
+        ]
+      },
+      "F077": {
+        "field_id": "F077",
+        "label": "隐患记录·隐患描述",
+        "review_status": "input_missing",
+        "reason": "June执行记录是消防/电缆/标识/封堵/工具检查正常，没有隐患描述及关联整改销项；不把计划中防火要求或历史站场火灾隐患变成当期事实。",
+        "lookup_guide_ids": [
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "筛选期内新发现及月末未闭环隐患合理，但措施/销项状态要截至月末，不能把月后完成回填为月末完成。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F077"
+          }
+        ]
+      },
+      "F078": {
+        "field_id": "F078",
+        "label": "隐患记录·措施完成",
+        "review_status": "input_missing",
+        "reason": "June执行记录是消防/电缆/标识/封堵/工具检查正常，没有隐患描述及关联整改销项；不把计划中防火要求或历史站场火灾隐患变成当期事实。",
+        "lookup_guide_ids": [
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "筛选期内新发现及月末未闭环隐患合理，但措施/销项状态要截至月末，不能把月后完成回填为月末完成。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F078"
+          }
+        ]
+      },
+      "F079": {
+        "field_id": "F079",
+        "label": "安全工器具检测记录·序号",
+        "review_status": "partial",
+        "reason": "源证书两组接地线已找到，完整资产清单和源管理号到报告编号关系仍待核。",
+        "lookup_guide_ids": [
+          "powerplus_files",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "不能说整列无数据，保留证书对象级候选及缺映射/规格冲突。",
+            "latest_valid_inspection改为latest_applicable_inspection_version；先选期末前最近适用检验，再显示合格或不合格，禁止跳过新不合格选旧合格。",
+            "2029-06-24是明确建议下次检测日期，可作为F086候选，不是安全保证；源报告提示老化破损禁止使用。",
+            "证书（2）报告编号扫描页间可辨性不足，不用猜号作连接键。",
+            "三相样品编号与工具副数不同，不能按3个sample_id生成3套接地线。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F079"
+          }
+        ]
+      },
+      "F080": {
+        "field_id": "F080",
+        "label": "安全工器具检测记录·编号",
+        "review_status": "partial",
+        "reason": "已得源证书管理号JDX01/02及各三相样品号，但未得到至FBSPQ2-10kV-JDX-01/02的直接映射；不能按后缀相同自动连接。",
+        "lookup_guide_ids": [
+          "powerplus_files",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "不能说整列无数据，保留证书对象级候选及缺映射/规格冲突。",
+            "latest_valid_inspection改为latest_applicable_inspection_version；先选期末前最近适用检验，再显示合格或不合格，禁止跳过新不合格选旧合格。",
+            "2029-06-24是明确建议下次检测日期，可作为F086候选，不是安全保证；源报告提示老化破损禁止使用。",
+            "证书（2）报告编号扫描页间可辨性不足，不用猜号作连接键。",
+            "三相样品编号与工具副数不同，不能按3个sample_id生成3套接地线。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F080"
+          }
+        ],
+        "manual_locations": [
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/迈大安全工器具台账.xlsx",
+            "sheet": "Sheet1",
+            "range": "A3:J8",
+            "file_name": "迈大安全工器具台账.xlsx"
+          },
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/安全工器具检测报告-济南迈大电站.pdf",
+            "pdf_pages": [
+              1,
+              4
+            ],
+            "file_name": "安全工器具检测报告-济南迈大电站.pdf"
+          }
+        ],
+        "document_reason": "接地线证书的真实检验日期、结果及建议下检日期已取得并覆盖目标期间；对象编号对应及规格差异仍待核。最近适用记录若不合格不得跳过。"
+      },
+      "F081": {
+        "field_id": "F081",
+        "label": "安全工器具检测记录·名称",
+        "review_status": "partial",
+        "reason": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+        "lookup_guide_ids": [
+          "powerplus_files",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "不能说整列无数据，保留证书对象级候选及缺映射/规格冲突。",
+            "latest_valid_inspection改为latest_applicable_inspection_version；先选期末前最近适用检验，再显示合格或不合格，禁止跳过新不合格选旧合格。",
+            "2029-06-24是明确建议下次检测日期，可作为F086候选，不是安全保证；源报告提示老化破损禁止使用。",
+            "证书（2）报告编号扫描页间可辨性不足，不用猜号作连接键。",
+            "三相样品编号与工具副数不同，不能按3个sample_id生成3套接地线。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F081"
+          }
+        ],
+        "manual_locations": [
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/迈大安全工器具台账.xlsx",
+            "sheet": "Sheet1",
+            "range": "D4:D8",
+            "file_name": "迈大安全工器具台账.xlsx"
+          }
+        ],
+        "document_reason": "接地线证书的真实检验日期、结果及建议下检日期已取得并覆盖目标期间；对象编号对应及规格差异仍待核。最近适用记录若不合格不得跳过。"
+      },
+      "F082": {
+        "field_id": "F082",
+        "label": "安全工器具检测记录·型号与规格",
+        "review_status": "partial",
+        "reason": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+        "lookup_guide_ids": [
+          "powerplus_files",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "不能说整列无数据，保留证书对象级候选及缺映射/规格冲突。",
+            "latest_valid_inspection改为latest_applicable_inspection_version；先选期末前最近适用检验，再显示合格或不合格，禁止跳过新不合格选旧合格。",
+            "2029-06-24是明确建议下次检测日期，可作为F086候选，不是安全保证；源报告提示老化破损禁止使用。",
+            "证书（2）报告编号扫描页间可辨性不足，不用猜号作连接键。",
+            "三相样品编号与工具副数不同，不能按3个sample_id生成3套接地线。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F082"
+          }
+        ],
+        "manual_locations": [
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/迈大安全工器具台账.xlsx",
+            "sheet": "Sheet1",
+            "range": "G4:G8",
+            "file_name": "迈大安全工器具台账.xlsx"
+          }
+        ],
+        "document_reason": "接地线证书的真实检验日期、结果及建议下检日期已取得并覆盖目标期间；对象编号对应及规格差异仍待核。最近适用记录若不合格不得跳过。"
+      },
+      "F083": {
+        "field_id": "F083",
+        "label": "安全工器具检测记录·制造厂家",
+        "review_status": "partial",
+        "reason": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+        "lookup_guide_ids": [
+          "powerplus_files",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "不能说整列无数据，保留证书对象级候选及缺映射/规格冲突。",
+            "latest_valid_inspection改为latest_applicable_inspection_version；先选期末前最近适用检验，再显示合格或不合格，禁止跳过新不合格选旧合格。",
+            "2029-06-24是明确建议下次检测日期，可作为F086候选，不是安全保证；源报告提示老化破损禁止使用。",
+            "证书（2）报告编号扫描页间可辨性不足，不用猜号作连接键。",
+            "三相样品编号与工具副数不同，不能按3个sample_id生成3套接地线。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F083"
+          }
+        ],
+        "manual_locations": [
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/迈大安全工器具台账.xlsx",
+            "sheet": "Sheet1",
+            "range": "E4:E8",
+            "file_name": "迈大安全工器具台账.xlsx"
+          }
+        ],
+        "document_reason": "接地线证书的真实检验日期、结果及建议下检日期已取得并覆盖目标期间；对象编号对应及规格差异仍待核。最近适用记录若不合格不得跳过。"
+      },
+      "F084": {
+        "field_id": "F084",
+        "label": "安全工器具检测记录·试验日期",
+        "review_status": "partial",
+        "reason": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+        "lookup_guide_ids": [
+          "powerplus_files",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "不能说整列无数据，保留证书对象级候选及缺映射/规格冲突。",
+            "latest_valid_inspection改为latest_applicable_inspection_version；先选期末前最近适用检验，再显示合格或不合格，禁止跳过新不合格选旧合格。",
+            "2029-06-24是明确建议下次检测日期，可作为F086候选，不是安全保证；源报告提示老化破损禁止使用。",
+            "证书（2）报告编号扫描页间可辨性不足，不用猜号作连接键。",
+            "三相样品编号与工具副数不同，不能按3个sample_id生成3套接地线。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F084"
+          }
+        ],
+        "manual_locations": [
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/安全工器具检测报告-济南迈大电站.pdf",
+            "pdf_pages": [
+              1,
+              4
+            ],
+            "file_name": "安全工器具检测报告-济南迈大电站.pdf"
+          }
+        ],
+        "document_reason": "接地线证书的真实检验日期、结果及建议下检日期已取得并覆盖目标期间；对象编号对应及规格差异仍待核。最近适用记录若不合格不得跳过。"
+      },
+      "F085": {
+        "field_id": "F085",
+        "label": "安全工器具检测记录·试验结果",
+        "review_status": "partial",
+        "reason": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+        "lookup_guide_ids": [
+          "powerplus_files",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "不能说整列无数据，保留证书对象级候选及缺映射/规格冲突。",
+            "latest_valid_inspection改为latest_applicable_inspection_version；先选期末前最近适用检验，再显示合格或不合格，禁止跳过新不合格选旧合格。",
+            "2029-06-24是明确建议下次检测日期，可作为F086候选，不是安全保证；源报告提示老化破损禁止使用。",
+            "证书（2）报告编号扫描页间可辨性不足，不用猜号作连接键。",
+            "三相样品编号与工具副数不同，不能按3个sample_id生成3套接地线。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F085"
+          }
+        ],
+        "manual_locations": [
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/安全工器具检测报告-济南迈大电站.pdf",
+            "pdf_pages": [
+              1,
+              4
+            ],
+            "file_name": "安全工器具检测报告-济南迈大电站.pdf"
+          }
+        ],
+        "document_reason": "接地线证书的真实检验日期、结果及建议下检日期已取得并覆盖目标期间；对象编号对应及规格差异仍待核。最近适用记录若不合格不得跳过。"
+      },
+      "F086": {
+        "field_id": "F086",
+        "label": "安全工器具检测记录·下次检验时间",
+        "review_status": "partial",
+        "reason": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+        "lookup_guide_ids": [
+          "powerplus_files",
+          "powerplus_other_work"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "retain_pending",
+          "corrections": [
+            "不能说整列无数据，保留证书对象级候选及缺映射/规格冲突。",
+            "latest_valid_inspection改为latest_applicable_inspection_version；先选期末前最近适用检验，再显示合格或不合格，禁止跳过新不合格选旧合格。",
+            "2029-06-24是明确建议下次检测日期，可作为F086候选，不是安全保证；源报告提示老化破损禁止使用。",
+            "证书（2）报告编号扫描页间可辨性不足，不用猜号作连接键。",
+            "三相样品编号与工具副数不同，不能按3个sample_id生成3套接地线。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F086"
+          }
+        ],
+        "manual_locations": [
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/安全工器具检测报告-济南迈大电站.pdf",
+            "pdf_pages": [
+              1,
+              4
+            ],
+            "file_name": "安全工器具检测报告-济南迈大电站.pdf"
+          },
+          {
+            "file": "/Users/yeyuanbozhizhu/Documents/ChatGPT/协合-自动化报告/验证记录/迈大2026-06逐字段验证-160728/交接资料补查/ZIP小文件/迈大安全工器具台账.xlsx",
+            "sheet": "Sheet1",
+            "range": "J4:J8",
+            "file_name": "迈大安全工器具台账.xlsx"
+          }
+        ],
+        "document_reason": "接地线证书的真实检验日期、结果及建议下检日期已取得并覆盖目标期间；对象编号对应及规格差异仍待核。最近适用记录若不合格不得跳过。"
+      },
+      "F087": {
+        "field_id": "F087",
+        "label": "1.1正文电站名称",
+        "review_status": "identity_config",
+        "reason": "现有报告命名配置可执行；不将平台全名强行替换项目报告约定名。",
+        "lookup_guide_ids": [
+          "powerplus_archive"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "原研究derivation.property=narrative_name无有效配置字段；实际本站profile及模板字段定义为revenue_name，必须修正引用后执行。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F087"
+          }
+        ]
+      },
+      "F088": {
+        "field_id": "F088",
+        "label": "运行概况受累电量说明",
+        "review_status": "input_missing",
+        "reason": "June F010缺真实0和范围证明，文字应随之待填。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_rule",
+          "corrections": [
+            "依赖缺失或冲突时明确写受累电量待核，不生成无事件结论。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F088"
+          }
+        ]
+      },
+      "F089": {
+        "field_id": "F089",
+        "label": "发电损失表合计填写位置",
+        "review_status": "partial",
+        "reason": "历史填写位置已明确（逻辑第3列），但主模板当前待确认标记不可由研究直接消除；June事件完整性不足，合计值仍待填。",
+        "lookup_guide_ids": [
+          "powerplus_fault"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "保持现有逻辑第3列位置，不移到第4列。",
+            "原始kWh完整事件集合求和再转换；部分事件不输出完整合计。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F089"
+          }
+        ]
+      },
+      "F090": {
+        "field_id": "F090",
+        "label": "现场照片",
+        "review_status": "direct_verified",
+        "reason": "OtherWorkOrder本轮仍有20张June图，源字节此前下载并视觉复核，本轮复核工具4图及源URL一致；不要求与历史8张相同。不代表所有历史工种照片齐全。",
+        "lookup_guide_ids": [
+          "powerplus_other_work",
+          "powerplus_bills"
+        ],
+        "review_scope": "仅本站2026-06本轮核验；其他期间使用通用查找方法，重新查询实际来源。",
+        "auto_fill_from_guide": false,
+        "independent_review": {
+          "reviewer": "safety_research",
+          "disposition": "accept_executable_conditionally",
+          "corrections": [
+            "本次交叉审查没有重新逐张下载和目视全部20张，不能把规则审查称为本次成品已完成视觉验收。",
+            "同图片跨来源以内容哈希去重并保留出处；抄表与检查分别描述，不跨月套历史签名。"
+          ]
+        },
+        "lookup_examples": [
+          {
+            "evidence_file": "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+            "field_pointer": "/fields/F090"
+          }
+        ]
+      }
+    }
+  },
+  "history_values_not_included": true,
+  "origin_evidence": [
+    "验证记录/90字段反推重建-20260908-234936/已核验规则总账.json",
+    "验证记录/90字段反推重建-20260908-234936/review/safety_cross_review.json",
+    "验证记录/90字段反推重建-20260908-234936/review/energy_cross_review.json"
+  ]
+}

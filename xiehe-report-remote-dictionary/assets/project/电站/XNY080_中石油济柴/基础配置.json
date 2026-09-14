@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "station_id": "XNY080",
+  "station_name": "中石油济柴",
+  "aliases": [
+    "XNY080",
+    "中石油济柴",
+    "济柴",
+    "南网中石油济柴",
+    "南网济南中石油济柴动力"
+  ],
+  "platforms": {
+    "powerplus": {
+      "station_code": 3600410,
+      "station_name": "南网济南中石油济柴动力",
+      "identity_evidence": {
+        "project_station_id": "XNY080",
+        "project_station_name": "中石油济柴",
+        "powerplus_station_id": 3600410,
+        "powerplus_station_name": "南网济南中石油济柴动力",
+        "status": "verified_unique_name_match",
+        "captured_at": "2026-09-07T10:07:38.072517+00:00",
+        "evidence": "运维月报/验证记录/Power取数-20260907/济柴.json",
+        "scope": "当前API电站身份；不证明实时测点或历史发电量已接入。"
+      }
+    }
+  }
+}

@@ -1,0 +1,974 @@
+{
+  "schema_version": 2,
+  "rules_version": "2.0.2",
+  "report_type": "定检报告",
+  "template_id": "DJ-02",
+  "template_mapping": "模板字段映射.json",
+  "dictionary_id": "DJ-FIELDS-01",
+  "parameter_bindings": {
+    "station_id": "$station.station_id",
+    "powerplus_station_id": "$station.powerplus_station_id",
+    "period": "$request.period"
+  },
+  "meaning": "共用字段定义和取数方法；不共用各站的当期数值。候选平台位置不等于已取得数据。",
+  "fields": {
+    "J001": {
+      "field_id": "J001",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J001",
+      "filling_rule": {
+        "label": "报告年份",
+        "kind": "request",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "明确年度与上半年/下半年/全年，同一报告的封面和正文重复日期要核对。"
+        ],
+        "unit": "年"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D023",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J002": {
+      "field_id": "J002",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J002",
+      "filling_rule": {
+        "label": "报告周期",
+        "kind": "request",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "明确年度与上半年/下半年/全年，同一报告的封面和正文重复日期要核对。"
+        ],
+        "unit": "上半年/下半年/全年"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D108",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J003": {
+      "field_id": "J003",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J003",
+      "filling_rule": {
+        "label": "电站资料编码",
+        "kind": "station",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "使用报告期有效的本站档案；名称、装机容量、并网电压和停电容量不可混用。"
+        ],
+        "unit": "编码"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "station_snapshot_observed_report_binding_pending",
+      "data_definition": {
+        "standard_id": "D109",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J004": {
+      "field_id": "J004",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J004",
+      "filling_rule": {
+        "label": "电站名称",
+        "kind": "station",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "使用报告期有效的本站档案；名称、装机容量、并网电压和停电容量不可混用。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "station_snapshot_observed_report_binding_pending",
+      "data_definition": {
+        "standard_id": "D022",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "name_role": "inspection_station"
+        }
+      }
+    },
+    "J005": {
+      "field_id": "J005",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J005",
+      "filling_rule": {
+        "label": "定检日期",
+        "kind": "event",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。"
+        ],
+        "unit": "日期"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D111",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J006": {
+      "field_id": "J006",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J006",
+      "filling_rule": {
+        "label": "定检员签认位",
+        "kind": "signature",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "角色对应固定字段，签字顺序由本站版本配置决定；签字/盖章由真实授权来源提供，不能复制历史签名。"
+        ],
+        "unit": "签认"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D112",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J007": {
+      "field_id": "J007",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J007",
+      "filling_rule": {
+        "label": "编制人签认位",
+        "kind": "signature",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "角色对应固定字段，签字顺序由本站版本配置决定；签字/盖章由真实授权来源提供，不能复制历史签名。"
+        ],
+        "unit": "签认"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D113",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J008": {
+      "field_id": "J008",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J008",
+      "filling_rule": {
+        "label": "审核人签认位",
+        "kind": "signature",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "角色对应固定字段，签字顺序由本站版本配置决定；签字/盖章由真实授权来源提供，不能复制历史签名。"
+        ],
+        "unit": "签认"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D114",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J009": {
+      "field_id": "J009",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J009",
+      "filling_rule": {
+        "label": "批准人签认位",
+        "kind": "signature",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "角色对应固定字段，签字顺序由本站版本配置决定；签字/盖章由真实授权来源提供，不能复制历史签名。"
+        ],
+        "unit": "签认"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D115",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J010": {
+      "field_id": "J010",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J010",
+      "filling_rule": {
+        "label": "报告出具单位",
+        "kind": "event",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D116",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J011": {
+      "field_id": "J011",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J011",
+      "filling_rule": {
+        "label": "并网容量",
+        "kind": "station",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "使用报告期有效的本站档案；名称、装机容量、并网电压和停电容量不可混用。"
+        ],
+        "unit": "MW"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "station_snapshot_observed_report_binding_pending",
+      "data_definition": {
+        "standard_id": "D117",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J012": {
+      "field_id": "J012",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J012",
+      "filling_rule": {
+        "label": "并网电压",
+        "kind": "station",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "使用报告期有效的本站档案；名称、装机容量、并网电压和停电容量不可混用。"
+        ],
+        "unit": "kV"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D118",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J013": {
+      "field_id": "J013",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J013",
+      "filling_rule": {
+        "label": "并网时间",
+        "kind": "station",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "使用报告期有效的本站档案；名称、装机容量、并网电压和停电容量不可混用。"
+        ],
+        "unit": "日期"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D119",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J014": {
+      "field_id": "J014",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J014",
+      "filling_rule": {
+        "label": "定检参与人员",
+        "kind": "event",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D120",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J015": {
+      "field_id": "J015",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J015",
+      "filling_rule": {
+        "label": "本次定检依据",
+        "kind": "event",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "依据、措施和注意事项需核实本次适用性；它们与详细版固定检查条款版本是不同层次。"
+        ],
+        "unit": "标准及版本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D121",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J016": {
+      "field_id": "J016",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J016",
+      "filling_rule": {
+        "label": "本次使用仪器",
+        "kind": "event",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。"
+        ],
+        "unit": "清单"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D122",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J017": {
+      "field_id": "J017",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J017",
+      "filling_rule": {
+        "label": "安全工器具及其他",
+        "kind": "event",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。"
+        ],
+        "unit": "清单"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D123",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J018": {
+      "field_id": "J018",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J018",
+      "filling_rule": {
+        "label": "安全措施",
+        "kind": "event",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "依据、措施和注意事项需核实本次适用性；它们与详细版固定检查条款版本是不同层次。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D124",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J019": {
+      "field_id": "J019",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J019",
+      "filling_rule": {
+        "label": "注意事项",
+        "kind": "event",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "依据、措施和注意事项需核实本次适用性；它们与详细版固定检查条款版本是不同层次。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D125",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J020": {
+      "field_id": "J020",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J020",
+      "filling_rule": {
+        "label": "工作量序号",
+        "kind": "workload",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "一条设备类型/型号记录一行，按实际工作量增减行；设备数量与完成数量分别填写，不能默认相等。",
+          "序号是当前表的展示顺序，不是设备/缺陷主键；发现重复不能按序号去重。"
+        ],
+        "unit": "序号"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D076",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "collection": "inspection_workload"
+        }
+      }
+    },
+    "J021": {
+      "field_id": "J021",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J021",
+      "filling_rule": {
+        "label": "工作量设备名称",
+        "kind": "workload",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "一条设备类型/型号记录一行，按实际工作量增减行；设备数量与完成数量分别填写，不能默认相等。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D127",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J022": {
+      "field_id": "J022",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J022",
+      "filling_rule": {
+        "label": "工作量设备型号",
+        "kind": "workload",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "一条设备类型/型号记录一行，按实际工作量增减行；设备数量与完成数量分别填写，不能默认相等。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D128",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J023": {
+      "field_id": "J023",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J023",
+      "filling_rule": {
+        "label": "工作量计量单位",
+        "kind": "workload",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "一条设备类型/型号记录一行，按实际工作量增减行；设备数量与完成数量分别填写，不能默认相等。"
+        ],
+        "unit": "单位"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D129",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J024": {
+      "field_id": "J024",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J024",
+      "filling_rule": {
+        "label": "设备数量",
+        "kind": "workload",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "一条设备类型/型号记录一行，按实际工作量增减行；设备数量与完成数量分别填写，不能默认相等。"
+        ],
+        "unit": "按计量单位"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D130",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J025": {
+      "field_id": "J025",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J025",
+      "filling_rule": {
+        "label": "实际定检完成数量",
+        "kind": "workload",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "一条设备类型/型号记录一行，按实际工作量增减行；设备数量与完成数量分别填写，不能默认相等。"
+        ],
+        "unit": "按计量单位"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D131",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J026": {
+      "field_id": "J026",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J026",
+      "filling_rule": {
+        "label": "定检结果",
+        "kind": "workload",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "一条设备类型/型号记录一行，按实际工作量增减行；设备数量与完成数量分别填写，不能默认相等。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D132",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J027": {
+      "field_id": "J027",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J027",
+      "filling_rule": {
+        "label": "工作量备注",
+        "kind": "workload",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "一条设备类型/型号记录一行，按实际工作量增减行；设备数量与完成数量分别填写，不能默认相等。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D133",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J028": {
+      "field_id": "J028",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J028",
+      "filling_rule": {
+        "label": "缺陷序号",
+        "kind": "defects",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "按实际缺陷增减行；全空备用行不计记录。确认无缺陷和未取得缺陷资料分开。",
+          "序号是当前表的展示顺序，不是设备/缺陷主键；发现重复不能按序号去重。"
+        ],
+        "unit": "序号"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D076",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "collection": "inspection_defects"
+        }
+      }
+    },
+    "J029": {
+      "field_id": "J029",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J029",
+      "filling_rule": {
+        "label": "缺陷设备名称",
+        "kind": "defects",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "按实际缺陷增减行；全空备用行不计记录。确认无缺陷和未取得缺陷资料分开。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D135",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J030": {
+      "field_id": "J030",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J030",
+      "filling_rule": {
+        "label": "缺陷隐患项目",
+        "kind": "defects",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "按实际缺陷增减行；全空备用行不计记录。确认无缺陷和未取得缺陷资料分开。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D136",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J031": {
+      "field_id": "J031",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J031",
+      "filling_rule": {
+        "label": "缺陷处理结果",
+        "kind": "defects",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "按实际缺陷增减行；全空备用行不计记录。确认无缺陷和未取得缺陷资料分开。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D137",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J032": {
+      "field_id": "J032",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J032",
+      "filling_rule": {
+        "label": "缺陷备注",
+        "kind": "defects",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "按实际缺陷增减行；全空备用行不计记录。确认无缺陷和未取得缺陷资料分开。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D138",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J033": {
+      "field_id": "J033",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J033",
+      "filling_rule": {
+        "label": "遗留问题整改计划",
+        "kind": "event",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "由本次结果与未闭环问题支撑，不自动沿用旧结论。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D139",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J034": {
+      "field_id": "J034",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J034",
+      "filling_rule": {
+        "label": "定检结论",
+        "kind": "event",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "由本次结果与未闭环问题支撑，不自动沿用旧结论。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D140",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J035": {
+      "field_id": "J035",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J035",
+      "filling_rule": {
+        "label": "设备结果序号",
+        "kind": "results",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "使用field_id＋module_id＋record_id定位，不能把同名占位符在所有设备表填成同一值。",
+          "行数依本站检查记录增减；本批既有按设备编号也有按部件/检查项填写，不能由设备数量自动复制等量行。",
+          "保留结果表的固定表头、备注；设备模块是否启用由配置决定，不据某次记录为空就删除章节。",
+          "序号是当前表的展示顺序，不是设备/缺陷主键；发现重复不能按序号去重。"
+        ],
+        "unit": "序号"
+      },
+      "module_scope_parameter": "$profile.equipment_modules",
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D076",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "collection": "inspection_equipment_results"
+        }
+      }
+    },
+    "J036": {
+      "field_id": "J036",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J036",
+      "filling_rule": {
+        "label": "设备名称或编号",
+        "kind": "results",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "使用field_id＋module_id＋record_id定位，不能把同名占位符在所有设备表填成同一值。",
+          "行数依本站检查记录增减；本批既有按设备编号也有按部件/检查项填写，不能由设备数量自动复制等量行。",
+          "保留结果表的固定表头、备注；设备模块是否启用由配置决定，不据某次记录为空就删除章节。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": "$profile.equipment_modules",
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D142",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J037": {
+      "field_id": "J037",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J037",
+      "filling_rule": {
+        "label": "设备检查情况",
+        "kind": "results",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "使用field_id＋module_id＋record_id定位，不能把同名占位符在所有设备表填成同一值。",
+          "行数依本站检查记录增减；本批既有按设备编号也有按部件/检查项填写，不能由设备数量自动复制等量行。",
+          "保留结果表的固定表头、备注；设备模块是否启用由配置决定，不据某次记录为空就删除章节。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": "$profile.equipment_modules",
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D143",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J038": {
+      "field_id": "J038",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J038",
+      "filling_rule": {
+        "label": "设备定检照片",
+        "kind": "results",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "使用field_id＋module_id＋record_id定位，不能把同名占位符在所有设备表填成同一值。",
+          "行数依本站检查记录增减；本批既有按设备编号也有按部件/检查项填写，不能由设备数量自动复制等量行。",
+          "保留结果表的固定表头、备注；设备模块是否启用由配置决定，不据某次记录为空就删除章节。",
+          "实际图片/票据来源未配置；不从历史报告取图或签章当作新来源。"
+        ],
+        "unit": "图片"
+      },
+      "module_scope_parameter": "$profile.equipment_modules",
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D144",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J039": {
+      "field_id": "J039",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J039",
+      "filling_rule": {
+        "label": "设备处理结果",
+        "kind": "results",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "使用field_id＋module_id＋record_id定位，不能把同名占位符在所有设备表填成同一值。",
+          "行数依本站检查记录增减；本批既有按设备编号也有按部件/检查项填写，不能由设备数量自动复制等量行。",
+          "保留结果表的固定表头、备注；设备模块是否启用由配置决定，不据某次记录为空就删除章节。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": "$profile.equipment_modules",
+      "requires_tickets": false,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D145",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J040": {
+      "field_id": "J040",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J040",
+      "filling_rule": {
+        "label": "票据类型",
+        "kind": "tickets",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "仅在本站选定版本include_tickets为true时启用；按真实票据增加行，类型、编号、附件互相对应。"
+        ],
+        "unit": "文本"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": true,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D146",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J041": {
+      "field_id": "J041",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J041",
+      "filling_rule": {
+        "label": "票据编号",
+        "kind": "tickets",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "仅在本站选定版本include_tickets为true时启用；按真实票据增加行，类型、编号、附件互相对应。"
+        ],
+        "unit": "编号"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": true,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D147",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "J042": {
+      "field_id": "J042",
+      "dictionary_ref": "../../数据字典/字段字典.json#/fields/J042",
+      "filling_rule": {
+        "label": "票据附件",
+        "kind": "tickets",
+        "rules": [
+          "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+          "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+          "仅在本站选定版本include_tickets为true时启用；按真实票据增加行，类型、编号、附件互相对应。",
+          "实际图片/票据来源未配置；不从历史报告取图或签章当作新来源。"
+        ],
+        "unit": "文件"
+      },
+      "module_scope_parameter": null,
+      "requires_tickets": true,
+      "online_source_status": "not_live_verified",
+      "data_definition": {
+        "standard_id": "D148",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    }
+  },
+  "filling": {
+    "repeat_rules": {
+      "workload": "按设备类型/型号的实际记录增减；不固定为样本行数",
+      "defects": "按真实缺陷增减，备用空行删除，未知与无缺陷分开",
+      "results": "每个启用模块独立扩行；记录粒度按本站实际登记规则核实",
+      "tickets": "仅明确启用两票的版本按真实票据扩行"
+    },
+    "module_rules": "设备模块有无不等于数据行多少；新增模块/列需版本化，不允许仅私加字段",
+    "clause_rules": "仅按profile选择已登记的本站条款版本，不能把迈大35kV条文自动复制给济柴"
+  },
+  "data_definition_version": 2,
+  "source_catalog": "remote:dictionary_readonly"
+}

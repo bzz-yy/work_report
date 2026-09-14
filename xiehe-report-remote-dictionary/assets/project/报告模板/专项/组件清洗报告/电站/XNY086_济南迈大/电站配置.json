@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "station_id": "XNY086",
+  "report_type": "组件清洗报告",
+  "station_ref": "../../../../../电站/XNY086_济南迈大/基础配置.json",
+  "template_id": "QX-01",
+  "template_status": "verified_shared_structure",
+  "template_rules": "../../模板/QX-01/通用取值规则.json",
+  "observed_source_ids": [
+    "C03",
+    "C04"
+  ],
+  "maintenance_rules": "填写规则.json",
+  "field_configuration": "字段取数配置.json",
+  "source_index": "本地资料索引.json",
+  "auto_generation_ready": false,
+  "business_approved": false
+}

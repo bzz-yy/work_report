@@ -1,0 +1,1153 @@
+{
+  "schema_version": 2,
+  "station_id": "XNY086",
+  "dictionary_id": "NW-MONTHLY-FIELDS-01",
+  "parameters": {
+    "station_id": "$station.station_id",
+    "powerplus_station_id": "$station.powerplus_station_id",
+    "period": "$request.period"
+  },
+  "profiles": {
+    "NW-MONTHLY-STD-01": {
+      "template_rules": "../../模板/NW-MONTHLY-STD-01/通用取值规则.json",
+      "field_notes": {
+        "F001": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "现有报告命名配置可执行；不将平台全名强行替换项目报告约定名。"
+        },
+        "F002": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "来自本次明确年月请求。"
+        },
+        "F003": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "来自本次明确年月请求。"
+        },
+        "F004": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "六月809040 kWh本轮直接取得；年度一月缺结算，不影响六月单值。"
+        },
+        "F005": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "六月两个结算标量均为待确认0，六月结算附件数组为空；尚无六月关口表底。二月能从附件重算，三月直接值与附件一致。"
+        },
+        "F006": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "六月标量0未获准，两个关口6月表底尚缺；2月和3月附件可计算172080/315480 kWh。"
+        },
+        "F007": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "已批准1月独立站用月台账及2、3月结算附件表底来源；4月至本报告月的对应站用输入仍需实际查询，缺月不补0。"
+        },
+        "F008": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "六月电量已实取；当前API容量5.88没有历史有效期和单位/直交流口径，尚缺六月可采用容量。"
+        },
+        "F009": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "1—7月月报、1月及6月日报本轮为空；8月阳性记录resource相关字段也为空。设备树返回业务错误00000，未定位本站气象测点；光资源比例台账候选空。"
+        },
+        "F010": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "损失组本轮唯一事件为2026-05-01至04限电损失24658 kWh；六月未获完整无事件证明，不能填0。二月47526.82 kWh仍无独立事件输入。"
+        },
+        "F011": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "本轮2—6月电量齐备；1月301280仅在完成月报出现，本轮结算、光伏月报/日报、发电资料目录未得其独立源。"
+        },
+        "F012": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "一月电量及各月可采用有效容量缺失。"
+        },
+        "F013": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "缺完整累计小时输入及独立可研年度目标；1060.75只在既有报告出现。"
+        },
+        "F014": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "当前档案designUtilizationHours=null；PowerGenPlan/PowerStats候选筛本站为空；生产任务书/交付任务书目录为空。未取得1060.75的独立年度依据。"
+        },
+        "F015": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "当前stationCapacity/designCapacity均5.88，dcStationCapacity、ratedCapacityActual/Instal、stationPeriodList为空，无法证明2026-06有效单位口径。"
+        },
+        "F016": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "电量输入由能源组核验可供摘要；本组未取得六月组件积灰观测/清洗前后测量，历史因果句不能照搬。"
+        },
+        "F017": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "本站消缺工单本轮无记录，损失台账仅五月限电事件；未取得六月全部故障记录及完整性确认，不能据此写无故障。"
+        },
+        "F018": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "六月及年内完整设备故障事件/逐月明确零值证据未取得；五月唯一条记录为fault_type=1其他缺陷、xdss限电，不能计为设备故障也不能因此认定设备故障合计为0。"
+        },
+        "F019": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "五月24658kWh线上已取得且与历史2.4658万kWh一致；二月47526.82kWh未找到线上事件，其他零月份缺覆盖证明，禁止用部分和24658kWh充年度累计。"
+        },
+        "F020": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "六月及年内完整设备故障事件/逐月明确零值证据未取得；五月唯一条记录为fault_type=1其他缺陷、xdss限电，不能计为设备故障也不能因此认定设备故障合计为0。"
+        },
+        "F021": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "尚未取得本站2026-06已开展培训的事件记录、签到/纪要或学习台账；六月安全工单仅证明5项检查。"
+        },
+        "F022": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "缺本站2026-06有效人员名册、低压电工证应持证职责关系及统计范围。"
+        },
+        "F023": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "缺本站2026-06应持证人员集合及低压电工证逐人有效证据。"
+        },
+        "F024": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "缺本站2026-06 低压电工证取证办理进度；历史6月空白不能自动解释为无事项。"
+        },
+        "F025": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "缺本站2026-06有效人员名册、高压电工证应持证职责关系及统计范围。"
+        },
+        "F026": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "缺本站2026-06应持证人员集合及高压电工证逐人有效证据。"
+        },
+        "F027": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "缺本站2026-06 高压电工证取证办理进度；历史6月空白不能自动解释为无事项。"
+        },
+        "F028": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "缺本站2026-06有效人员名册、调度受令证应持证职责关系及统计范围。"
+        },
+        "F029": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "缺本站2026-06应持证人员集合及调度受令证逐人有效证据。六个月原报告均0只证明历史填报，不能据此配置永久0。"
+        },
+        "F030": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "缺本站2026-06 调度受令证取证办理进度；历史6月空白不能自动解释为无事项。"
+        },
+        "F031": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "未取得本站2026-06完整电气一种票收票明细与收票归属时间；已见旧扫描票不能替代当期。"
+        },
+        "F032": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "缺本站2026-06 电气一种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。"
+        },
+        "F033": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "缺本站2026-06 电气一种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。"
+        },
+        "F034": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "计算关系已反推并复算；仍缺电气一种票同站同月经核实的收票、合格/不合格数及评价完整性。"
+        },
+        "F035": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "尚未取得本站2026-06 电气一种票的质量评价备注及异常闭环明细。"
+        },
+        "F036": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "未取得本站2026-06完整电气二种票收票明细与收票归属时间；已见旧扫描票不能替代当期。"
+        },
+        "F037": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "缺本站2026-06 电气二种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。"
+        },
+        "F038": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "缺本站2026-06 电气二种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。"
+        },
+        "F039": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "计算关系已反推并复算；仍缺电气二种票同站同月经核实的收票、合格/不合格数及评价完整性。"
+        },
+        "F040": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "尚未取得本站2026-06 电气二种票的质量评价备注及异常闭环明细。"
+        },
+        "F041": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "未取得本站2026-06完整书面布置作业票收票明细与收票归属时间；已见旧扫描票不能替代当期。"
+        },
+        "F042": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "缺本站2026-06 书面布置作业票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。"
+        },
+        "F043": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "缺本站2026-06 书面布置作业票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。"
+        },
+        "F044": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "计算关系已反推并复算；仍缺书面布置作业票同站同月经核实的收票、合格/不合格数及评价完整性。"
+        },
+        "F045": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "尚未取得本站2026-06 书面布置作业票的质量评价备注及异常闭环明细。"
+        },
+        "F046": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "未取得本站2026-06完整电气操作票收票明细与收票归属时间；已见旧扫描票不能替代当期。"
+        },
+        "F047": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "缺本站2026-06 电气操作票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。"
+        },
+        "F048": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "缺本站2026-06 电气操作票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。"
+        },
+        "F049": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "计算关系已反推并复算；仍缺电气操作票同站同月经核实的收票、合格/不合格数及评价完整性。"
+        },
+        "F050": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "尚未取得本站2026-06 电气操作票的质量评价备注及异常闭环明细。"
+        },
+        "F051": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "无数值缺项；当前档案stationNameShort=null不影响已有有依据的本站简称配置。"
+        },
+        "F052": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "月份标签不要求平台取数，数值缺项仍保留该月行。"
+        },
+        "F053": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "当前档案仅数值5.88无历史期/明确MWp，1—6月有效容量未完成独立核验。"
+        },
+        "F054": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "2—7月本轮均取得；1月无独立源。累计待填。"
+        },
+        "F055": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "仅五月限电24658具本轮独立事件；二月47526.82缺源，其余月份缺完整零值依据。"
+        },
+        "F056": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "1—7月月报和主要日值查询未得辐照输入；光资源比例候选无记录，COI气象设备未定位。"
+        },
+        "F057": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "六月可用电量但容量有效期未核；一月电量缺源，累计也缺输入。"
+        },
+        "F058": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "已批准1月独立站用月台账及2、3月结算附件表底来源；4月至本报告月的对应站用输入仍需实际查询，缺月不补0。"
+        },
+        "F059": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "计划集合仅部分可取得；序号算法本身不缺数据接口，但须依赖通过审核的计划记录。"
+        },
+        "F060": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "六月安全检查计划说明已得；原月报灭火器/箱变/场站/逆变器四行的完整分项安排及现场风险仍未取得。新来源应一条源计划一行或按明确编号子项保留原文，不把历史四行硬复制。"
+        },
+        "F061": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "计划说明及安全执行记录可取，但没有与六月具体作业逐行关联的主要风险点、风险等级和现场管控措施；安全计划泛化条款不证明当次低风险。"
+        },
+        "F062": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "计划说明及安全执行记录可取，但没有与六月具体作业逐行关联的主要风险点、风险等级和现场管控措施；安全计划泛化条款不证明当次低风险。"
+        },
+        "F063": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "计划说明及安全执行记录可取，但没有与六月具体作业逐行关联的主要风险点、风险等级和现场管控措施；安全计划泛化条款不证明当次低风险。"
+        },
+        "F064": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "已核验规则，实际采用须按本站期间与当前来源质量判断。"
+        },
+        "F065": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "六月五条安全检查实值已取，可直接填该已知集合；原月报结算/全站定检/蓄电池内阻/日常巡检等六类工作不能由这5条推定全部覆盖。"
+        },
+        "F066": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "OtherWorkOrder只有安全管理一级类别，未给二级类别；不得把过程文本自动改成历史巡检维护分类。"
+        },
+        "F067": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "六月五条安全检查实值已取，可直接填该已知集合；原月报结算/全站定检/蓄电池内阻/日常巡检等六类工作不能由这5条推定全部覆盖。"
+        },
+        "F068": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "计划集合仅部分可取得；序号算法本身不缺数据接口，但须依赖通过审核的计划记录。"
+        },
+        "F069": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "已取得下一月候选计划，但当前记录修改时间晚于报告期末且缺历史内容版本，不能将当前文字当作当时期末计划。"
+        },
+        "F070": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "没有取得June需要协助的事项集合或无事项确认，不能因历史多月无而永久填无。"
+        },
+        "F071": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "所查工单/任务/资料未取得明确需协助事项字段或无事项声明；0条工单不证明无协助。"
+        },
+        "F072": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。"
+        },
+        "F073": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。"
+        },
+        "F074": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。"
+        },
+        "F075": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。"
+        },
+        "F076": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "没有当期已确认隐患集合；五条安全检查正常不能证明历史火灾风险仍作为待治理隐患。"
+        },
+        "F077": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "June执行记录是消防/电缆/标识/封堵/工具检查正常，没有隐患描述及关联整改销项；不把计划中防火要求或历史站场火灾隐患变成当期事实。"
+        },
+        "F078": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "June执行记录是消防/电缆/标识/封堵/工具检查正常，没有隐患描述及关联整改销项；不把计划中防火要求或历史站场火灾隐患变成当期事实。"
+        },
+        "F079": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "源证书两组接地线已找到，完整资产清单和源管理号到报告编号关系仍待核。"
+        },
+        "F080": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "已得源证书管理号JDX01/02及各三相样品号，但未得到至FBSPQ2-10kV-JDX-01/02的直接映射；不能按后缀相同自动连接。"
+        },
+        "F081": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。"
+        },
+        "F082": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。"
+        },
+        "F083": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。"
+        },
+        "F084": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。"
+        },
+        "F085": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。"
+        },
+        "F086": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。"
+        },
+        "F087": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "现有报告命名配置可执行；不将平台全名强行替换项目报告约定名。"
+        },
+        "F088": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "June F010缺真实0和范围证明，文字应随之待填。"
+        },
+        "F089": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "历史填写位置已明确（逻辑第3列），但主模板当前待确认标记不可由研究直接消除；June事件完整性不足，合计值仍待填。"
+        },
+        "F090": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "OtherWorkOrder本轮仍有20张June图，源字节此前下载并视觉复核，本轮复核工具4图及源URL一致；不要求与历史8张相同。不代表所有历史工种照片齐全。"
+        }
+      },
+      "field_overrides": {},
+      "source_controls": {},
+      "source_guide": "来源指南.json",
+      "meter_policy_ref": "计量附件参数.json",
+      "plan_source_policy": {
+        "enabled": true,
+        "periods": [
+          "2026-06"
+        ],
+        "method_id": "power.plan.triggers.v1",
+        "next_month": "candidate_only"
+      },
+      "calculation_adoptions": {
+        "F008": {
+          "calculation_rule": {
+            "rule_id": "F008_scalar_v1",
+            "periods": [
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F011": {
+          "calculation_rule": {
+            "rule_id": "F011_scalar_v1",
+            "periods": [
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F012": {
+          "calculation_rule": {
+            "rule_id": "F012_scalar_v1",
+            "periods": [
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F013": {
+          "calculation_rule": {
+            "rule_id": "F013_scalar_v1",
+            "periods": [
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F034": {
+          "calculation_rule": {
+            "rule_id": "F034_scalar_v1",
+            "periods": [
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F039": {
+          "calculation_rule": {
+            "rule_id": "F039_scalar_v1",
+            "periods": [
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F044": {
+          "calculation_rule": {
+            "rule_id": "F044_scalar_v1",
+            "periods": [
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F049": {
+          "calculation_rule": {
+            "rule_id": "F049_scalar_v1",
+            "periods": [
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F054": {
+          "ledger_total_rule": {
+            "rule_id": "F054_ledger_total_v1",
+            "periods": [
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F055": {
+          "ledger_total_rule": {
+            "rule_id": "F055_ledger_total_v1",
+            "periods": [
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F056": {
+          "ledger_total_rule": {
+            "rule_id": "F056_ledger_total_v1",
+            "periods": [
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F057": {
+          "calculation_rule": {
+            "rule_id": "F057_ledger_month_v1",
+            "periods": [
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          },
+          "ledger_total_rule": {
+            "rule_id": "F057_ledger_total_v1",
+            "periods": [
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        },
+        "F058": {
+          "ledger_total_rule": {
+            "rule_id": "F058_ledger_total_v1",
+            "periods": [
+              "2026-01",
+              "2026-02",
+              "2026-03",
+              "2026-04",
+              "2026-05",
+              "2026-06",
+              "2026-07"
+            ],
+            "validation_ref": "报告模板/计划/运维月报/模板/NW-MONTHLY-STD-01/字段反推核验.json",
+            "validation_sha256": "7ce1ae530d49b932b25ad969ed835e91ffc7c8bccdc3a20eeedc684c638db8f2"
+          }
+        }
+      },
+      "fixedness_decisions": {}
+    }
+  },
+  "template_id": "NW-MONTHLY-STD-01",
+  "local_source_index": "本地资料索引.json",
+  "maintenance_entry": "AGENTS.md"
+}

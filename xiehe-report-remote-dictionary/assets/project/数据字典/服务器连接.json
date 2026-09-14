@@ -1,0 +1,14 @@
+{
+  "transport": "ssh_postgresql",
+  "ssh_host": "10.10.245.103",
+  "ssh_port": 22,
+  "ssh_user": "dict_tunnel_huangbo",
+  "remote_host": "127.0.0.1",
+  "remote_port": 55432,
+  "database": "report_platform",
+  "user": "dict_reader_huangbo",
+  "schema": "dictionary_readonly",
+  "credential_source": "XIEHE_DICTIONARY_CONFIG or XIEHE_DICTIONARY_* environment variables",
+  "read_only": true,
+  "allow_previous_run_fallback": false
+}

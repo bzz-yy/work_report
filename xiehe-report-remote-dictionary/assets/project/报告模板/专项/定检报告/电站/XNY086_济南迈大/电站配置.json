@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "station_id": "XNY086",
+  "display_name": "济南迈大食品",
+  "report_type": "定检报告",
+  "maintenance_entry": "AGENTS.md",
+  "maintenance_rules": "填写规则.json",
+  "field_configuration": "字段取数配置.json",
+  "source_index": "本地资料索引.json",
+  "profiles": {
+    "DJ-02": {
+      "template_id": "DJ-02",
+      "observed_source_id": "D04",
+      "observed_period": "2026-H1",
+      "selection_basis": "用户明确交付版本；本站单一已登记模板可直接定位。该样本不证明所有未来周期固定采用。",
+      "equipment_modules": [
+        "hv",
+        "transformer",
+        "inverter",
+        "secondary",
+        "other"
+      ],
+      "clause_version": "MD-2026-H1",
+      "clause_file": "../../条款库/MD-2026-H1.json",
+      "include_tickets": false,
+      "signature_order": [
+        "定检员",
+        "编制人",
+        "审核人",
+        "批准人"
+      ],
+      "source_positions": {
+        "basic_table": 0,
+        "overview_table": 1,
+        "result_tables": {
+          "hv": 3,
+          "transformer": 5,
+          "inverter": 7,
+          "secondary": 9,
+          "other": 10
+        },
+        "standard_tables": {
+          "hv": 2,
+          "transformer": 4,
+          "inverter": 6,
+          "secondary": 8
+        },
+        "ticket_table": null
+      },
+      "source_reference": {
+        "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/南网资料/目前整理较好的材料/优先级高报告整理/定检报告/济南迈大/济南迈大食品光伏电站2026年上半年定检报告.docx",
+        "sha256": "f727dc830dd3514026115b4d8c70480902a35db580dac3f987e36f7e4e096d25",
+        "period": "2026-H1"
+      },
+      "business_confirmation": "pending",
+      "known_issues": [
+        "标准有35kV开关柜条款，不代表该站实际存在35kV设备；适用性待业务确认。"
+      ]
+    }
+  },
+  "formal_report_ready": false,
+  "rules_schema_version": 2,
+  "template_rules": {
+    "DJ-02": "../../模板/DJ-02/通用取值规则.json"
+  },
+  "station_ref": "../../../../../电站/XNY086_济南迈大/基础配置.json"
+}

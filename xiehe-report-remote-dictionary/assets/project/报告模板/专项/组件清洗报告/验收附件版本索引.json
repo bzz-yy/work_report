@@ -1,0 +1,28 @@
+{
+  "status": "附件来源结构版本索引；本次未重制独立验收单Word",
+  "versions": [
+    {
+      "version_id": "QX-AC-01",
+      "station_id": "XNY108",
+      "observed_event": "2026年第1次",
+      "source_id": "C07",
+      "source_path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/南网资料/目前整理较好的材料/优先级高报告整理/组件清洗报告/潍坊伊利/潍坊伊利第一次清洗验收单.pdf",
+      "source_sha256": "14014579eccdb486a9600a617a35d488974d4e122ccec0f1cab076e53a759d53",
+      "signature_columns": 3,
+      "description": "清洗、除草评价单/验收单，含清洁效果评价副标题",
+      "template_file": null
+    },
+    {
+      "version_id": "QX-AC-02",
+      "station_id": "XNY108",
+      "observed_event": "2026年第2次",
+      "source_id": "C08",
+      "source_path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/南网资料/目前整理较好的材料/优先级高报告整理/组件清洗报告/潍坊伊利/潍坊伊利第二次清洗验收单.pdf",
+      "source_sha256": "5fb76dafc02f78508bc549ef2c3c3a35da5df7c60292876ba85671420d99ed69",
+      "signature_columns": 4,
+      "description": "组件清洗评价单/验收单，增加污染组件数量、污染容量和场景说明",
+      "template_file": null
+    }
+  ],
+  "selection_rule": "历史次序不作为未来自动选版规则，按本次任务要求确认；主报告Q021插入对应的当期验收附件。其他站原报告含附件槽，不代表已核实采用以上某版。"
+}

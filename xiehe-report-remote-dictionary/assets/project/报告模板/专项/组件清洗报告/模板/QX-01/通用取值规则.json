@@ -1,0 +1,573 @@
+{
+  "schema_version": 3,
+  "report_type": "组件清洗报告",
+  "template_id": "QX-01",
+  "formal_template_ready": true,
+  "status": "Word空白主模板已提取；当期取数和自动填写未接通",
+  "field_id_scope": "Q001—Q033已绑定Word标记；重复记录用序号、前后期间和数据列子键定位。",
+  "observed_stations": [
+    "中石油济柴",
+    "济南迈大",
+    "潍坊伊利"
+  ],
+  "station_pending": [
+    "德州保龄宝缺样本"
+  ],
+  "parameter_bindings": {
+    "station_id": "$request.station_id",
+    "cleaning_event_id": "$request.cleaning_event_id",
+    "start_date": "$request.start_date",
+    "end_date": "$request.end_date",
+    "sequence": "$request.sequence"
+  },
+  "common_rules": [
+    "以电站、真实起止日期、清洗次数和确认版本定位，不能只依文件名。",
+    "前后照片按实际日期或作业记录成组增减，不固定照片组数。",
+    "效率数据按经确认的前后取样窗口取得，不机械固定为前后各5天。",
+    "4%触发、7天间隔、年度次数等保留业务待确认，不写成所有电站通用常量。",
+    "清洗装机容量不自动等同全站装机；须核实本次覆盖范围。",
+    "三站主报告同类，验收附件有两个候选版本；签认和附件要求分别确认。"
+  ],
+  "fields": {
+    "Q001": {
+      "label": "报告出具单位",
+      "unit": "文本",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D149",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q002": {
+      "label": "电站名称",
+      "unit": "文本",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D022",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "name_role": "cleaning_cover"
+        }
+      }
+    },
+    "Q003": {
+      "label": "报告年份",
+      "unit": "年",
+      "kind": "request",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D023",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q004": {
+      "label": "清洗次数",
+      "unit": "次",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D151",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q005": {
+      "label": "清洗原则及触发条件",
+      "unit": "受控文字",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D152",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q006": {
+      "label": "清洗起止时间",
+      "unit": "日期区间",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D153",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q007": {
+      "label": "清洗装机容量",
+      "unit": "MW",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D154",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q008": {
+      "label": "项目污染物类型",
+      "unit": "文本",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D155",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q009": {
+      "label": "清洗方式",
+      "unit": "文本",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D156",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q010": {
+      "label": "清洗设备",
+      "unit": "清单",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D157",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q011": {
+      "label": "清洗人数",
+      "unit": "人",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D158",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q012": {
+      "label": "进厂施工手续附件",
+      "unit": "文件",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D159",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q013": {
+      "label": "作业安全风险控制卡",
+      "unit": "文件",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D160",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q014": {
+      "label": "清洗工作票",
+      "unit": "文件",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D161",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q015": {
+      "label": "安全交底",
+      "unit": "文件",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D162",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q016": {
+      "label": "现场清洗照片",
+      "unit": "图片",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D163",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q017": {
+      "label": "前后照片日期",
+      "unit": "日期",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D164",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q018": {
+      "label": "清洗前照片",
+      "unit": "图片",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D165",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "before",
+          "collection": "photo_pairs"
+        }
+      }
+    },
+    "Q019": {
+      "label": "清洗后照片",
+      "unit": "图片",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D165",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "after",
+          "collection": "photo_pairs"
+        }
+      }
+    },
+    "Q020": {
+      "label": "清洗视频记录",
+      "unit": "视频",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D167",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q021": {
+      "label": "组件清洗验收表",
+      "unit": "文件",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D168",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q022": {
+      "label": "清洗前取样日期",
+      "unit": "日期",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D169",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "before",
+          "collection": "before_data"
+        }
+      }
+    },
+    "Q023": {
+      "label": "清洗前日发电量",
+      "unit": "kWh",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D170",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "before",
+          "collection": "before_data"
+        }
+      }
+    },
+    "Q024": {
+      "label": "清洗前满发小时数",
+      "unit": "h",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D171",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "before",
+          "collection": "before_data"
+        }
+      }
+    },
+    "Q025": {
+      "label": "清洗前辐照",
+      "unit": "MJ/m2",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D172",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "before",
+          "collection": "before_data"
+        }
+      }
+    },
+    "Q026": {
+      "label": "清洗前系统效率",
+      "unit": "%",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D173",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "before",
+          "collection": "before_data"
+        }
+      }
+    },
+    "Q027": {
+      "label": "清洗后取样日期",
+      "unit": "日期",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D169",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "after",
+          "collection": "after_data"
+        }
+      }
+    },
+    "Q028": {
+      "label": "清洗后日发电量",
+      "unit": "kWh",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D170",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "after",
+          "collection": "after_data"
+        }
+      }
+    },
+    "Q029": {
+      "label": "清洗后满发小时数",
+      "unit": "h",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D171",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "after",
+          "collection": "after_data"
+        }
+      }
+    },
+    "Q030": {
+      "label": "清洗后辐照",
+      "unit": "MJ/m2",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D172",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "after",
+          "collection": "after_data"
+        }
+      }
+    },
+    "Q031": {
+      "label": "清洗后系统效率",
+      "unit": "%",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D173",
+        "relation": "business_requirement",
+        "note": "共用数据定义；本位置的命名角色、阶段或集合单独绑定，实际source_mode、取值位置、单位、记录和固定批准保持独立。",
+        "parameters": {
+          "phase": "after",
+          "collection": "after_data"
+        }
+      }
+    },
+    "Q032": {
+      "label": "前后数据汇总",
+      "unit": "按列单位",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D179",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    },
+    "Q033": {
+      "label": "效率提升说明",
+      "unit": "百分比/百分点待确认",
+      "kind": "candidate",
+      "source_evidence": "../../比对证据/源文件结构与取值.json",
+      "status": "word_bound_data_pending",
+      "source_selection": null,
+      "data_definition": {
+        "standard_id": "D180",
+        "relation": "business_requirement",
+        "note": "定义关联不授予自动取值权限；仍按source_mode与已核验来源执行。"
+      }
+    }
+  },
+  "rules_version": "1.0.2",
+  "template_mapping": "模板字段映射.json",
+  "auto_generation_ready": false,
+  "business_approved": false,
+  "repeat_groups": {
+    "work_photos": {
+      "table": 3,
+      "unit": "照片及说明成组",
+      "initial_photos": 2
+    },
+    "photo_pairs": {
+      "table": 4,
+      "rows": [
+        1,
+        2
+      ],
+      "field_ids": [
+        "Q017",
+        "Q018",
+        "Q019"
+      ],
+      "initial_records": 1,
+      "count_rule": "按实际日期或作业记录，前后必须对应"
+    },
+    "before_data": {
+      "table": 7,
+      "row": 3,
+      "field_ids": [
+        "Q022",
+        "Q023",
+        "Q024",
+        "Q025",
+        "Q026"
+      ],
+      "initial_records": 1
+    },
+    "after_data": {
+      "table": 7,
+      "row": 7,
+      "field_ids": [
+        "Q027",
+        "Q028",
+        "Q029",
+        "Q030",
+        "Q031"
+      ],
+      "initial_records": 1
+    }
+  },
+  "summary_keys": {
+    "B": "清洗前",
+    "A": "清洗后",
+    "E": "电量kWh",
+    "H": "满发小时h",
+    "R": "辐照MJ/m2",
+    "PR": "系统效率%"
+  },
+  "calculation_rule": "Q032/Q033须根据确认的取样窗口及公式填写；不预置求和、平均、效率提升或默认零。",
+  "data_definition_version": 2,
+  "source_catalog": "remote:dictionary_readonly"
+}

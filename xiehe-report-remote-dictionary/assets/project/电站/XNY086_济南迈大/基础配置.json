@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "station_id": "XNY086",
+  "station_name": "济南迈大",
+  "aliases": [
+    "XNY086",
+    "济南迈大",
+    "济南迈大食品",
+    "迈大食品",
+    "南网济南迈大食品",
+    "迈大"
+  ],
+  "platforms": {
+    "powerplus": {
+      "station_code": 3600411,
+      "station_name": "南网济南迈大食品",
+      "identity_evidence": {
+        "project_station_id": "XNY086",
+        "project_station_name": "济南迈大",
+        "powerplus_station_id": 3600411,
+        "powerplus_station_name": "南网济南迈大食品",
+        "status": "verified_unique_name_match",
+        "captured_at": "2026-09-07T10:07:38.072778+00:00",
+        "evidence": "运维月报/验证记录/Power取数-20260907/迈大.json",
+        "scope": "当前API电站身份；不证明实时测点或历史发电量已接入。"
+      },
+      "resource_parameters": {
+        "entry_handover_folder_id": 9976,
+        "safety_documents_folder_id": 9982,
+        "monthly_reports_folder_id": 9979,
+        "handover_pdf_id": 9995,
+        "intake_archive_id": 26697
+      }
+    }
+  }
+}

@@ -1,0 +1,1196 @@
+{
+  "schema_version": 1,
+  "dictionary_id": "DJ-FIELDS-01",
+  "version": "1.0",
+  "field_context": "同一结果字段在多个设备模块复用，完整地址为field_id/module_id/record_id",
+  "fields": {
+    "J001": {
+      "label": "报告年份",
+      "business_key": "year",
+      "unit": "年",
+      "kind": "request",
+      "local": {
+        "kind": "request",
+        "property": "year"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J002": {
+      "label": "报告周期",
+      "business_key": "report_period",
+      "unit": "上半年/下半年/全年",
+      "kind": "request",
+      "local": {
+        "kind": "request",
+        "property": "period_label"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J003": {
+      "label": "电站资料编码",
+      "business_key": "station_code",
+      "unit": "编码",
+      "kind": "station",
+      "local": {
+        "kind": "station_profile",
+        "property": "station_id"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "station_snapshot_observed_report_binding_pending",
+          "candidate_command": "power station list --keyword <电站名称>",
+          "endpoint": "/api/v4/base/station/list",
+          "observed_fields": [
+            "stationCode",
+            "stationName",
+            "stationCapacity"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大.json",
+          "value_status": "四站当前档案已查到；报告中的资料编码不应替换成平台编码，历史容量/名称口径仍需确认。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J004": {
+      "label": "电站名称",
+      "business_key": "station_name",
+      "unit": "文本",
+      "kind": "station",
+      "local": {
+        "kind": "station_profile",
+        "property": "display_name"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "station_snapshot_observed_report_binding_pending",
+          "candidate_command": "power station list --keyword <电站名称>",
+          "endpoint": "/api/v4/base/station/list",
+          "observed_fields": [
+            "stationCode",
+            "stationName",
+            "stationCapacity"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大.json",
+          "value_status": "四站当前档案已查到；报告中的资料编码不应替换成平台编码，历史容量/名称口径仍需确认。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J005": {
+      "label": "定检日期",
+      "business_key": "inspection_date",
+      "unit": "日期",
+      "kind": "event",
+      "local": {
+        "kind": "overview_cell",
+        "row": 0,
+        "unique_cell": 1,
+        "crosscheck": "封面定检日期"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J006": {
+      "label": "定检员签认位",
+      "business_key": "inspector_sign",
+      "unit": "签认",
+      "kind": "signature",
+      "local": {
+        "kind": "manual_signature",
+        "history_signature_reuse": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J007": {
+      "label": "编制人签认位",
+      "business_key": "preparer_sign",
+      "unit": "签认",
+      "kind": "signature",
+      "local": {
+        "kind": "manual_signature",
+        "history_signature_reuse": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J008": {
+      "label": "审核人签认位",
+      "business_key": "reviewer_sign",
+      "unit": "签认",
+      "kind": "signature",
+      "local": {
+        "kind": "manual_signature",
+        "history_signature_reuse": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J009": {
+      "label": "批准人签认位",
+      "business_key": "approver_sign",
+      "unit": "签认",
+      "kind": "signature",
+      "local": {
+        "kind": "manual_signature",
+        "history_signature_reuse": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J010": {
+      "label": "报告出具单位",
+      "business_key": "issuing_org",
+      "unit": "文本",
+      "kind": "event",
+      "local": {
+        "kind": "paragraph_after_label",
+        "label": "定检单位"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J011": {
+      "label": "并网容量",
+      "business_key": "capacity",
+      "unit": "MW",
+      "kind": "station",
+      "local": {
+        "kind": "basic_cell",
+        "row": 1,
+        "unique_cell": 1
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "station_snapshot_observed_report_binding_pending",
+          "candidate_command": "power station list --keyword <电站名称>",
+          "endpoint": "/api/v4/base/station/list",
+          "observed_fields": [
+            "stationCode",
+            "stationName",
+            "stationCapacity"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大.json",
+          "value_status": "四站当前档案已查到；报告中的资料编码不应替换成平台编码，历史容量/名称口径仍需确认。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J012": {
+      "label": "并网电压",
+      "business_key": "voltage",
+      "unit": "kV",
+      "kind": "station",
+      "local": {
+        "kind": "basic_cell",
+        "row": 1,
+        "unique_cell": 2
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J013": {
+      "label": "并网时间",
+      "business_key": "grid_date",
+      "unit": "日期",
+      "kind": "station",
+      "local": {
+        "kind": "basic_cell",
+        "row": 1,
+        "unique_cell": 3
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J014": {
+      "label": "定检参与人员",
+      "business_key": "inspection_people",
+      "unit": "文本",
+      "kind": "event",
+      "local": {
+        "kind": "overview_cell",
+        "row": 0,
+        "unique_cell": 3
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J015": {
+      "label": "本次定检依据",
+      "business_key": "basis",
+      "unit": "标准及版本",
+      "kind": "event",
+      "local": {
+        "kind": "overview_cell",
+        "row": 1,
+        "unique_cell": 1
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J016": {
+      "label": "本次使用仪器",
+      "business_key": "instruments",
+      "unit": "清单",
+      "kind": "event",
+      "local": {
+        "kind": "overview_cell",
+        "row": 2,
+        "unique_cell": 1
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J017": {
+      "label": "安全工器具及其他",
+      "business_key": "safety_tools",
+      "unit": "清单",
+      "kind": "event",
+      "local": {
+        "kind": "overview_cell",
+        "row": 3,
+        "unique_cell": 1
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J018": {
+      "label": "安全措施",
+      "business_key": "safety_measures",
+      "unit": "文本",
+      "kind": "event",
+      "local": {
+        "kind": "overview_cell",
+        "row": 4,
+        "unique_cell": 1
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J019": {
+      "label": "注意事项",
+      "business_key": "precautions",
+      "unit": "文本",
+      "kind": "event",
+      "local": {
+        "kind": "overview_cell",
+        "row": 5,
+        "unique_cell": 1
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J020": {
+      "label": "工作量序号",
+      "business_key": "workload.seq",
+      "unit": "序号",
+      "kind": "workload",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "一、定检工作量",
+        "before_heading": "二、定检缺陷",
+        "skip_header": true,
+        "unique_column": 0
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J021": {
+      "label": "工作量设备名称",
+      "business_key": "workload.device",
+      "unit": "文本",
+      "kind": "workload",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "一、定检工作量",
+        "before_heading": "二、定检缺陷",
+        "skip_header": true,
+        "unique_column": 1
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J022": {
+      "label": "工作量设备型号",
+      "business_key": "workload.model",
+      "unit": "文本",
+      "kind": "workload",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "一、定检工作量",
+        "before_heading": "二、定检缺陷",
+        "skip_header": true,
+        "unique_column": 2
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J023": {
+      "label": "工作量计量单位",
+      "business_key": "workload.unit",
+      "unit": "单位",
+      "kind": "workload",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "一、定检工作量",
+        "before_heading": "二、定检缺陷",
+        "skip_header": true,
+        "unique_column": 3
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J024": {
+      "label": "设备数量",
+      "business_key": "workload.quantity",
+      "unit": "按计量单位",
+      "kind": "workload",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "一、定检工作量",
+        "before_heading": "二、定检缺陷",
+        "skip_header": true,
+        "unique_column": 4
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J025": {
+      "label": "实际定检完成数量",
+      "business_key": "workload.completed",
+      "unit": "按计量单位",
+      "kind": "workload",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "一、定检工作量",
+        "before_heading": "二、定检缺陷",
+        "skip_header": true,
+        "unique_column": 5
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J026": {
+      "label": "定检结果",
+      "business_key": "workload.result",
+      "unit": "文本",
+      "kind": "workload",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "一、定检工作量",
+        "before_heading": "二、定检缺陷",
+        "skip_header": true,
+        "unique_column": 6
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J027": {
+      "label": "工作量备注",
+      "business_key": "workload.notes",
+      "unit": "文本",
+      "kind": "workload",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "一、定检工作量",
+        "before_heading": "二、定检缺陷",
+        "skip_header": true,
+        "unique_column": 7
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J028": {
+      "label": "缺陷序号",
+      "business_key": "defects.seq",
+      "unit": "序号",
+      "kind": "defects",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "二、定检缺陷",
+        "before_heading": "三、遗留问题",
+        "skip_header": true,
+        "unique_column": 0
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J029": {
+      "label": "缺陷设备名称",
+      "business_key": "defects.device",
+      "unit": "文本",
+      "kind": "defects",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "二、定检缺陷",
+        "before_heading": "三、遗留问题",
+        "skip_header": true,
+        "unique_column": 1
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J030": {
+      "label": "缺陷隐患项目",
+      "business_key": "defects.issue",
+      "unit": "文本",
+      "kind": "defects",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "二、定检缺陷",
+        "before_heading": "三、遗留问题",
+        "skip_header": true,
+        "unique_column": 2
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J031": {
+      "label": "缺陷处理结果",
+      "business_key": "defects.treatment",
+      "unit": "文本",
+      "kind": "defects",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "二、定检缺陷",
+        "before_heading": "三、遗留问题",
+        "skip_header": true,
+        "unique_column": 3
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J032": {
+      "label": "缺陷备注",
+      "business_key": "defects.notes",
+      "unit": "文本",
+      "kind": "defects",
+      "local": {
+        "kind": "overview_records",
+        "after_heading": "二、定检缺陷",
+        "before_heading": "三、遗留问题",
+        "skip_header": true,
+        "unique_column": 4
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J033": {
+      "label": "遗留问题整改计划",
+      "business_key": "remaining_plan",
+      "unit": "文本",
+      "kind": "event",
+      "local": {
+        "kind": "overview_text",
+        "after_heading": "三、遗留问题"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J034": {
+      "label": "定检结论",
+      "business_key": "conclusion",
+      "unit": "文本",
+      "kind": "event",
+      "local": {
+        "kind": "overview_text",
+        "after_heading": "四、结论"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J035": {
+      "label": "设备结果序号",
+      "business_key": "results.seq",
+      "unit": "序号",
+      "kind": "results",
+      "local": {
+        "kind": "equipment_result_records",
+        "table_from": "profile.source_positions.result_tables[module_id]",
+        "unique_column": 0,
+        "row_policy": "跳过两行表头和末尾备注，备用空行不作为实际检查",
+        "module_required": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J036": {
+      "label": "设备名称或编号",
+      "business_key": "results.device_id",
+      "unit": "文本",
+      "kind": "results",
+      "local": {
+        "kind": "equipment_result_records",
+        "table_from": "profile.source_positions.result_tables[module_id]",
+        "unique_column": 1,
+        "row_policy": "跳过两行表头和末尾备注，备用空行不作为实际检查",
+        "module_required": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J037": {
+      "label": "设备检查情况",
+      "business_key": "results.finding",
+      "unit": "文本",
+      "kind": "results",
+      "local": {
+        "kind": "equipment_result_records",
+        "table_from": "profile.source_positions.result_tables[module_id]",
+        "unique_column": 2,
+        "row_policy": "跳过两行表头和末尾备注，备用空行不作为实际检查",
+        "module_required": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J038": {
+      "label": "设备定检照片",
+      "business_key": "results.photo",
+      "unit": "图片",
+      "kind": "results",
+      "local": {
+        "kind": "independent_photo",
+        "table_from": "profile.source_positions.result_tables[module_id]",
+        "unique_column": 3,
+        "row_policy": "跳过两行表头和末尾备注，备用空行不作为实际检查",
+        "module_required": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J039": {
+      "label": "设备处理结果",
+      "business_key": "results.treatment",
+      "unit": "文本",
+      "kind": "results",
+      "local": {
+        "kind": "equipment_result_records",
+        "table_from": "profile.source_positions.result_tables[module_id]",
+        "unique_column": 4,
+        "row_policy": "跳过两行表头和末尾备注，备用空行不作为实际检查",
+        "module_required": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J040": {
+      "label": "票据类型",
+      "business_key": "tickets.type",
+      "unit": "文本",
+      "kind": "tickets",
+      "local": {
+        "kind": "ticket_record",
+        "table_from": "profile.source_positions.ticket_table",
+        "parse": "票据类型/编号在左栏，附件在右栏",
+        "enabled_from": "profile.include_tickets"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J041": {
+      "label": "票据编号",
+      "business_key": "tickets.number",
+      "unit": "编号",
+      "kind": "tickets",
+      "local": {
+        "kind": "ticket_record",
+        "table_from": "profile.source_positions.ticket_table",
+        "parse": "票据类型/编号在左栏，附件在右栏",
+        "enabled_from": "profile.include_tickets"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    },
+    "J042": {
+      "label": "票据附件",
+      "business_key": "tickets.attachment",
+      "unit": "文件",
+      "kind": "tickets",
+      "local": {
+        "kind": "independent_attachment",
+        "table_from": "profile.source_positions.ticket_table",
+        "parse": "票据类型/编号在左栏，附件在右栏",
+        "enabled_from": "profile.include_tickets"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "url": null,
+        "selector": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "明确待补，不复用旧事实或其他站资料",
+      "business_confirmation": "pending"
+    }
+  },
+  "review_version": "2026-09-07-2.0"
+}

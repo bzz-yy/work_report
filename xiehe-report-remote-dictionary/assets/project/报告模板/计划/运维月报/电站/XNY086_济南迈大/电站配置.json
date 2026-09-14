@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "station_id": "XNY086",
+  "report_type": "运维月报",
+  "template_id": "NW-MONTHLY-STD-01",
+  "template_mapping": "../../模板/NW-MONTHLY-STD-01/模板字段映射.json",
+  "field_configuration": "字段取数配置.json",
+  "local_sources": "本地资料索引.json",
+  "profile": {
+    "cover_name": "济南迈大食品光伏项目",
+    "overview_short_name": "迈大食品",
+    "revenue_name": "济南迈大食品光伏电站"
+  },
+  "profile_evidence": {
+    "periods": [
+      "2026-02",
+      "2026-03",
+      "2026-04",
+      "2026-05",
+      "2026-06",
+      "2026-07"
+    ],
+    "status": "历史报告中名称一致，正式命名和生效范围仍待确认"
+  },
+  "default_data_mode": "powerplus",
+  "production_ready": false,
+  "delivery": {
+    "appendix_policy": "pending_business_confirmation",
+    "photo_policy": "verified_independent_only",
+    "loss_total_policy": "pending_business_confirmation",
+    "layout": "follow_user_designated_standard"
+  },
+  "maintenance_entry": "AGENTS.md",
+  "maintenance_rules": "填写规则.json",
+  "maintenance_evidence": "逐月维护证据.json",
+  "rules_schema_version": 2,
+  "template_rules": {
+    "NW-MONTHLY-STD-01": "../../模板/NW-MONTHLY-STD-01/通用取值规则.json"
+  },
+  "station_ref": "../../../../../电站/XNY086_济南迈大/基础配置.json"
+}

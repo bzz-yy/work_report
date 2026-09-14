@@ -1,0 +1,47 @@
+{
+  "station_id": "XNY108",
+  "sources": [
+    {
+      "period": "2026-02",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/潍坊伊利/潍坊伊利光伏项目2026年02月运维月报.docx",
+      "sha256": "dc3003070323ee488d1256cd740dd1c88b7d3f716e06f119369a04d61ea787cb",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    },
+    {
+      "period": "2026-03",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/潍坊伊利/潍坊伊利光伏项目2026年03月运维月报.docx",
+      "sha256": "8aa088515da72f3d0649e34bbda07d60698afcc08a0d26a5b3df1b629bd9d2d5",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    },
+    {
+      "period": "2026-04",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/潍坊伊利/潍坊伊利光伏项目2026年04月运维月报.docx",
+      "sha256": "909390ca253698f5ad7345c44f5aadf184597cfa2779ad0f09d63f6e9086b3b9",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    },
+    {
+      "period": "2026-05",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/潍坊伊利/潍坊伊利光伏项目2026年05月运维月报.docx",
+      "sha256": "c08cba51ccb87572682cd929e193a869a413654d708bfb10507620eb226e4920",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    },
+    {
+      "period": "2026-06",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/潍坊伊利/潍坊伊利光伏项目2026年06月运维月报.docx",
+      "sha256": "4c4d6770095aa5f44f78c3ee75db195f90a14e35820fdcc471aecd5badf77c90",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    },
+    {
+      "period": "2026-07",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/潍坊伊利/潍坊伊利光伏项目2026年07月运维月报.docx",
+      "sha256": "6b993dd1fddaa9e6be9fd708a44062e6e67c591e5cb54b948c82c6ad45dae2d1",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    }
+  ]
+}

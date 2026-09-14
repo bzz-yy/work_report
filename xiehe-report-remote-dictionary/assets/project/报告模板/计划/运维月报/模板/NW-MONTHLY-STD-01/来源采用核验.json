@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "template_id": "NW-MONTHLY-STD-01",
+  "status": "validated_against_history",
+  "validation_date": "2026-09-08",
+  "method": "按用户要求用24份历史月报与Power+实时返回逐项核对；按原始表头单位换算，保留精度、冲突与缺失。",
+  "comparison_file": "../../../验证记录/历史对账-20260908/字段对账.json",
+  "comparison_sha256": "a43ab3b000d50667d30f283354a836965ae159d189c61a280a32c120852ea494",
+  "historical_reports": 24,
+  "comparison_rows": 180,
+  "field_results": {
+    "F004": {
+      "rounding_compatible": 3,
+      "exact": 20,
+      "zero_corroborated": 1
+    },
+    "F005": {
+      "rounding_compatible": 1,
+      "value_conflict": 1,
+      "source_zero_not_report_zero": 16,
+      "exact": 5,
+      "zero_corroborated": 1
+    },
+    "F006": {
+      "value_conflict": 1,
+      "exact": 6,
+      "source_zero_not_report_zero": 15,
+      "zero_corroborated": 2
+    },
+    "F054": {
+      "source_missing": 24,
+      "rounding_compatible": 15,
+      "exact": 65,
+      "historical_unit_mismatch": 1,
+      "zero_corroborated": 3
+    }
+  },
+  "selected_fields": {
+    "F004": "SM006",
+    "F005": "SM007",
+    "F006": "SM008",
+    "F054": "SM006"
+  },
+  "limits": [
+    "零值仅接受本站本期历史数值与当前同一来源记录同时为零的核验项。",
+    "已有冲突按本站期间拦截；不以另一来源或历史数值覆盖。",
+    "保龄宝7月台账原值疑似单位错位，保留原件；自动报告按Power+原始kWh填写。",
+    "四站一月结算来源未取得，年度累计不得用2月起的部分和冒充。"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "station_id": "XNY108",
+  "station_name": "潍坊伊利",
+  "aliases": [
+    "XNY108",
+    "潍坊伊利",
+    "潍坊伊利乳业",
+    "南网潍坊伊利乳业",
+    "伊利"
+  ],
+  "platforms": {
+    "powerplus": {
+      "station_code": 3600416,
+      "station_name": "南网潍坊伊利乳业",
+      "identity_evidence": {
+        "project_station_id": "XNY108",
+        "project_station_name": "潍坊伊利",
+        "powerplus_station_id": 3600416,
+        "powerplus_station_name": "南网潍坊伊利乳业",
+        "status": "verified_unique_name_match",
+        "captured_at": "2026-09-07T10:07:38.072480+00:00",
+        "evidence": "运维月报/验证记录/Power取数-20260907/伊利.json",
+        "scope": "当前API电站身份；不证明实时测点或历史发电量已接入。"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "station_id": "SZ065",
+  "sources": [
+    {
+      "template_id": "DJ-01",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/定检报告/德州保龄宝/德州保龄宝光伏电站2026年上半年定检报告.docx",
+      "sha256": "56faea867f31253fe5e16e80faadb9ab20b0e3dc2703350bec076b771d024c69",
+      "period": "2026-H1",
+      "source_type": "historical_filled_report"
+    }
+  ]
+}

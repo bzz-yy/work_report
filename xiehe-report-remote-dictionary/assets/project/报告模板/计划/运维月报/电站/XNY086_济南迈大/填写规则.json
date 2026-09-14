@@ -1,0 +1,570 @@
+{
+  "schema_version": 2,
+  "version": "1.1-field-inference-reviewed",
+  "station_id": "XNY086",
+  "report_type": "运维月报",
+  "template_id": "NW-MONTHLY-STD-01",
+  "maintenance_entry": "AGENTS.md",
+  "evidence_file": "逐月维护证据.json",
+  "scope": [
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07"
+  ],
+  "status": "90字段已独立交叉复核；可取、可算、有效期档案与缺输入分别记录。",
+  "execution_status": "通过通用取值规则及本站限定政策接入已实现来源与公式；缺输入保留待填。",
+  "repeat_groups": {
+    "records.1": {
+      "observed_record_counts": {
+        "2026-02": 3,
+        "2026-03": 4,
+        "2026-04": 5,
+        "2026-05": 6,
+        "2026-06": 7,
+        "2026-07": 8
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.1"
+    },
+    "records.2": {
+      "observed_record_counts": {
+        "2026-02": 4,
+        "2026-03": 4,
+        "2026-04": 6,
+        "2026-05": 4,
+        "2026-06": 4,
+        "2026-07": 5
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.2"
+    },
+    "records.3": {
+      "observed_record_counts": {
+        "2026-02": 3,
+        "2026-03": 3,
+        "2026-04": 5,
+        "2026-05": 4,
+        "2026-06": 6,
+        "2026-07": 5
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.3"
+    },
+    "records.4": {
+      "observed_record_counts": {
+        "2026-02": 3,
+        "2026-03": 3,
+        "2026-04": 3,
+        "2026-05": 3,
+        "2026-06": 4,
+        "2026-07": 3
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.4"
+    },
+    "records.5": {
+      "observed_record_counts": {
+        "2026-02": 0,
+        "2026-03": 0,
+        "2026-04": 0,
+        "2026-05": 0,
+        "2026-06": 0,
+        "2026-07": 0
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.5"
+    },
+    "records.6": {
+      "observed_record_counts": {
+        "2026-02": 1,
+        "2026-03": 0,
+        "2026-04": 0,
+        "2026-05": 1,
+        "2026-06": 0,
+        "2026-07": 0
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.6"
+    },
+    "records.7": {
+      "observed_record_counts": {
+        "2026-02": 1,
+        "2026-03": 1,
+        "2026-04": 1,
+        "2026-05": 1,
+        "2026-06": 1,
+        "2026-07": 1
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.7"
+    },
+    "records.8": {
+      "observed_record_counts": {
+        "2026-02": 12,
+        "2026-03": 12,
+        "2026-04": 12,
+        "2026-05": 12,
+        "2026-06": 12,
+        "2026-07": 12
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.8"
+    }
+  },
+  "fields": {
+    "F001": {
+      "observation": "六个月未变；本轮复核：现有报告命名配置可执行；不将平台全名强行替换项目报告约定名。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F001"
+    },
+    "F002": {
+      "observation": "六个月未变；本轮复核：来自本次明确年月请求。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F002"
+    },
+    "F003": {
+      "observation": "观察到变化；本轮复核：来自本次明确年月请求。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F003"
+    },
+    "F004": {
+      "observation": "观察到变化；本轮复核：六月809040 kWh本轮直接取得；年度一月缺结算，不影响六月单值。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F004"
+    },
+    "F005": {
+      "observation": "观察到变化；本轮复核：六月两个结算标量均为待确认0，六月结算附件数组为空；尚无六月关口表底。二月能从附件重算，三月直接值与附件一致。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F005"
+    },
+    "F006": {
+      "observation": "观察到变化；本轮复核：六月标量0未获准，两个关口6月表底尚缺；2月和3月附件可计算172080/315480 kWh。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F006"
+    },
+    "F007": {
+      "observation": "观察到变化；本轮复核：已批准1月独立站用月台账及2、3月结算附件表底来源；4月至本报告月的对应站用输入仍需实际查询，缺月不补0。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F007"
+    },
+    "F008": {
+      "observation": "观察到变化；本轮复核：六月电量已实取；当前API容量5.88没有历史有效期和单位/直交流口径，尚缺六月可采用容量。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F008"
+    },
+    "F009": {
+      "observation": "观察到变化；本轮复核：1—7月月报、1月及6月日报本轮为空；8月阳性记录resource相关字段也为空。设备树返回业务错误00000，未定位本站气象测点；光资源比例台账候选空。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F009"
+    },
+    "F010": {
+      "observation": "观察到变化；本轮复核：损失组本轮唯一事件为2026-05-01至04限电损失24658 kWh；六月未获完整无事件证明，不能填0。二月47526.82 kWh仍无独立事件输入。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F010"
+    },
+    "F011": {
+      "observation": "观察到变化；本轮复核：本轮2—6月电量齐备；1月301280仅在完成月报出现，本轮结算、光伏月报/日报、发电资料目录未得其独立源。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F011"
+    },
+    "F012": {
+      "observation": "观察到变化；本轮复核：一月电量及各月可采用有效容量缺失。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F012"
+    },
+    "F013": {
+      "observation": "观察到变化；本轮复核：缺完整累计小时输入及独立可研年度目标；1060.75只在既有报告出现。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F013"
+    },
+    "F014": {
+      "observation": "六个月未变；本轮复核：当前档案designUtilizationHours=null；PowerGenPlan/PowerStats候选筛本站为空；生产任务书/交付任务书目录为空。未取得1060.75的独立年度依据。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F014"
+    },
+    "F015": {
+      "observation": "六个月未变；本轮复核：当前stationCapacity/designCapacity均5.88，dcStationCapacity、ratedCapacityActual/Instal、stationPeriodList为空，无法证明2026-06有效单位口径。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F015"
+    },
+    "F016": {
+      "observation": "观察到变化；本轮复核：电量输入由能源组核验可供摘要；本组未取得六月组件积灰观测/清洗前后测量，历史因果句不能照搬。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F016"
+    },
+    "F017": {
+      "observation": "观察到变化；本轮复核：本站消缺工单本轮无记录，损失台账仅五月限电事件；未取得六月全部故障记录及完整性确认，不能据此写无故障。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F017"
+    },
+    "F018": {
+      "observation": "六个月未变；本轮复核：六月及年内完整设备故障事件/逐月明确零值证据未取得；五月唯一条记录为fault_type=1其他缺陷、xdss限电，不能计为设备故障也不能因此认定设备故障合计为0。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F018"
+    },
+    "F019": {
+      "observation": "观察到变化；本轮复核：五月24658kWh线上已取得且与历史2.4658万kWh一致；二月47526.82kWh未找到线上事件，其他零月份缺覆盖证明，禁止用部分和24658kWh充年度累计。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F019"
+    },
+    "F020": {
+      "observation": "六个月未变；本轮复核：六月及年内完整设备故障事件/逐月明确零值证据未取得；五月唯一条记录为fault_type=1其他缺陷、xdss限电，不能计为设备故障也不能因此认定设备故障合计为0。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F020"
+    },
+    "F021": {
+      "observation": "观察到变化；本轮复核：尚未取得本站2026-06已开展培训的事件记录、签到/纪要或学习台账；六月安全工单仅证明5项检查。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F021"
+    },
+    "F022": {
+      "observation": "观察到变化；本轮复核：缺本站2026-06有效人员名册、低压电工证应持证职责关系及统计范围。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F022"
+    },
+    "F023": {
+      "observation": "观察到变化；本轮复核：缺本站2026-06应持证人员集合及低压电工证逐人有效证据。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F023"
+    },
+    "F024": {
+      "observation": "六个月均空白；本轮复核：缺本站2026-06 低压电工证取证办理进度；历史6月空白不能自动解释为无事项。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F024"
+    },
+    "F025": {
+      "observation": "观察到变化；本轮复核：缺本站2026-06有效人员名册、高压电工证应持证职责关系及统计范围。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F025"
+    },
+    "F026": {
+      "observation": "观察到变化；本轮复核：缺本站2026-06应持证人员集合及高压电工证逐人有效证据。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F026"
+    },
+    "F027": {
+      "observation": "六个月均空白；本轮复核：缺本站2026-06 高压电工证取证办理进度；历史6月空白不能自动解释为无事项。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F027"
+    },
+    "F028": {
+      "observation": "观察到变化；本轮复核：缺本站2026-06有效人员名册、调度受令证应持证职责关系及统计范围。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F028"
+    },
+    "F029": {
+      "observation": "六个月未变；本轮复核：缺本站2026-06应持证人员集合及调度受令证逐人有效证据。六个月原报告均0只证明历史填报，不能据此配置永久0。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F029"
+    },
+    "F030": {
+      "observation": "六个月均空白；本轮复核：缺本站2026-06 调度受令证取证办理进度；历史6月空白不能自动解释为无事项。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F030"
+    },
+    "F031": {
+      "observation": "观察到变化；本轮复核：未取得本站2026-06完整电气一种票收票明细与收票归属时间；已见旧扫描票不能替代当期。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F031"
+    },
+    "F032": {
+      "observation": "观察到变化；本轮复核：缺本站2026-06 电气一种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F032"
+    },
+    "F033": {
+      "observation": "六个月未变；本轮复核：缺本站2026-06 电气一种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F033"
+    },
+    "F034": {
+      "observation": "观察到变化；本轮复核：计算关系已反推并复算；仍缺电气一种票同站同月经核实的收票、合格/不合格数及评价完整性。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F034"
+    },
+    "F035": {
+      "observation": "六个月均空白；本轮复核：尚未取得本站2026-06 电气一种票的质量评价备注及异常闭环明细。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F035"
+    },
+    "F036": {
+      "observation": "六个月未变；本轮复核：未取得本站2026-06完整电气二种票收票明细与收票归属时间；已见旧扫描票不能替代当期。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F036"
+    },
+    "F037": {
+      "observation": "六个月未变；本轮复核：缺本站2026-06 电气二种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F037"
+    },
+    "F038": {
+      "observation": "六个月未变；本轮复核：缺本站2026-06 电气二种票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F038"
+    },
+    "F039": {
+      "observation": "六个月未变；本轮复核：计算关系已反推并复算；仍缺电气二种票同站同月经核实的收票、合格/不合格数及评价完整性。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F039"
+    },
+    "F040": {
+      "observation": "六个月均空白；本轮复核：尚未取得本站2026-06 电气二种票的质量评价备注及异常闭环明细。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F040"
+    },
+    "F041": {
+      "observation": "观察到变化；本轮复核：未取得本站2026-06完整书面布置作业票收票明细与收票归属时间；已见旧扫描票不能替代当期。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F041"
+    },
+    "F042": {
+      "observation": "观察到变化；本轮复核：缺本站2026-06 书面布置作业票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F042"
+    },
+    "F043": {
+      "observation": "六个月未变；本轮复核：缺本站2026-06 书面布置作业票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F043"
+    },
+    "F044": {
+      "observation": "观察到变化；本轮复核：计算关系已反推并复算；仍缺书面布置作业票同站同月经核实的收票、合格/不合格数及评价完整性。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F044"
+    },
+    "F045": {
+      "observation": "六个月均空白；本轮复核：尚未取得本站2026-06 书面布置作业票的质量评价备注及异常闭环明细。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F045"
+    },
+    "F046": {
+      "observation": "观察到变化；本轮复核：未取得本站2026-06完整电气操作票收票明细与收票归属时间；已见旧扫描票不能替代当期。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F046"
+    },
+    "F047": {
+      "observation": "观察到变化；本轮复核：缺本站2026-06 电气操作票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F047"
+    },
+    "F048": {
+      "observation": "六个月未变；本轮复核：缺本站2026-06 电气操作票的完整收票集合和最终质量评价；现有登记本/盖章只证明执行或终结。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F048"
+    },
+    "F049": {
+      "observation": "观察到变化；本轮复核：计算关系已反推并复算；仍缺电气操作票同站同月经核实的收票、合格/不合格数及评价完整性。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F049"
+    },
+    "F050": {
+      "observation": "六个月均空白；本轮复核：尚未取得本站2026-06 电气操作票的质量评价备注及异常闭环明细。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F050"
+    },
+    "F051": {
+      "observation": "六个月未变；本轮复核：无数值缺项；当前档案stationNameShort=null不影响已有有依据的本站简称配置。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F051"
+    },
+    "F052": {
+      "observation": "记录集合变化，共同记录未变；本轮复核：月份标签不要求平台取数，数值缺项仍保留该月行。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F052"
+    },
+    "F053": {
+      "observation": "记录集合变化，共同记录未变；本轮复核：当前档案仅数值5.88无历史期/明确MWp，1—6月有效容量未完成独立核验。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F053"
+    },
+    "F054": {
+      "observation": "记录集合变化，共同记录未变；本轮复核：2—7月本轮均取得；1月无独立源。累计待填。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F054"
+    },
+    "F055": {
+      "observation": "记录集合变化，共同记录未变；本轮复核：仅五月限电24658具本轮独立事件；二月47526.82缺源，其余月份缺完整零值依据。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F055"
+    },
+    "F056": {
+      "observation": "记录集合变化，共同记录未变；本轮复核：1—7月月报和主要日值查询未得辐照输入；光资源比例候选无记录，COI气象设备未定位。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F056"
+    },
+    "F057": {
+      "observation": "记录集合变化，共同记录未变；本轮复核：六月可用电量但容量有效期未核；一月电量缺源，累计也缺输入。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F057"
+    },
+    "F058": {
+      "observation": "记录集合变化，共同记录未变；本轮复核：已批准1月独立站用月台账及2、3月结算附件表底来源；4月至本报告月的对应站用输入仍需实际查询，缺月不补0。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F058"
+    },
+    "F059": {
+      "observation": "观察到变化；本轮复核：计划集合仅部分可取得；序号算法本身不缺数据接口，但须依赖通过审核的计划记录。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F059"
+    },
+    "F060": {
+      "observation": "观察到变化；本轮复核：六月安全检查计划说明已得；原月报灭火器/箱变/场站/逆变器四行的完整分项安排及现场风险仍未取得。新来源应一条源计划一行或按明确编号子项保留原文，不把历史四行硬复制。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F060"
+    },
+    "F061": {
+      "observation": "观察到变化；本轮复核：计划说明及安全执行记录可取，但没有与六月具体作业逐行关联的主要风险点、风险等级和现场管控措施；安全计划泛化条款不证明当次低风险。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F061"
+    },
+    "F062": {
+      "observation": "观察到变化；本轮复核：计划说明及安全执行记录可取，但没有与六月具体作业逐行关联的主要风险点、风险等级和现场管控措施；安全计划泛化条款不证明当次低风险。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F062"
+    },
+    "F063": {
+      "observation": "观察到变化；本轮复核：计划说明及安全执行记录可取，但没有与六月具体作业逐行关联的主要风险点、风险等级和现场管控措施；安全计划泛化条款不证明当次低风险。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F063"
+    },
+    "F064": {
+      "observation": "观察到变化；本轮复核：已核验规则，实际采用须按本站期间与当前来源质量判断。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F064"
+    },
+    "F065": {
+      "observation": "观察到变化；本轮复核：六月五条安全检查实值已取，可直接填该已知集合；原月报结算/全站定检/蓄电池内阻/日常巡检等六类工作不能由这5条推定全部覆盖。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F065"
+    },
+    "F066": {
+      "observation": "观察到变化；本轮复核：OtherWorkOrder只有安全管理一级类别，未给二级类别；不得把过程文本自动改成历史巡检维护分类。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F066"
+    },
+    "F067": {
+      "observation": "观察到变化；本轮复核：六月五条安全检查实值已取，可直接填该已知集合；原月报结算/全站定检/蓄电池内阻/日常巡检等六类工作不能由这5条推定全部覆盖。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F067"
+    },
+    "F068": {
+      "observation": "观察到变化；本轮复核：计划集合仅部分可取得；序号算法本身不缺数据接口，但须依赖通过审核的计划记录。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F068"
+    },
+    "F069": {
+      "observation": "观察到变化；本轮复核：已取得下一月候选计划，但当前记录修改时间晚于报告期末且缺历史内容版本，不能将当前文字当作当时期末计划。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F069"
+    },
+    "F070": {
+      "observation": "六个月未变；本轮复核：没有取得June需要协助的事项集合或无事项确认，不能因历史多月无而永久填无。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F070"
+    },
+    "F071": {
+      "observation": "六个月未变；本轮复核：所查工单/任务/资料未取得明确需协助事项字段或无事项声明；0条工单不证明无协助。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F071"
+    },
+    "F072": {
+      "observation": "六个月未变；本轮复核：本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F072"
+    },
+    "F073": {
+      "observation": "六个月未变；本轮复核：本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F073"
+    },
+    "F074": {
+      "observation": "六个月未变；本轮复核：本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F074"
+    },
+    "F075": {
+      "observation": "观察到变化；本轮复核：本轮取得五月事件的故障日期、损失类型和24658kWh；未取得June事件或全覆盖无损失证明。平台这条故障台账无停电容量字段，不能拿站装机/逆变器名称替代。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F075"
+    },
+    "F076": {
+      "observation": "六个月未变；本轮复核：没有当期已确认隐患集合；五条安全检查正常不能证明历史火灾风险仍作为待治理隐患。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F076"
+    },
+    "F077": {
+      "observation": "六个月未变；本轮复核：June执行记录是消防/电缆/标识/封堵/工具检查正常，没有隐患描述及关联整改销项；不把计划中防火要求或历史站场火灾隐患变成当期事实。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F077"
+    },
+    "F078": {
+      "observation": "六个月未变；本轮复核：June执行记录是消防/电缆/标识/封堵/工具检查正常，没有隐患描述及关联整改销项；不把计划中防火要求或历史站场火灾隐患变成当期事实。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F078"
+    },
+    "F079": {
+      "observation": "六个月未变；本轮复核：源证书两组接地线已找到，完整资产清单和源管理号到报告编号关系仍待核。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F079"
+    },
+    "F080": {
+      "observation": "六个月未变；本轮复核：已得源证书管理号JDX01/02及各三相样品号，但未得到至FBSPQ2-10kV-JDX-01/02的直接映射；不能按后缀相同自动连接。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F080"
+    },
+    "F081": {
+      "observation": "六个月未变；本轮复核：源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F081"
+    },
+    "F082": {
+      "observation": "六个月未变；本轮复核：源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F082"
+    },
+    "F083": {
+      "observation": "六个月未变；本轮复核：源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F083"
+    },
+    "F084": {
+      "observation": "观察到变化；本轮复核：源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F084"
+    },
+    "F085": {
+      "observation": "六个月未变；本轮复核：源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F085"
+    },
+    "F086": {
+      "observation": "观察到变化；本轮复核：源工具台账、六月现场影像及两份有效期接地线证书均已找到；两组JDX01/JDX02与月报FBSPQ2编号对应待核，证书25mm²与旧台账16mm²存在规格差异，其他10件2026-05-19证书未取得。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F086"
+    },
+    "F087": {
+      "observation": "六个月未变；本轮复核：现有报告命名配置可执行；不将平台全名强行替换项目报告约定名。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F087"
+    },
+    "F088": {
+      "observation": "观察到变化；本轮复核：June F010缺真实0和范围证明，文字应随之待填。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F088"
+    },
+    "F089": {
+      "observation": "观察到变化；本轮复核：历史填写位置已明确（逻辑第3列），但主模板当前待确认标记不可由研究直接消除；June事件完整性不足，合计值仍待填。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F089"
+    },
+    "F090": {
+      "observation": "观察到变化；本轮复核：OtherWorkOrder本轮仍有20张June图，源字节此前下载并视觉复核，本轮复核工具4图及源URL一致；不要求与历史8张相同。不代表所有历史工种照片齐全。",
+      "business_confirmation": "pending",
+      "evidence": "../../../验证记录/90字段反推重建-20260908-234936/已核验规则总账.json#/fields/F090"
+    }
+  },
+  "schema_boundaries": {},
+  "business_confirmation": {
+    "status": "pending",
+    "confirmed_by": null,
+    "effective_scope": null
+  },
+  "template_rules": {
+    "NW-MONTHLY-STD-01": "../../模板/NW-MONTHLY-STD-01/通用取值规则.json"
+  }
+}

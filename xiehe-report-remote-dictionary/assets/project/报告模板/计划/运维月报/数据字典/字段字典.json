@@ -1,0 +1,3615 @@
+{
+  "schema_version": 1,
+  "dictionary_id": "NW-MONTHLY-FIELDS-01",
+  "version": "1.0",
+  "fields": {
+    "F001": {
+      "label": "电站名称",
+      "business_key": "station.name",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "按本站有效档案填写，变更时更新",
+      "classification_suggestion": "电站档案",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "station_profile",
+        "property": "cover_name"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "station_snapshot_observed_report_binding_pending",
+          "candidate_command": "power station list --keyword <电站名称>",
+          "endpoint": "/api/v4/base/station/list",
+          "observed_fields": [
+            "stationCode",
+            "stationName",
+            "stationCapacity"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大.json",
+          "value_status": "四站当前档案已查到；报告中的资料编码不应替换成平台编码，历史容量/名称口径仍需确认。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F002": {
+      "label": "报告年份",
+      "business_key": "report.year",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "按请求年月更新",
+      "classification_suggestion": "报告期间",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "request",
+        "param": "year"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F003": {
+      "label": "报告月份",
+      "business_key": "report.month",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "按请求年月更新",
+      "classification_suggestion": "报告期间",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "request",
+        "param": "month"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F004": {
+      "label": "当月总发电量",
+      "business_key": "energy.generation.month",
+      "column": null,
+      "unit": "万kWh",
+      "kind": "单值",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "regex",
+        "pattern": "总电量\\s*([\\d.]+)万kWh"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "platform_definition_verified_period_value_missing",
+          "name": "实发电量",
+          "key": "genValid",
+          "unit": "万kWh",
+          "definition_evidence": "运维月报/验证记录/Power取数-20260907/报表指标.json",
+          "definition_pointer": "/response/data/indexes/3/list/0",
+          "candidate_command": "power report pv list --station-code <本站Power编码> --date-type 2 --start-time <月初> --end-time <月末>",
+          "endpoint": "/api/v4/report/station/sun/list",
+          "method": "POST",
+          "value_status": "迈大2026-06实测返回空记录；尚未拿到带值的返回字段路径。",
+          "value_evidence": "运维月报/验证记录/Power取数-20260907/迈大2026-06月报.json",
+          "do_not_use": "监控详情显示未接入且monthPower=0，不能据此写月报发电量为0。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F005": {
+      "label": "当月消纳电量",
+      "business_key": "energy.self_use.month",
+      "column": null,
+      "unit": "万kWh",
+      "kind": "单值",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 0,
+        "row": 2,
+        "col": 0
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F006": {
+      "label": "当月上网电量",
+      "business_key": "energy.export.month",
+      "column": null,
+      "unit": "万kWh",
+      "kind": "单值",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 0,
+        "row": 2,
+        "col": 1
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "platform_definition_verified_value_unverified",
+          "name": "上网电量",
+          "key": "genInternet",
+          "unit": "万kWh",
+          "definition_evidence": "运维月报/验证记录/Power取数-20260907/报表指标.json",
+          "definition_pointer": "/response/data/indexes/3/list/2",
+          "value_status": "已核验指标定义；未取得本站当期数值。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F007": {
+      "label": "当月站用电量",
+      "business_key": "energy.station_use.month",
+      "column": null,
+      "unit": "万kWh",
+      "kind": "单值",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 0,
+        "row": 2,
+        "col": 2
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F008": {
+      "label": "当月满发小时",
+      "business_key": "performance.hours.month",
+      "column": null,
+      "unit": "小时",
+      "kind": "单值",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 0,
+        "row": 2,
+        "col": 3
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "technical_keys_observed_not_validated",
+          "observed_fields": [
+            "equivalentHours",
+            "yearEquivalentHours",
+            "yearPower"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大2026-06监控.json",
+          "value_status": "详情显示未接入，相关字段为空或0；未核验单位及字段适用性，不能直接使用。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F009": {
+      "label": "当月累计辐照",
+      "business_key": "irradiance.month",
+      "column": null,
+      "unit": "kWh/㎡",
+      "kind": "单值",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 0,
+        "row": 2,
+        "col": 4
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F010": {
+      "label": "当月受累损失电量",
+      "business_key": "loss.curtailed.month",
+      "column": null,
+      "unit": "万kWh",
+      "kind": "单值",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 0,
+        "row": 2,
+        "col": 5
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F011": {
+      "label": "累计发电量",
+      "business_key": "energy.generation.ytd",
+      "column": null,
+      "unit": "万kWh",
+      "kind": "单值",
+      "frequency": "按报告截止时点更新",
+      "classification_suggestion": "累计指标",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "regex",
+        "pattern": "累计发电量为\\s*([\\d.]+)万kWh"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "technical_keys_observed_not_validated",
+          "observed_fields": [
+            "equivalentHours",
+            "yearEquivalentHours",
+            "yearPower"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大2026-06监控.json",
+          "value_status": "详情显示未接入，相关字段为空或0；未核验单位及字段适用性，不能直接使用。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F012": {
+      "label": "累计满发小时",
+      "business_key": "performance.hours.ytd",
+      "column": null,
+      "unit": "小时",
+      "kind": "单值",
+      "frequency": "按报告截止时点更新",
+      "classification_suggestion": "累计指标",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "regex",
+        "pattern": "累计满发小时\\s*([\\d.]+)小时"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "technical_keys_observed_not_validated",
+          "observed_fields": [
+            "equivalentHours",
+            "yearEquivalentHours",
+            "yearPower"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大2026-06监控.json",
+          "value_status": "详情显示未接入，相关字段为空或0；未核验单位及字段适用性，不能直接使用。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F013": {
+      "label": "可研完成率",
+      "business_key": "performance.feasibility_rate.ytd",
+      "column": null,
+      "unit": "%",
+      "kind": "单值",
+      "frequency": "按报告截止时点更新",
+      "classification_suggestion": "累计指标",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "regex",
+        "pattern": "完成率\\s*([\\d.]+\\s*%)"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F014": {
+      "label": "年度可研小时",
+      "business_key": "performance.feasibility_hours.year",
+      "column": null,
+      "unit": "小时",
+      "kind": "单值",
+      "frequency": "按当年有效版本填写",
+      "classification_suggestion": "年度配置",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "regex",
+        "pattern": "本年可研小时为\\s*([\\d.]+)小时"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F015": {
+      "label": "装机容量",
+      "business_key": "station.capacity",
+      "column": null,
+      "unit": "MW",
+      "kind": "单值",
+      "frequency": "按本站有效档案填写，变更时更新",
+      "classification_suggestion": "电站档案",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "regex",
+        "pattern": "装机容量\\s*([\\d.]+)MW"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "station_snapshot_observed_report_binding_pending",
+          "candidate_command": "power station list --keyword <电站名称>",
+          "endpoint": "/api/v4/base/station/list",
+          "observed_fields": [
+            "stationCode",
+            "stationName",
+            "stationCapacity"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大.json",
+          "value_status": "四站当前档案已查到；报告中的资料编码不应替换成平台编码，历史容量/名称口径仍需确认。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F016": {
+      "label": "运行数据分析",
+      "business_key": "analysis.operation",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月按实际记录填写",
+      "classification_suggestion": "当月事实文字",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "between",
+        "start": "3.1 运行数据分析",
+        "end": "3.2 故障分析"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F017": {
+      "label": "故障处理情况",
+      "business_key": "analysis.fault",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月按实际记录填写",
+      "classification_suggestion": "当月事实文字",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "between",
+        "start": "本月故障处理情况：",
+        "end": "3.3 发电损失"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F018": {
+      "label": "本月设备故障损失电量",
+      "business_key": "loss.fault.month",
+      "column": null,
+      "unit": "kWh",
+      "kind": "单值",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "regex",
+        "pattern": "设备故障损失电量\\s*([\\d.]+)\\s*kWh"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F019": {
+      "label": "累计受累损失电量",
+      "business_key": "loss.curtailed.cumulative",
+      "column": null,
+      "unit": "万kWh",
+      "kind": "单值",
+      "frequency": "按报告截止时点更新",
+      "classification_suggestion": "累计指标",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "regex",
+        "pattern": "累计受累损失电量总计约[：:]?\\s*([\\d.]+)\\s*万kWh"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F020": {
+      "label": "累计设备故障损失电量",
+      "business_key": "loss.fault.cumulative",
+      "column": null,
+      "unit": "kWh",
+      "kind": "单值",
+      "frequency": "按报告截止时点更新",
+      "classification_suggestion": "累计指标",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "regex",
+        "pattern": "累计设备故障损失电量总计[：:]\\s*([\\d.]+)\\s*kWh"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F021": {
+      "label": "安全学习培训情况",
+      "business_key": "safety.training",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月按实际记录填写",
+      "classification_suggestion": "当月事实文字",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "between",
+        "start": "4.1 安全学习培训情况",
+        "end": "4.2 特种作业人员持证情况统计"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F022": {
+      "label": "低压电工应取证人数",
+      "business_key": "report.field.022",
+      "column": null,
+      "unit": "人",
+      "kind": "单值",
+      "frequency": "每月确认，未变化也要核实",
+      "classification_suggestion": "月末人员状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 6,
+        "row": 1,
+        "col": 2,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F023": {
+      "label": "低压电工已取证人数",
+      "business_key": "report.field.023",
+      "column": null,
+      "unit": "人",
+      "kind": "单值",
+      "frequency": "每月确认，未变化也要核实",
+      "classification_suggestion": "月末人员状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 6,
+        "row": 1,
+        "col": 3,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F024": {
+      "label": "低压电工取证进展",
+      "business_key": "report.field.024",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月确认，未变化也要核实",
+      "classification_suggestion": "月末人员状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 6,
+        "row": 1,
+        "col": 4,
+        "blank_is_empty": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F025": {
+      "label": "高压电工应取证人数",
+      "business_key": "report.field.025",
+      "column": null,
+      "unit": "人",
+      "kind": "单值",
+      "frequency": "每月确认，未变化也要核实",
+      "classification_suggestion": "月末人员状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 6,
+        "row": 2,
+        "col": 2,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F026": {
+      "label": "高压电工已取证人数",
+      "business_key": "report.field.026",
+      "column": null,
+      "unit": "人",
+      "kind": "单值",
+      "frequency": "每月确认，未变化也要核实",
+      "classification_suggestion": "月末人员状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 6,
+        "row": 2,
+        "col": 3,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F027": {
+      "label": "高压电工取证进展",
+      "business_key": "report.field.027",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月确认，未变化也要核实",
+      "classification_suggestion": "月末人员状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 6,
+        "row": 2,
+        "col": 4,
+        "blank_is_empty": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F028": {
+      "label": "调度受令应取证人数",
+      "business_key": "report.field.028",
+      "column": null,
+      "unit": "人",
+      "kind": "单值",
+      "frequency": "每月确认，未变化也要核实",
+      "classification_suggestion": "月末人员状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 6,
+        "row": 3,
+        "col": 2,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F029": {
+      "label": "调度受令已取证人数",
+      "business_key": "report.field.029",
+      "column": null,
+      "unit": "人",
+      "kind": "单值",
+      "frequency": "每月确认，未变化也要核实",
+      "classification_suggestion": "月末人员状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 6,
+        "row": 3,
+        "col": 3,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F030": {
+      "label": "调度受令取证进展",
+      "business_key": "report.field.030",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月确认，未变化也要核实",
+      "classification_suggestion": "月末人员状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 6,
+        "row": 3,
+        "col": 4,
+        "blank_is_empty": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F031": {
+      "label": "电气一种票收票数",
+      "business_key": "report.field.031",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 1,
+        "col": 2,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F032": {
+      "label": "电气一种票合格数",
+      "business_key": "report.field.032",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 1,
+        "col": 3,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F033": {
+      "label": "电气一种票不合格数",
+      "business_key": "report.field.033",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 1,
+        "col": 4,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F034": {
+      "label": "电气一种票合格率",
+      "business_key": "report.field.034",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 1,
+        "col": 5,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F035": {
+      "label": "电气一种票备注",
+      "business_key": "report.field.035",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 1,
+        "col": 6,
+        "blank_is_empty": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F036": {
+      "label": "电气二种票收票数",
+      "business_key": "report.field.036",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 2,
+        "col": 2,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F037": {
+      "label": "电气二种票合格数",
+      "business_key": "report.field.037",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 2,
+        "col": 3,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F038": {
+      "label": "电气二种票不合格数",
+      "business_key": "report.field.038",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 2,
+        "col": 4,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F039": {
+      "label": "电气二种票合格率",
+      "business_key": "report.field.039",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 2,
+        "col": 5,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F040": {
+      "label": "电气二种票备注",
+      "business_key": "report.field.040",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 2,
+        "col": 6,
+        "blank_is_empty": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F041": {
+      "label": "书面布置作业票收票数",
+      "business_key": "report.field.041",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 3,
+        "col": 2,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F042": {
+      "label": "书面布置作业票合格数",
+      "business_key": "report.field.042",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 3,
+        "col": 3,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F043": {
+      "label": "书面布置作业票不合格数",
+      "business_key": "report.field.043",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 3,
+        "col": 4,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F044": {
+      "label": "书面布置作业票合格率",
+      "business_key": "report.field.044",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 3,
+        "col": 5,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F045": {
+      "label": "书面布置作业票备注",
+      "business_key": "report.field.045",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 3,
+        "col": 6,
+        "blank_is_empty": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F046": {
+      "label": "电气操作票收票数",
+      "business_key": "report.field.046",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 4,
+        "col": 2,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F047": {
+      "label": "电气操作票合格数",
+      "business_key": "report.field.047",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 4,
+        "col": 3,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F048": {
+      "label": "电气操作票不合格数",
+      "business_key": "report.field.048",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 4,
+        "col": 4,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F049": {
+      "label": "电气操作票合格率",
+      "business_key": "report.field.049",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 4,
+        "col": 5,
+        "blank_is_empty": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F050": {
+      "label": "电气操作票备注",
+      "business_key": "report.field.050",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "每月重新统计或确认",
+      "classification_suggestion": "月度票据统计",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "cell",
+        "table": 7,
+        "row": 4,
+        "col": 6,
+        "blank_is_empty": true
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F051": {
+      "label": "电站简称",
+      "business_key": "station.short_name",
+      "column": null,
+      "unit": "文本/见原文",
+      "kind": "单值",
+      "frequency": "按本站有效档案填写，变更时更新",
+      "classification_suggestion": "电站档案",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "station_profile",
+        "property": "overview_short_name"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "station_snapshot_observed_report_binding_pending",
+          "candidate_command": "power station list --keyword <电站名称>",
+          "endpoint": "/api/v4/base/station/list",
+          "observed_fields": [
+            "stationCode",
+            "stationName",
+            "stationCapacity"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大.json",
+          "value_status": "四站当前档案已查到；报告中的资料编码不应替换成平台编码，历史容量/名称口径仍需确认。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F052": {
+      "label": "发电量台账·月份",
+      "business_key": "records.1",
+      "column": "月份",
+      "unit": "月",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "月份",
+          "实际容量",
+          "月实际发电量",
+          "月核减电量",
+          "月辐照量",
+          "月等效利用小时数",
+          "月站用电量"
+        ],
+        "table": 1,
+        "start": 1,
+        "end": null,
+        "keep_empty": false,
+        "select_column": "月份"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F053": {
+      "label": "发电量台账·实际容量",
+      "business_key": "records.1",
+      "column": "实际容量",
+      "unit": "MWp",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "月份",
+          "实际容量",
+          "月实际发电量",
+          "月核减电量",
+          "月辐照量",
+          "月等效利用小时数",
+          "月站用电量"
+        ],
+        "table": 1,
+        "start": 1,
+        "end": null,
+        "keep_empty": false,
+        "select_column": "实际容量"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "station_snapshot_observed_report_binding_pending",
+          "candidate_command": "power station list --keyword <电站名称>",
+          "endpoint": "/api/v4/base/station/list",
+          "observed_fields": [
+            "stationCode",
+            "stationName",
+            "stationCapacity"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大.json",
+          "value_status": "四站当前档案已查到；报告中的资料编码不应替换成平台编码，历史容量/名称口径仍需确认。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F054": {
+      "label": "发电量台账·月实际发电量",
+      "business_key": "records.1",
+      "column": "月实际发电量",
+      "unit": "kWh",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "月份",
+          "实际容量",
+          "月实际发电量",
+          "月核减电量",
+          "月辐照量",
+          "月等效利用小时数",
+          "月站用电量"
+        ],
+        "table": 1,
+        "start": 1,
+        "end": null,
+        "keep_empty": false,
+        "select_column": "月实际发电量"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "platform_definition_verified_period_value_missing",
+          "name": "实发电量",
+          "key": "genValid",
+          "unit": "万kWh",
+          "definition_evidence": "运维月报/验证记录/Power取数-20260907/报表指标.json",
+          "definition_pointer": "/response/data/indexes/3/list/0",
+          "candidate_command": "power report pv list --station-code <本站Power编码> --date-type 2 --start-time <月初> --end-time <月末>",
+          "endpoint": "/api/v4/report/station/sun/list",
+          "method": "POST",
+          "value_status": "迈大2026-06实测返回空记录；尚未拿到带值的返回字段路径。",
+          "value_evidence": "运维月报/验证记录/Power取数-20260907/迈大2026-06月报.json",
+          "do_not_use": "监控详情显示未接入且monthPower=0，不能据此写月报发电量为0。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F055": {
+      "label": "发电量台账·月核减电量",
+      "business_key": "records.1",
+      "column": "月核减电量",
+      "unit": "kWh",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "月份",
+          "实际容量",
+          "月实际发电量",
+          "月核减电量",
+          "月辐照量",
+          "月等效利用小时数",
+          "月站用电量"
+        ],
+        "table": 1,
+        "start": 1,
+        "end": null,
+        "keep_empty": false,
+        "select_column": "月核减电量"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F056": {
+      "label": "发电量台账·月辐照量",
+      "business_key": "records.1",
+      "column": "月辐照量",
+      "unit": "KW-h/m²（原文）",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "月份",
+          "实际容量",
+          "月实际发电量",
+          "月核减电量",
+          "月辐照量",
+          "月等效利用小时数",
+          "月站用电量"
+        ],
+        "table": 1,
+        "start": 1,
+        "end": null,
+        "keep_empty": false,
+        "select_column": "月辐照量"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F057": {
+      "label": "发电量台账·月等效利用小时数",
+      "business_key": "records.1",
+      "column": "月等效利用小时数",
+      "unit": "H",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "月份",
+          "实际容量",
+          "月实际发电量",
+          "月核减电量",
+          "月辐照量",
+          "月等效利用小时数",
+          "月站用电量"
+        ],
+        "table": 1,
+        "start": 1,
+        "end": null,
+        "keep_empty": false,
+        "select_column": "月等效利用小时数"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F058": {
+      "label": "发电量台账·月站用电量",
+      "business_key": "records.1",
+      "column": "月站用电量",
+      "unit": "kWh",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "月份",
+          "实际容量",
+          "月实际发电量",
+          "月核减电量",
+          "月辐照量",
+          "月等效利用小时数",
+          "月站用电量"
+        ],
+        "table": 1,
+        "start": 1,
+        "end": null,
+        "keep_empty": false,
+        "select_column": "月站用电量"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F059": {
+      "label": "月度作业计划·序号",
+      "business_key": "records.2",
+      "column": "序号",
+      "unit": "序号",
+      "kind": "循环列",
+      "frequency": "随当期记录重新编号",
+      "classification_suggestion": "记录派生",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "工作内容",
+          "主要风险点",
+          "作业风险等级",
+          "现场管控措施"
+        ],
+        "table": 2,
+        "start": 1,
+        "end": null,
+        "select_column": "序号"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F060": {
+      "label": "月度作业计划·工作内容",
+      "business_key": "records.2",
+      "column": "工作内容",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "工作内容",
+          "主要风险点",
+          "作业风险等级",
+          "现场管控措施"
+        ],
+        "table": 2,
+        "start": 1,
+        "end": null,
+        "select_column": "工作内容"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F061": {
+      "label": "月度作业计划·主要风险点",
+      "business_key": "records.2",
+      "column": "主要风险点",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "工作内容",
+          "主要风险点",
+          "作业风险等级",
+          "现场管控措施"
+        ],
+        "table": 2,
+        "start": 1,
+        "end": null,
+        "select_column": "主要风险点"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F062": {
+      "label": "月度作业计划·作业风险等级",
+      "business_key": "records.2",
+      "column": "作业风险等级",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "工作内容",
+          "主要风险点",
+          "作业风险等级",
+          "现场管控措施"
+        ],
+        "table": 2,
+        "start": 1,
+        "end": null,
+        "select_column": "作业风险等级"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F063": {
+      "label": "月度作业计划·现场管控措施",
+      "business_key": "records.2",
+      "column": "现场管控措施",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "工作内容",
+          "主要风险点",
+          "作业风险等级",
+          "现场管控措施"
+        ],
+        "table": 2,
+        "start": 1,
+        "end": null,
+        "select_column": "现场管控措施"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F064": {
+      "label": "本月工作总结·序号",
+      "business_key": "records.3",
+      "column": "序号",
+      "unit": "序号",
+      "kind": "循环列",
+      "frequency": "随当期记录重新编号",
+      "classification_suggestion": "记录派生",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "一级类别",
+          "二级类别",
+          "工作内容"
+        ],
+        "table": 3,
+        "start": 1,
+        "end": null,
+        "required_col": 3,
+        "select_column": "序号"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F065": {
+      "label": "本月工作总结·一级类别",
+      "business_key": "records.3",
+      "column": "一级类别",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "一级类别",
+          "二级类别",
+          "工作内容"
+        ],
+        "table": 3,
+        "start": 1,
+        "end": null,
+        "required_col": 3,
+        "select_column": "一级类别"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F066": {
+      "label": "本月工作总结·二级类别",
+      "business_key": "records.3",
+      "column": "二级类别",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "一级类别",
+          "二级类别",
+          "工作内容"
+        ],
+        "table": 3,
+        "start": 1,
+        "end": null,
+        "required_col": 3,
+        "select_column": "二级类别"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F067": {
+      "label": "本月工作总结·工作内容",
+      "business_key": "records.3",
+      "column": "工作内容",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "一级类别",
+          "二级类别",
+          "工作内容"
+        ],
+        "table": 3,
+        "start": 1,
+        "end": null,
+        "required_col": 3,
+        "select_column": "工作内容"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F068": {
+      "label": "下月工作计划·序号",
+      "business_key": "records.4",
+      "column": "序号",
+      "unit": "序号",
+      "kind": "循环列",
+      "frequency": "随当期记录重新编号",
+      "classification_suggestion": "记录派生",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "工作内容"
+        ],
+        "table": 4,
+        "start": 1,
+        "until_header": "需协助事项",
+        "select_column": "序号"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F069": {
+      "label": "下月工作计划·工作内容",
+      "business_key": "records.4",
+      "column": "工作内容",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "工作内容"
+        ],
+        "table": 4,
+        "start": 1,
+        "until_header": "需协助事项",
+        "select_column": "工作内容"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F070": {
+      "label": "需协助事项·序号",
+      "business_key": "records.5",
+      "column": "序号",
+      "unit": "序号",
+      "kind": "循环列",
+      "frequency": "随当期记录重新编号",
+      "classification_suggestion": "记录派生",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "需协助事项"
+        ],
+        "table": 4,
+        "after_header": "需协助事项",
+        "required_col": 1,
+        "select_column": "序号"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F071": {
+      "label": "需协助事项·需协助事项",
+      "business_key": "records.5",
+      "column": "需协助事项",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "需协助事项"
+        ],
+        "table": 4,
+        "after_header": "需协助事项",
+        "required_col": 1,
+        "select_column": "需协助事项"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F072": {
+      "label": "发电损失记录·停电时间",
+      "business_key": "records.6",
+      "column": "停电时间",
+      "unit": "日期/时段",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "停电时间",
+          "停电容量",
+          "停电原因",
+          "损失电量"
+        ],
+        "table": 5,
+        "start": 1,
+        "until_header": "合计",
+        "select_column": "停电时间"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F073": {
+      "label": "发电损失记录·停电容量",
+      "business_key": "records.6",
+      "column": "停电容量",
+      "unit": "kWp",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "停电时间",
+          "停电容量",
+          "停电原因",
+          "损失电量"
+        ],
+        "table": 5,
+        "start": 1,
+        "until_header": "合计",
+        "select_column": "停电容量"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F074": {
+      "label": "发电损失记录·停电原因",
+      "business_key": "records.6",
+      "column": "停电原因",
+      "unit": "文本",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "停电时间",
+          "停电容量",
+          "停电原因",
+          "损失电量"
+        ],
+        "table": 5,
+        "start": 1,
+        "until_header": "合计",
+        "select_column": "停电原因"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F075": {
+      "label": "发电损失记录·损失电量",
+      "business_key": "records.6",
+      "column": "损失电量",
+      "unit": "万kWh",
+      "kind": "循环列",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "停电时间",
+          "停电容量",
+          "停电原因",
+          "损失电量"
+        ],
+        "table": 5,
+        "start": 1,
+        "until_header": "合计",
+        "select_column": "损失电量"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F076": {
+      "label": "隐患记录·序号",
+      "business_key": "records.7",
+      "column": "序号",
+      "unit": "序号",
+      "kind": "循环列",
+      "frequency": "随当期记录重新编号",
+      "classification_suggestion": "记录派生",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "隐患描述",
+          "措施完成"
+        ],
+        "table": 8,
+        "start": 1,
+        "required_col": 1,
+        "select_column": "序号"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F077": {
+      "label": "隐患记录·隐患描述",
+      "business_key": "records.7",
+      "column": "隐患描述",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "隐患描述",
+          "措施完成"
+        ],
+        "table": 8,
+        "start": 1,
+        "required_col": 1,
+        "select_column": "隐患描述"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F078": {
+      "label": "隐患记录·措施完成",
+      "business_key": "records.7",
+      "column": "措施完成",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月确认并按记录增删",
+      "classification_suggestion": "当期工作记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "隐患描述",
+          "措施完成"
+        ],
+        "table": 8,
+        "start": 1,
+        "required_col": 1,
+        "select_column": "措施完成"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F079": {
+      "label": "安全工器具检测记录·序号",
+      "business_key": "records.8",
+      "column": "序号",
+      "unit": "序号",
+      "kind": "循环列",
+      "frequency": "随当期记录重新编号",
+      "classification_suggestion": "记录派生",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "编号",
+          "名称",
+          "型号与规格",
+          "制造厂家",
+          "试验日期",
+          "试验结果",
+          "下次检验时间"
+        ],
+        "table": 9,
+        "start": 1,
+        "select_column": "序号"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F080": {
+      "label": "安全工器具检测记录·编号",
+      "business_key": "records.8",
+      "column": "编号",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "按本站/班组在用清单更新",
+      "classification_suggestion": "工器具档案",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "编号",
+          "名称",
+          "型号与规格",
+          "制造厂家",
+          "试验日期",
+          "试验结果",
+          "下次检验时间"
+        ],
+        "table": 9,
+        "start": 1,
+        "select_column": "编号"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F081": {
+      "label": "安全工器具检测记录·名称",
+      "business_key": "records.8",
+      "column": "名称",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "按本站/班组在用清单更新",
+      "classification_suggestion": "工器具档案",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "编号",
+          "名称",
+          "型号与规格",
+          "制造厂家",
+          "试验日期",
+          "试验结果",
+          "下次检验时间"
+        ],
+        "table": 9,
+        "start": 1,
+        "select_column": "名称"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F082": {
+      "label": "安全工器具检测记录·型号与规格",
+      "business_key": "records.8",
+      "column": "型号与规格",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "按本站/班组在用清单更新",
+      "classification_suggestion": "工器具档案",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "编号",
+          "名称",
+          "型号与规格",
+          "制造厂家",
+          "试验日期",
+          "试验结果",
+          "下次检验时间"
+        ],
+        "table": 9,
+        "start": 1,
+        "select_column": "型号与规格"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F083": {
+      "label": "安全工器具检测记录·制造厂家",
+      "business_key": "records.8",
+      "column": "制造厂家",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "按本站/班组在用清单更新",
+      "classification_suggestion": "工器具档案",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "编号",
+          "名称",
+          "型号与规格",
+          "制造厂家",
+          "试验日期",
+          "试验结果",
+          "下次检验时间"
+        ],
+        "table": 9,
+        "start": 1,
+        "select_column": "制造厂家"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F084": {
+      "label": "安全工器具检测记录·试验日期",
+      "business_key": "records.8",
+      "column": "试验日期",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月核对有效检验记录",
+      "classification_suggestion": "检验状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "编号",
+          "名称",
+          "型号与规格",
+          "制造厂家",
+          "试验日期",
+          "试验结果",
+          "下次检验时间"
+        ],
+        "table": 9,
+        "start": 1,
+        "select_column": "试验日期"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F085": {
+      "label": "安全工器具检测记录·试验结果",
+      "business_key": "records.8",
+      "column": "试验结果",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月核对有效检验记录",
+      "classification_suggestion": "检验状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "编号",
+          "名称",
+          "型号与规格",
+          "制造厂家",
+          "试验日期",
+          "试验结果",
+          "下次检验时间"
+        ],
+        "table": 9,
+        "start": 1,
+        "select_column": "试验结果"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F086": {
+      "label": "安全工器具检测记录·下次检验时间",
+      "business_key": "records.8",
+      "column": "下次检验时间",
+      "unit": "文本/见原文",
+      "kind": "循环列",
+      "frequency": "每月核对有效检验记录",
+      "classification_suggestion": "检验状态",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "rows",
+        "columns": [
+          "序号",
+          "编号",
+          "名称",
+          "型号与规格",
+          "制造厂家",
+          "试验日期",
+          "试验结果",
+          "下次检验时间"
+        ],
+        "table": 9,
+        "start": 1,
+        "select_column": "下次检验时间"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F087": {
+      "label": "1.1正文电站名称",
+      "business_key": "station.name.in_1_1",
+      "column": null,
+      "unit": "文本",
+      "kind": "单值",
+      "frequency": "按本站有效档案填写，变更时更新",
+      "classification_suggestion": "电站档案",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "station_profile",
+        "property": "revenue_name"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "station_snapshot_observed_report_binding_pending",
+          "candidate_command": "power station list --keyword <电站名称>",
+          "endpoint": "/api/v4/base/station/list",
+          "observed_fields": [
+            "stationCode",
+            "stationName",
+            "stationCapacity"
+          ],
+          "evidence": "运维月报/验证记录/Power取数-20260907/迈大.json",
+          "value_status": "四站当前档案已查到；报告中的资料编码不应替换成平台编码，历史容量/名称口径仍需确认。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F088": {
+      "label": "运行概况受累电量说明",
+      "business_key": "loss.statement",
+      "column": null,
+      "unit": "文本",
+      "kind": "单值",
+      "frequency": "每月取当期数据，零值也须核实",
+      "classification_suggestion": "当期指标或记录",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "paragraph_regex",
+        "anchor": "总电量",
+        "pattern": "(无受累电量|受累电量[^，。]*)"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F089": {
+      "label": "发电损失表合计填写位置",
+      "business_key": "loss.table_total",
+      "column": null,
+      "unit": "万kWh",
+      "kind": "单值",
+      "frequency": "按当月损失记录填写",
+      "classification_suggestion": "损失汇总位置",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "pending_business_rule",
+        "table_index": 5,
+        "row": "最后一行",
+        "candidate_columns": [
+          2,
+          3
+        ],
+        "reason": "标准合计占位在原因列；不能擅自选择来源或推广计算公式"
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    },
+    "F090": {
+      "label": "现场照片",
+      "business_key": "photos",
+      "column": null,
+      "unit": "图片集合",
+      "kind": "图片",
+      "frequency": "每月按本站作业更新",
+      "classification_suggestion": "现场照片",
+      "classification_confirmation": "pending",
+      "local": {
+        "kind": "independent_photo_manifest",
+        "source_file": "../test-data/manifest.json",
+        "json_pointer": "/photos",
+        "match": [
+          "station_id",
+          "period"
+        ],
+        "embedded_report_images_allowed": false
+      },
+      "external_dictionary": {
+        "standard_field_id": null,
+        "status": "retired_report_selection_in_template"
+      },
+      "powerplus": {
+        "status": "not_configured",
+        "station_id": null,
+        "location": null,
+        "unit_conversion": null,
+        "period_filter": null,
+        "candidate_verification": {
+          "status": "not_live_verified",
+          "value_status": "没有本轮在线字段核验；字典中即使有页面位置，也只列作候选。"
+        }
+      },
+      "missing_policy": "列明缺项；不得填历史示例、其他站数据或把未取到记作无"
+    }
+  },
+  "rules": [
+    {
+      "key": "appendix",
+      "label": "巡检记录表附件交付",
+      "unit": "有无/图数",
+      "kind": "附件",
+      "id": "F091",
+      "section": "附表交付",
+      "handling": "交付规则待确认",
+      "frequency": "每次按交付要求配置",
+      "question": "巡检记录表应内嵌还是独立附件？目录是否随交付内容更新？",
+      "baseline_position": "文末巡检记录表及图片对象",
+      "standard_example": {
+        "巡检记录标题": false,
+        "正文内嵌附件图数": 0
+      }
+    },
+    {
+      "key": "issuer.1",
+      "label": "封面出具单位一",
+      "unit": "文本",
+      "kind": "规则",
+      "id": "F092",
+      "section": "封面与电站档案",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "正文P17",
+      "standard_example": "南方电网综合能源股份有限公司"
+    },
+    {
+      "key": "issuer.2",
+      "label": "封面出具单位二",
+      "unit": "文本",
+      "kind": "规则",
+      "id": "F093",
+      "section": "封面与电站档案",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "正文P18",
+      "standard_example": "南网综能数字服务（广州）有限公司"
+    },
+    {
+      "key": "issuer.department",
+      "label": "封面出具部门",
+      "unit": "文本",
+      "kind": "规则",
+      "id": "F094",
+      "section": "封面与电站档案",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "正文P19",
+      "standard_example": "运检维护部"
+    },
+    {
+      "key": "notice",
+      "label": "阅前须知正文",
+      "unit": "文本",
+      "kind": "规则",
+      "id": "F095",
+      "section": "阅前须知",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "正文P26",
+      "standard_example": "接收到报告及附录后的各位领导、同事（含后续转发），须自觉严格遵守《中华人民共和国网络安全法》、《中华人民共和国数据安全法》、《中华人民共和国公司法（2018年修正）》、《中华人民共和国证券法（2019年修订）》、《全国人民代表大会常务委员会关于维护互联网安全的决定》、《中华人民共和国电信条例》、《互联网信息服务管理办法》、《南方电网综合能源股份有限公司重大事项内部报告管理办法（2022版）》、《南方电网综合能源股份有限公司内幕信息知情人登记管理办法（2022版）》、《南方电网综合能源股份有限公司网络安全管理办法（2021版）》、《南方电网综合能源股份有限公司电力监控系统网络安全管理实施细则（2021版）》等法律法规和规章的有关规定，避免各项生产运营数据外泄等不合规、不合法等行为。"
+    },
+    {
+      "key": "cert.types",
+      "label": "持证类别清单",
+      "unit": "文本",
+      "kind": "规则",
+      "id": "F096",
+      "section": "4.2 人员持证",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表7安全证件列",
+      "standard_example": [
+        "低压电工证",
+        "高压电工证",
+        "调度受令证"
+      ]
+    },
+    {
+      "key": "ticket.types",
+      "label": "票种类别清单",
+      "unit": "文本",
+      "kind": "规则",
+      "id": "F097",
+      "section": "4.3 两票管理",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表8票种列",
+      "standard_example": [
+        "电气一种票",
+        "电气二种票",
+        "书面布置作业票",
+        "电气操作票"
+      ]
+    },
+    {
+      "key": "ledger.note",
+      "label": "核减电量说明",
+      "unit": "文本",
+      "kind": "规则",
+      "id": "F098",
+      "section": "1.2 台账说明",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "1.2台账后说明",
+      "standard_example": "注：核减电量为不可抗力产生的受累损失电量，如台风、供电局停电等。"
+    },
+    {
+      "key": "structure.headings",
+      "label": "主体章节名称与顺序",
+      "unit": "文本",
+      "kind": "规则",
+      "id": "F099",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "主体章节目次",
+      "standard_example": [
+        "运行概况",
+        "1.1 发电量和收益",
+        "1.2发电量台账",
+        "二. 运维工作",
+        "2.1 月度作业计划管控",
+        "2.2 本月工作总结",
+        "2.3 下月工作计划及需协助解决事项",
+        "三. 发电分析",
+        "3.1 运行数据分析",
+        "3.2 故障分析",
+        "3.3 发电损失",
+        "四. 安全生产",
+        "4.1 安全学习培训情况",
+        "4.2 特种作业人员持证情况统计",
+        "4.3 两票管理",
+        "4.4 隐患排查与治理",
+        "4.5 安全工器具、仪器仪表定期检测情况",
+        "五. 运维现场图片（照片带水印）"
+      ]
+    },
+    {
+      "key": "header.1",
+      "label": "表1表头与单位",
+      "unit": "原文",
+      "kind": "规则",
+      "id": "F100",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表1表头",
+      "standard_example": [
+        "消纳电量\n（万kWh）",
+        "上网电量\n（万kWh）",
+        "站用电量\n（万kWh）",
+        "满发小时数（H）",
+        "累计辐照（kWh/㎡）",
+        "受累损失电量     （万kWh）"
+      ]
+    },
+    {
+      "key": "header.2",
+      "label": "表2表头与单位",
+      "unit": "原文",
+      "kind": "规则",
+      "id": "F101",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表2表头",
+      "standard_example": [
+        "月份",
+        "实际容量（MWp）",
+        "月实际发电量（kWh）",
+        "月核减电量\n（kWh）",
+        "月辐照量\n（KW-h/m²）",
+        "月等效利用小时数（H）",
+        "月站用电量（kWh）"
+      ]
+    },
+    {
+      "key": "header.3",
+      "label": "表3表头与单位",
+      "unit": "原文",
+      "kind": "规则",
+      "id": "F102",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表3表头",
+      "standard_example": [
+        "序号",
+        "工作内容",
+        "主要风险点",
+        "作业风险等级",
+        "现场管控措施"
+      ]
+    },
+    {
+      "key": "header.4",
+      "label": "表4表头与单位",
+      "unit": "原文",
+      "kind": "规则",
+      "id": "F103",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表4表头",
+      "standard_example": [
+        "序号",
+        "类别",
+        "类别",
+        "工作内容"
+      ]
+    },
+    {
+      "key": "header.5",
+      "label": "表5表头与单位",
+      "unit": "原文",
+      "kind": "规则",
+      "id": "F104",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表5表头",
+      "standard_example": [
+        "序号",
+        "工作内容"
+      ]
+    },
+    {
+      "key": "header.6",
+      "label": "表6表头与单位",
+      "unit": "原文",
+      "kind": "规则",
+      "id": "F105",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表6表头",
+      "standard_example": [
+        "停电时间",
+        "停电容量\n（kWp）",
+        "停电原因",
+        "损失电量\n（万kWh）"
+      ]
+    },
+    {
+      "key": "header.7",
+      "label": "表7表头与单位",
+      "unit": "原文",
+      "kind": "规则",
+      "id": "F106",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表7表头",
+      "standard_example": [
+        "序号",
+        "安全证件",
+        "应取证人数",
+        "已完成取证人数",
+        "取证进展"
+      ]
+    },
+    {
+      "key": "header.8",
+      "label": "表8表头与单位",
+      "unit": "原文",
+      "kind": "规则",
+      "id": "F107",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表8表头",
+      "standard_example": [
+        "序号",
+        "票的种类",
+        "收票数",
+        "合格",
+        "不合格",
+        "合格率",
+        "备注"
+      ]
+    },
+    {
+      "key": "header.9",
+      "label": "表9表头与单位",
+      "unit": "原文",
+      "kind": "规则",
+      "id": "F108",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表9表头",
+      "standard_example": [
+        "序号",
+        "隐患描述",
+        "措施完成"
+      ]
+    },
+    {
+      "key": "header.10",
+      "label": "表10表头与单位",
+      "unit": "原文",
+      "kind": "规则",
+      "id": "F109",
+      "section": "模板结构与表头",
+      "handling": "模板固定候选",
+      "frequency": "版本变更时维护",
+      "question": "这项是否由统一模板固定？如需按电站修改，谁批准、何时生效？",
+      "baseline_position": "表10表头",
+      "standard_example": [
+        "序号",
+        "编号",
+        "名称",
+        "型号与规格",
+        "制造厂家",
+        "试验日期",
+        "试验结果",
+        "下次检验时间"
+      ]
+    }
+  ],
+  "position_convention": "本地表/行/列索引从0开始；展示位置P及表N从1开始",
+  "file_reference_base": "字典中local.source_file和external_dictionary.file相对报告目录运维月报解析；本站dictionary_ref相对字段取数配置文件解析",
+  "scope": "本地位置基于24份历史月报；在线字典与Power+未配置",
+  "review_version": "2026-09-07-2.0"
+}

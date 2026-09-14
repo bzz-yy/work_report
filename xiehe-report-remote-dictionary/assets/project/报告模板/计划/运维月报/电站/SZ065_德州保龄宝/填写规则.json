@@ -1,0 +1,570 @@
+{
+  "schema_version": 2,
+  "version": "1.0-evidence-derived",
+  "station_id": "SZ065",
+  "report_type": "运维月报",
+  "template_id": "NW-MONTHLY-STD-01",
+  "maintenance_entry": "AGENTS.md",
+  "evidence_file": "逐月维护证据.json",
+  "scope": [
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07"
+  ],
+  "status": "报告观察已核验；操作规则为自动化维护规则，业务口径待确认",
+  "execution_status": "定位器读取这些规则；尚未接入最终填充执行器",
+  "repeat_groups": {
+    "records.1": {
+      "observed_record_counts": {
+        "2026-02": 3,
+        "2026-03": 4,
+        "2026-04": 5,
+        "2026-05": 6,
+        "2026-06": 7,
+        "2026-07": 8
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.1"
+    },
+    "records.2": {
+      "observed_record_counts": {
+        "2026-02": 3,
+        "2026-03": 3,
+        "2026-04": 4,
+        "2026-05": 3,
+        "2026-06": 3,
+        "2026-07": 3
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.2"
+    },
+    "records.3": {
+      "observed_record_counts": {
+        "2026-02": 4,
+        "2026-03": 4,
+        "2026-04": 5,
+        "2026-05": 5,
+        "2026-06": 5,
+        "2026-07": 5
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.3"
+    },
+    "records.4": {
+      "observed_record_counts": {
+        "2026-02": 3,
+        "2026-03": 3,
+        "2026-04": 3,
+        "2026-05": 3,
+        "2026-06": 2,
+        "2026-07": 1
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.4"
+    },
+    "records.5": {
+      "observed_record_counts": {
+        "2026-02": 0,
+        "2026-03": 0,
+        "2026-04": 0,
+        "2026-05": 0,
+        "2026-06": 0,
+        "2026-07": 0
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.5"
+    },
+    "records.6": {
+      "observed_record_counts": {
+        "2026-02": 2,
+        "2026-03": 1,
+        "2026-04": 2,
+        "2026-05": 0,
+        "2026-06": 0,
+        "2026-07": 0
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.6"
+    },
+    "records.7": {
+      "observed_record_counts": {
+        "2026-02": 1,
+        "2026-03": 1,
+        "2026-04": 1,
+        "2026-05": 1,
+        "2026-06": 1,
+        "2026-07": 1
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.7"
+    },
+    "records.8": {
+      "observed_record_counts": {
+        "2026-02": 16,
+        "2026-03": 16,
+        "2026-04": 16,
+        "2026-05": 9,
+        "2026-06": 9,
+        "2026-07": 9
+      },
+      "evidence_pointer": "逐月维护证据.json#/reports/<period>/groups/records.8"
+    }
+  },
+  "fields": {
+    "F001": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F001"
+    },
+    "F002": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F002"
+    },
+    "F003": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F003"
+    },
+    "F004": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F004"
+    },
+    "F005": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F005"
+    },
+    "F006": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F006"
+    },
+    "F007": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F007"
+    },
+    "F008": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F008"
+    },
+    "F009": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F009"
+    },
+    "F010": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F010"
+    },
+    "F011": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F011"
+    },
+    "F012": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F012"
+    },
+    "F013": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F013"
+    },
+    "F014": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F014"
+    },
+    "F015": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F015"
+    },
+    "F016": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F016"
+    },
+    "F017": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F017"
+    },
+    "F018": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F018"
+    },
+    "F019": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F019"
+    },
+    "F020": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F020"
+    },
+    "F021": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F021"
+    },
+    "F022": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F022"
+    },
+    "F023": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F023"
+    },
+    "F024": {
+      "observation": "六个月均空白",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F024"
+    },
+    "F025": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F025"
+    },
+    "F026": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F026"
+    },
+    "F027": {
+      "observation": "六个月均空白",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F027"
+    },
+    "F028": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F028"
+    },
+    "F029": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F029"
+    },
+    "F030": {
+      "observation": "六个月均空白",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F030"
+    },
+    "F031": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F031"
+    },
+    "F032": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F032"
+    },
+    "F033": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F033"
+    },
+    "F034": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F034"
+    },
+    "F035": {
+      "observation": "六个月均空白",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F035"
+    },
+    "F036": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F036"
+    },
+    "F037": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F037"
+    },
+    "F038": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F038"
+    },
+    "F039": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F039"
+    },
+    "F040": {
+      "observation": "六个月均空白",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F040"
+    },
+    "F041": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F041"
+    },
+    "F042": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F042"
+    },
+    "F043": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F043"
+    },
+    "F044": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F044"
+    },
+    "F045": {
+      "observation": "六个月均空白",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F045"
+    },
+    "F046": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F046"
+    },
+    "F047": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F047"
+    },
+    "F048": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F048"
+    },
+    "F049": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F049"
+    },
+    "F050": {
+      "observation": "六个月均空白",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F050"
+    },
+    "F051": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F051"
+    },
+    "F052": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.1"
+    },
+    "F053": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.1"
+    },
+    "F054": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.1"
+    },
+    "F055": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.1"
+    },
+    "F056": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.1"
+    },
+    "F057": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.1"
+    },
+    "F058": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.1"
+    },
+    "F059": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.2"
+    },
+    "F060": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.2"
+    },
+    "F061": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.2"
+    },
+    "F062": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.2"
+    },
+    "F063": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.2"
+    },
+    "F064": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.3"
+    },
+    "F065": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.3"
+    },
+    "F066": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.3"
+    },
+    "F067": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.3"
+    },
+    "F068": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.4"
+    },
+    "F069": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.4"
+    },
+    "F070": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.5"
+    },
+    "F071": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.5"
+    },
+    "F072": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.6"
+    },
+    "F073": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.6"
+    },
+    "F074": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.6"
+    },
+    "F075": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.6"
+    },
+    "F076": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.7"
+    },
+    "F077": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.7"
+    },
+    "F078": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.7"
+    },
+    "F079": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.8"
+    },
+    "F080": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.8"
+    },
+    "F081": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.8"
+    },
+    "F082": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.8"
+    },
+    "F083": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.8"
+    },
+    "F084": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.8"
+    },
+    "F085": {
+      "observation": "记录集合变化，共同记录未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.8"
+    },
+    "F086": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/groups/records.8"
+    },
+    "F087": {
+      "observation": "六个月未变",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F087"
+    },
+    "F088": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F088"
+    },
+    "F089": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/scalar_values/F089"
+    },
+    "F090": {
+      "observation": "观察到变化",
+      "business_confirmation": "pending",
+      "evidence": "逐月维护证据.json#/reports/<period>/photos_count"
+    }
+  },
+  "schema_boundaries": {},
+  "business_confirmation": {
+    "status": "pending",
+    "confirmed_by": null,
+    "effective_scope": null
+  },
+  "template_rules": {
+    "NW-MONTHLY-STD-01": "../../模板/NW-MONTHLY-STD-01/通用取值规则.json"
+  }
+}

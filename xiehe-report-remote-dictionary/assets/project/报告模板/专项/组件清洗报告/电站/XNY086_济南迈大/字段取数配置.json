@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "template_rules_ref": "../../模板/QX-01/通用取值规则.json",
+  "parameters": {
+    "station_id": "XNY086"
+  },
+  "notes": [
+    "两次清洗照片对照为7组和5组，设备不同；均作为当次字段，不拆分主体模板。"
+  ],
+  "overrides": {},
+  "status": "template_only"
+}

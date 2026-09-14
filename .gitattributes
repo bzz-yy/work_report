@@ -1,0 +1,3 @@
+# Preserve the verified package bytes, including original CSV line endings.
+xiehe-report-remote-dictionary/** -text
+*.docx binary

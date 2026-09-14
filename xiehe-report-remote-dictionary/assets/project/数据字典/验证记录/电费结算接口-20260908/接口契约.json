@@ -1,0 +1,173 @@
+{
+  "contract_id": "power.electricitybill.settlement.v1",
+  "verified_at": "2026-09-08T11:41:29.852901+08:00",
+  "status": "verified_source_values",
+  "access_mode": "project_readonly_adapter_using_installed_cli_http_client",
+  "base_url": "https://power-xhyw.cnecloud.com",
+  "ui": {
+    "url": "https://power-xhyw.cnecloud.com/#/household/workflow/Electricitybill?processDefKey=Electricitybill",
+    "colleague_menu_path": "运营中心 > 工单看板 > 电费结算工单（列表/详情）",
+    "observed_menu_path": "运维中心 > 工单看板 > 电费结算工单",
+    "iframe_host": "powersaber-xhyw.cnecloud.com",
+    "explanation": "外层地址显示功能；筛选条件放在列表POST请求体，详情ID放在内嵌页面路由及GET查询参数。未截获浏览器Network；请求路径和参数来自线上公开前端源码、线上表单定义，并通过CLI客户端实测及页面数值核对。"
+  },
+  "parameters": {
+    "station_code": {
+      "source": "电站平台对应.json 已核验Power+编码",
+      "type": "string containing seven digits",
+      "api_type": "integer in station_in array"
+    },
+    "settlement_month": {
+      "source": "本次报告年月",
+      "format": "YYYY-MM",
+      "selector": "解析主表variables JSON后精确匹配settlement_month；不用created_at、due_time、completed_at替代"
+    }
+  },
+  "steps": [
+    {
+      "step": 1,
+      "purpose": "获取本站全部非草稿电费结算工单",
+      "method": "POST",
+      "path": "/api/blade-form/form/data/list",
+      "body": {
+        "formKey": "Electricitybill",
+        "search": "{\"station_in\":[{{station_code_as_integer}}]}",
+        "query": {
+          "current": "{{page}}",
+          "size": "{{page_size}}"
+        },
+        "sort": {},
+        "customCriteria": {
+          "excludeDraft": 1
+        }
+      },
+      "rows_path": "data.datas",
+      "total_path": "data.totalCount",
+      "variables_type": "JSON string in each row.variables",
+      "filter": "每行variables.station须等于station_code；走完全部分页后按variables.settlement_month精确匹配；多条不取首条、不求和",
+      "ids": {
+        "row.id": "主表记录ID；内嵌详情路由称processId",
+        "row.processInstanceId": "流程实例ID，GET中参数processInsId",
+        "row.taskId": "流程任务ID",
+        "JSON.parse(row.variables).r_id": "关联子表的父记录键；不是工单编号"
+      }
+    },
+    {
+      "step": 2,
+      "purpose": "核对详情与结算期间",
+      "method": "GET",
+      "path": "/api/blade-workflow/process/detail",
+      "query": {
+        "processInsId": "{{selected_row.processInstanceId}}",
+        "taskId": "{{selected_row.taskId}}"
+      },
+      "variables_path": "data.process.variables",
+      "checks": [
+        "processInstanceId一致",
+        "formKey=Electricitybill",
+        "variables.id等于列表id",
+        "variables.r_id等于列表variables.r_id",
+        "variables.station一致",
+        "variables.settlement_month一致",
+        "settlement_month_start/end覆盖该自然月",
+        "variables.status=yjd且processIsFinished=finished"
+      ],
+      "cli_equivalent": "power flow show --profile me --process-instance-id <pid> --task-id <tid>；返回process含variables，但不会自动关联查询电量子表"
+    },
+    {
+      "step": 3,
+      "purpose": "取得结算电量电费关联子表",
+      "method": "POST",
+      "path": "/api/blade-form/form/data/list",
+      "body": {
+        "formKey": "ElectricitybillSettlement",
+        "search": {
+          "Electricitybill_CORRELATION_ID": "{{detail.data.process.variables.r_id}}"
+        },
+        "query": {
+          "current": "{{page}}",
+          "size": "{{page_size}}"
+        },
+        "sort": {
+          "createTime": "ASC"
+        },
+        "customCriteria": {
+          "excludeDraft": "1"
+        }
+      },
+      "rows_path": "data.datas",
+      "total_path": "data.totalCount",
+      "correlation_check": "每行Electricitybill_CORRELATION_ID等于主工单r_id",
+      "selection": "完整分页后恰好一条才能输出单值；零条为缺失，多条为歧义；不自动求和/去重",
+      "read_fields": [
+        {
+          "field": "totalpower_name",
+          "name": "总发电量-电量（kWh）",
+          "value_path": "data.datas[unique matched row].totalpower_name",
+          "unit": "kWh",
+          "unit_evidence": "线上表单定义label与Safari详情表头一致"
+        },
+        {
+          "field": "totalowner_name",
+          "name": "企业自用电量-电量（kWh）",
+          "value_path": "data.datas[unique matched row].totalowner_name",
+          "unit": "kWh",
+          "unit_evidence": "线上表单定义label与Safari详情表头一致"
+        },
+        {
+          "field": "totalownercost_name",
+          "name": "企业自用电量-电费（元）",
+          "value_path": "data.datas[unique matched row].totalownercost_name",
+          "unit": "元",
+          "unit_evidence": "线上表单定义label与Safari详情表头一致"
+        },
+        {
+          "field": "totalonline_name",
+          "name": "上网电量-电量（kWh）",
+          "value_path": "data.datas[unique matched row].totalonline_name",
+          "unit": "kWh",
+          "unit_evidence": "线上表单定义label与Safari详情表头一致"
+        },
+        {
+          "field": "totalonlinecost_name",
+          "name": "上网电量--电费（元）",
+          "value_path": "data.datas[unique matched row].totalonlinecost_name",
+          "unit": "元",
+          "unit_evidence": "线上表单定义label与Safari详情表头一致"
+        }
+      ]
+    }
+  ],
+  "quality_rules": {
+    "zero": "保留原始0并标zero_requires_confirmation；页面工单说明明确允许非保电量项目二阶填0闭环，不能一概认定真实0",
+    "missing": "null、缺键、空字符串保持缺失，不转0",
+    "positive": "正数为该业务来源已取得值，不自动等同月报其他来源口径",
+    "ambiguous_orders": "同站同结算月多工单时列出待选，不取最新或首条",
+    "ambiguous_child_rows": "关联子表多记录不相加、不随意去重",
+    "history_shape": "源码含旧工单父表totalpower_name兼容分支；本脚本不自动继承该分支，找不到子表时标缺失；验证旧版本后才登记专用规则",
+    "pagination": "current由1递增，直到已收行数等于totalCount；检测重复id、总数变化、空早停及hasNextPage冲突"
+  },
+  "report_mapping": {
+    "source_standard_concept": "电费结算工单填报总发电量",
+    "source_field": "ElectricitybillSettlement.totalpower_name",
+    "template_candidate": "运维月报F004当月总发电量",
+    "status": "candidate_pending_business_scope_confirmation",
+    "separate_from": [
+      "监控系统实发电量",
+      "电网结算上网电量",
+      "逆变器月累计发电量"
+    ],
+    "unit_conversion": "kWh除以10000为万kWh；展示位数由模板规则配置"
+  },
+  "evidence": {
+    "sample_file": "保龄宝2026-06接口实测.json",
+    "station_code": "3600409",
+    "month": "2026-06",
+    "totalpower_kwh": 1239669.6,
+    "observed_ui_totalpower_kwh": 1239669.6,
+    "listed_orders": 7,
+    "page_size_for_test": 3,
+    "list_pages_verified": 3
+  },
+  "cli_gap": "现有power form list是台账白名单且无search参数；不能声称该命令直接支持本流程筛选。本项目适配只复用CLI认证/HTTP客户端，未修改全局CLI，未执行平台写操作。"
+}

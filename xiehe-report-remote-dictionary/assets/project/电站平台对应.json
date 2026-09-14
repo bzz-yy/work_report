@@ -1,0 +1,52 @@
+{
+  "status": "2026-09-07实时只读核验",
+  "stations": [
+    {
+      "project_station_id": "XNY086",
+      "project_station_name": "济南迈大",
+      "powerplus_station_id": 3600411,
+      "powerplus_station_name": "南网济南迈大食品",
+      "status": "verified_unique_name_match",
+      "captured_at": "2026-09-07T10:07:38.072778+00:00",
+      "evidence": "运维月报/验证记录/Power取数-20260907/迈大.json",
+      "scope": "当前API电站身份；不证明实时测点或历史发电量已接入。"
+    },
+    {
+      "project_station_id": "XNY080",
+      "project_station_name": "中石油济柴",
+      "powerplus_station_id": 3600410,
+      "powerplus_station_name": "南网济南中石油济柴动力",
+      "status": "verified_unique_name_match",
+      "captured_at": "2026-09-07T10:07:38.072517+00:00",
+      "evidence": "运维月报/验证记录/Power取数-20260907/济柴.json",
+      "scope": "当前API电站身份；不证明实时测点或历史发电量已接入。"
+    },
+    {
+      "project_station_id": "SZ065",
+      "project_station_name": "德州保龄宝",
+      "powerplus_station_id": 3600409,
+      "powerplus_station_name": "南网德州保龄宝",
+      "status": "verified_unique_name_match",
+      "captured_at": "2026-09-07T10:07:38.072496+00:00",
+      "evidence": "运维月报/验证记录/Power取数-20260907/保龄宝.json",
+      "scope": "当前API电站身份；不证明实时测点或历史发电量已接入。"
+    },
+    {
+      "project_station_id": "XNY108",
+      "project_station_name": "潍坊伊利",
+      "powerplus_station_id": 3600416,
+      "powerplus_station_name": "南网潍坊伊利乳业",
+      "status": "verified_unique_name_match",
+      "captured_at": "2026-09-07T10:07:38.072480+00:00",
+      "evidence": "运维月报/验证记录/Power取数-20260907/伊利.json",
+      "scope": "当前API电站身份；不证明实时测点或历史发电量已接入。"
+    }
+  ],
+  "generated_from": [
+    "电站/SZ065_德州保龄宝/基础配置.json",
+    "电站/XNY080_中石油济柴/基础配置.json",
+    "电站/XNY086_济南迈大/基础配置.json",
+    "电站/XNY108_潍坊伊利/基础配置.json"
+  ],
+  "maintenance": "只读阅读索引。电站基础配置为唯一执行来源，不在本文件日常维护。"
+}

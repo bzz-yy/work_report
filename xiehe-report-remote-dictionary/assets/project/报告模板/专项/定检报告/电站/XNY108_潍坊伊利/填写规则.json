@@ -1,0 +1,164 @@
+{
+  "schema_version": 2,
+  "station_id": "XNY108",
+  "template_ids": [
+    "DJ-01"
+  ],
+  "sample_periods": [
+    "2026-H1"
+  ],
+  "business_confirmation": "pending",
+  "fields": {
+    "J001": {
+      "business_confirmation": "pending"
+    },
+    "J002": {
+      "business_confirmation": "pending"
+    },
+    "J003": {
+      "business_confirmation": "pending"
+    },
+    "J004": {
+      "business_confirmation": "pending"
+    },
+    "J005": {
+      "business_confirmation": "pending"
+    },
+    "J006": {
+      "business_confirmation": "pending"
+    },
+    "J007": {
+      "business_confirmation": "pending"
+    },
+    "J008": {
+      "business_confirmation": "pending"
+    },
+    "J009": {
+      "business_confirmation": "pending"
+    },
+    "J010": {
+      "business_confirmation": "pending"
+    },
+    "J011": {
+      "business_confirmation": "pending"
+    },
+    "J012": {
+      "business_confirmation": "pending"
+    },
+    "J013": {
+      "business_confirmation": "pending"
+    },
+    "J014": {
+      "business_confirmation": "pending"
+    },
+    "J015": {
+      "business_confirmation": "pending"
+    },
+    "J016": {
+      "business_confirmation": "pending"
+    },
+    "J017": {
+      "business_confirmation": "pending"
+    },
+    "J018": {
+      "business_confirmation": "pending"
+    },
+    "J019": {
+      "business_confirmation": "pending"
+    },
+    "J020": {
+      "business_confirmation": "pending"
+    },
+    "J021": {
+      "business_confirmation": "pending"
+    },
+    "J022": {
+      "business_confirmation": "pending"
+    },
+    "J023": {
+      "business_confirmation": "pending"
+    },
+    "J024": {
+      "business_confirmation": "pending"
+    },
+    "J025": {
+      "business_confirmation": "pending"
+    },
+    "J026": {
+      "business_confirmation": "pending"
+    },
+    "J027": {
+      "business_confirmation": "pending"
+    },
+    "J028": {
+      "business_confirmation": "pending"
+    },
+    "J029": {
+      "business_confirmation": "pending"
+    },
+    "J030": {
+      "business_confirmation": "pending"
+    },
+    "J031": {
+      "business_confirmation": "pending"
+    },
+    "J032": {
+      "business_confirmation": "pending"
+    },
+    "J033": {
+      "business_confirmation": "pending"
+    },
+    "J034": {
+      "business_confirmation": "pending"
+    },
+    "J035": {
+      "business_confirmation": "pending"
+    },
+    "J036": {
+      "business_confirmation": "pending"
+    },
+    "J037": {
+      "business_confirmation": "pending"
+    },
+    "J038": {
+      "business_confirmation": "pending"
+    },
+    "J039": {
+      "business_confirmation": "pending"
+    },
+    "J040": {
+      "label": "票据类型",
+      "kind": "tickets",
+      "rules": [
+        "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+        "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+        "仅在本站选定版本include_tickets为true时启用；按真实票据增加行，类型、编号、附件互相对应。"
+      ],
+      "business_confirmation": "pending"
+    },
+    "J041": {
+      "label": "票据编号",
+      "kind": "tickets",
+      "rules": [
+        "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+        "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+        "仅在本站选定版本include_tickets为true时启用；按真实票据增加行，类型、编号、附件互相对应。"
+      ],
+      "business_confirmation": "pending"
+    },
+    "J042": {
+      "label": "票据附件",
+      "kind": "tickets",
+      "rules": [
+        "按本站及报告周期取数；历史样例只作测试来源，不能当作本次实际记录。",
+        "保留单位、原始来源和空值状态；未取到不能填正常、合格或无。",
+        "仅在本站选定版本include_tickets为true时启用；按真实票据增加行，类型、编号、附件互相对应。",
+        "实际图片/票据来源未配置；不从历史报告取图或签章当作新来源。"
+      ],
+      "business_confirmation": "pending"
+    }
+  },
+  "template_rules": {
+    "DJ-01": "../../模板/DJ-01/通用取值规则.json"
+  }
+}

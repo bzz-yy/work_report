@@ -1,0 +1,934 @@
+{
+  "template_id": "NW-MONTHLY-STD-01",
+  "version": "1.0-draft",
+  "status": "主体共用已核验；正式交付规则待确认",
+  "template_file": "运维月报模板.docx",
+  "template_sha256": "a1d1ab5d8445d39664d3876d65996ca56faf4a82b3e111e56ea7532ace2c918c",
+  "source_sha256": "5c44f06623e9015a2e86d2c8f56c3626733ee62b984c9d9a76bc6704c9d3dd70",
+  "placeholder_syntax": "F001—F090为专用字段标记；按映射仅替换完整编号，重复位置共用同一值。不是Jinja语法",
+  "fields": [
+    {
+      "id": "F001",
+      "label": "电站名称",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F001",
+      "dictionary_key": "F001"
+    },
+    {
+      "id": "F002",
+      "label": "报告年份",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F002",
+      "dictionary_key": "F002"
+    },
+    {
+      "id": "F003",
+      "label": "报告月份",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F003",
+      "dictionary_key": "F003"
+    },
+    {
+      "id": "F004",
+      "label": "当月总发电量",
+      "kind": "单值",
+      "unit": "万kWh",
+      "placeholder": "F004",
+      "dictionary_key": "F004"
+    },
+    {
+      "id": "F005",
+      "label": "当月消纳电量",
+      "kind": "单值",
+      "unit": "万kWh",
+      "placeholder": "F005",
+      "dictionary_key": "F005"
+    },
+    {
+      "id": "F006",
+      "label": "当月上网电量",
+      "kind": "单值",
+      "unit": "万kWh",
+      "placeholder": "F006",
+      "dictionary_key": "F006"
+    },
+    {
+      "id": "F007",
+      "label": "当月站用电量",
+      "kind": "单值",
+      "unit": "万kWh",
+      "placeholder": "F007",
+      "dictionary_key": "F007"
+    },
+    {
+      "id": "F008",
+      "label": "当月满发小时",
+      "kind": "单值",
+      "unit": "小时",
+      "placeholder": "F008",
+      "dictionary_key": "F008"
+    },
+    {
+      "id": "F009",
+      "label": "当月累计辐照",
+      "kind": "单值",
+      "unit": "kWh/㎡",
+      "placeholder": "F009",
+      "dictionary_key": "F009"
+    },
+    {
+      "id": "F010",
+      "label": "当月受累损失电量",
+      "kind": "单值",
+      "unit": "万kWh",
+      "placeholder": "F010",
+      "dictionary_key": "F010"
+    },
+    {
+      "id": "F011",
+      "label": "累计发电量",
+      "kind": "单值",
+      "unit": "万kWh",
+      "placeholder": "F011",
+      "dictionary_key": "F011"
+    },
+    {
+      "id": "F012",
+      "label": "累计满发小时",
+      "kind": "单值",
+      "unit": "小时",
+      "placeholder": "F012",
+      "dictionary_key": "F012"
+    },
+    {
+      "id": "F013",
+      "label": "可研完成率",
+      "kind": "单值",
+      "unit": "%",
+      "placeholder": "F013",
+      "dictionary_key": "F013"
+    },
+    {
+      "id": "F014",
+      "label": "年度可研小时",
+      "kind": "单值",
+      "unit": "小时",
+      "placeholder": "F014",
+      "dictionary_key": "F014"
+    },
+    {
+      "id": "F015",
+      "label": "装机容量",
+      "kind": "单值",
+      "unit": "MW",
+      "placeholder": "F015",
+      "dictionary_key": "F015"
+    },
+    {
+      "id": "F016",
+      "label": "运行数据分析",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F016",
+      "dictionary_key": "F016"
+    },
+    {
+      "id": "F017",
+      "label": "故障处理情况",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F017",
+      "dictionary_key": "F017"
+    },
+    {
+      "id": "F018",
+      "label": "本月设备故障损失电量",
+      "kind": "单值",
+      "unit": "kWh",
+      "placeholder": "F018",
+      "dictionary_key": "F018"
+    },
+    {
+      "id": "F019",
+      "label": "累计受累损失电量",
+      "kind": "单值",
+      "unit": "万kWh",
+      "placeholder": "F019",
+      "dictionary_key": "F019"
+    },
+    {
+      "id": "F020",
+      "label": "累计设备故障损失电量",
+      "kind": "单值",
+      "unit": "kWh",
+      "placeholder": "F020",
+      "dictionary_key": "F020"
+    },
+    {
+      "id": "F021",
+      "label": "安全学习培训情况",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F021",
+      "dictionary_key": "F021"
+    },
+    {
+      "id": "F022",
+      "label": "低压电工应取证人数",
+      "kind": "单值",
+      "unit": "人",
+      "placeholder": "F022",
+      "dictionary_key": "F022"
+    },
+    {
+      "id": "F023",
+      "label": "低压电工已取证人数",
+      "kind": "单值",
+      "unit": "人",
+      "placeholder": "F023",
+      "dictionary_key": "F023"
+    },
+    {
+      "id": "F024",
+      "label": "低压电工取证进展",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F024",
+      "dictionary_key": "F024"
+    },
+    {
+      "id": "F025",
+      "label": "高压电工应取证人数",
+      "kind": "单值",
+      "unit": "人",
+      "placeholder": "F025",
+      "dictionary_key": "F025"
+    },
+    {
+      "id": "F026",
+      "label": "高压电工已取证人数",
+      "kind": "单值",
+      "unit": "人",
+      "placeholder": "F026",
+      "dictionary_key": "F026"
+    },
+    {
+      "id": "F027",
+      "label": "高压电工取证进展",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F027",
+      "dictionary_key": "F027"
+    },
+    {
+      "id": "F028",
+      "label": "调度受令应取证人数",
+      "kind": "单值",
+      "unit": "人",
+      "placeholder": "F028",
+      "dictionary_key": "F028"
+    },
+    {
+      "id": "F029",
+      "label": "调度受令已取证人数",
+      "kind": "单值",
+      "unit": "人",
+      "placeholder": "F029",
+      "dictionary_key": "F029"
+    },
+    {
+      "id": "F030",
+      "label": "调度受令取证进展",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F030",
+      "dictionary_key": "F030"
+    },
+    {
+      "id": "F031",
+      "label": "电气一种票收票数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F031",
+      "dictionary_key": "F031"
+    },
+    {
+      "id": "F032",
+      "label": "电气一种票合格数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F032",
+      "dictionary_key": "F032"
+    },
+    {
+      "id": "F033",
+      "label": "电气一种票不合格数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F033",
+      "dictionary_key": "F033"
+    },
+    {
+      "id": "F034",
+      "label": "电气一种票合格率",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F034",
+      "dictionary_key": "F034"
+    },
+    {
+      "id": "F035",
+      "label": "电气一种票备注",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F035",
+      "dictionary_key": "F035"
+    },
+    {
+      "id": "F036",
+      "label": "电气二种票收票数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F036",
+      "dictionary_key": "F036"
+    },
+    {
+      "id": "F037",
+      "label": "电气二种票合格数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F037",
+      "dictionary_key": "F037"
+    },
+    {
+      "id": "F038",
+      "label": "电气二种票不合格数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F038",
+      "dictionary_key": "F038"
+    },
+    {
+      "id": "F039",
+      "label": "电气二种票合格率",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F039",
+      "dictionary_key": "F039"
+    },
+    {
+      "id": "F040",
+      "label": "电气二种票备注",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F040",
+      "dictionary_key": "F040"
+    },
+    {
+      "id": "F041",
+      "label": "书面布置作业票收票数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F041",
+      "dictionary_key": "F041"
+    },
+    {
+      "id": "F042",
+      "label": "书面布置作业票合格数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F042",
+      "dictionary_key": "F042"
+    },
+    {
+      "id": "F043",
+      "label": "书面布置作业票不合格数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F043",
+      "dictionary_key": "F043"
+    },
+    {
+      "id": "F044",
+      "label": "书面布置作业票合格率",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F044",
+      "dictionary_key": "F044"
+    },
+    {
+      "id": "F045",
+      "label": "书面布置作业票备注",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F045",
+      "dictionary_key": "F045"
+    },
+    {
+      "id": "F046",
+      "label": "电气操作票收票数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F046",
+      "dictionary_key": "F046"
+    },
+    {
+      "id": "F047",
+      "label": "电气操作票合格数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F047",
+      "dictionary_key": "F047"
+    },
+    {
+      "id": "F048",
+      "label": "电气操作票不合格数",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F048",
+      "dictionary_key": "F048"
+    },
+    {
+      "id": "F049",
+      "label": "电气操作票合格率",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F049",
+      "dictionary_key": "F049"
+    },
+    {
+      "id": "F050",
+      "label": "电气操作票备注",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F050",
+      "dictionary_key": "F050"
+    },
+    {
+      "id": "F051",
+      "label": "电站简称",
+      "kind": "单值",
+      "unit": "文本/见原文",
+      "placeholder": "F051",
+      "dictionary_key": "F051"
+    },
+    {
+      "id": "F052",
+      "label": "发电量台账·月份",
+      "kind": "循环列",
+      "unit": "月",
+      "placeholder": "F052",
+      "dictionary_key": "F052"
+    },
+    {
+      "id": "F053",
+      "label": "发电量台账·实际容量",
+      "kind": "循环列",
+      "unit": "MWp",
+      "placeholder": "F053",
+      "dictionary_key": "F053"
+    },
+    {
+      "id": "F054",
+      "label": "发电量台账·月实际发电量",
+      "kind": "循环列",
+      "unit": "kWh",
+      "placeholder": "F054",
+      "dictionary_key": "F054"
+    },
+    {
+      "id": "F055",
+      "label": "发电量台账·月核减电量",
+      "kind": "循环列",
+      "unit": "kWh",
+      "placeholder": "F055",
+      "dictionary_key": "F055"
+    },
+    {
+      "id": "F056",
+      "label": "发电量台账·月辐照量",
+      "kind": "循环列",
+      "unit": "KW-h/m²（原文）",
+      "placeholder": "F056",
+      "dictionary_key": "F056"
+    },
+    {
+      "id": "F057",
+      "label": "发电量台账·月等效利用小时数",
+      "kind": "循环列",
+      "unit": "H",
+      "placeholder": "F057",
+      "dictionary_key": "F057"
+    },
+    {
+      "id": "F058",
+      "label": "发电量台账·月站用电量",
+      "kind": "循环列",
+      "unit": "kWh",
+      "placeholder": "F058",
+      "dictionary_key": "F058"
+    },
+    {
+      "id": "F059",
+      "label": "月度作业计划·序号",
+      "kind": "循环列",
+      "unit": "序号",
+      "placeholder": "F059",
+      "dictionary_key": "F059"
+    },
+    {
+      "id": "F060",
+      "label": "月度作业计划·工作内容",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F060",
+      "dictionary_key": "F060"
+    },
+    {
+      "id": "F061",
+      "label": "月度作业计划·主要风险点",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F061",
+      "dictionary_key": "F061"
+    },
+    {
+      "id": "F062",
+      "label": "月度作业计划·作业风险等级",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F062",
+      "dictionary_key": "F062"
+    },
+    {
+      "id": "F063",
+      "label": "月度作业计划·现场管控措施",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F063",
+      "dictionary_key": "F063"
+    },
+    {
+      "id": "F064",
+      "label": "本月工作总结·序号",
+      "kind": "循环列",
+      "unit": "序号",
+      "placeholder": "F064",
+      "dictionary_key": "F064"
+    },
+    {
+      "id": "F065",
+      "label": "本月工作总结·一级类别",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F065",
+      "dictionary_key": "F065"
+    },
+    {
+      "id": "F066",
+      "label": "本月工作总结·二级类别",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F066",
+      "dictionary_key": "F066"
+    },
+    {
+      "id": "F067",
+      "label": "本月工作总结·工作内容",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F067",
+      "dictionary_key": "F067"
+    },
+    {
+      "id": "F068",
+      "label": "下月工作计划·序号",
+      "kind": "循环列",
+      "unit": "序号",
+      "placeholder": "F068",
+      "dictionary_key": "F068"
+    },
+    {
+      "id": "F069",
+      "label": "下月工作计划·工作内容",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F069",
+      "dictionary_key": "F069"
+    },
+    {
+      "id": "F070",
+      "label": "需协助事项·序号",
+      "kind": "循环列",
+      "unit": "序号",
+      "placeholder": "F070",
+      "dictionary_key": "F070"
+    },
+    {
+      "id": "F071",
+      "label": "需协助事项·需协助事项",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F071",
+      "dictionary_key": "F071"
+    },
+    {
+      "id": "F072",
+      "label": "发电损失记录·停电时间",
+      "kind": "循环列",
+      "unit": "日期/时段",
+      "placeholder": "F072",
+      "dictionary_key": "F072"
+    },
+    {
+      "id": "F073",
+      "label": "发电损失记录·停电容量",
+      "kind": "循环列",
+      "unit": "kWp",
+      "placeholder": "F073",
+      "dictionary_key": "F073"
+    },
+    {
+      "id": "F074",
+      "label": "发电损失记录·停电原因",
+      "kind": "循环列",
+      "unit": "文本",
+      "placeholder": "F074",
+      "dictionary_key": "F074"
+    },
+    {
+      "id": "F075",
+      "label": "发电损失记录·损失电量",
+      "kind": "循环列",
+      "unit": "万kWh",
+      "placeholder": "F075",
+      "dictionary_key": "F075"
+    },
+    {
+      "id": "F076",
+      "label": "隐患记录·序号",
+      "kind": "循环列",
+      "unit": "序号",
+      "placeholder": "F076",
+      "dictionary_key": "F076"
+    },
+    {
+      "id": "F077",
+      "label": "隐患记录·隐患描述",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F077",
+      "dictionary_key": "F077"
+    },
+    {
+      "id": "F078",
+      "label": "隐患记录·措施完成",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F078",
+      "dictionary_key": "F078"
+    },
+    {
+      "id": "F079",
+      "label": "安全工器具检测记录·序号",
+      "kind": "循环列",
+      "unit": "序号",
+      "placeholder": "F079",
+      "dictionary_key": "F079"
+    },
+    {
+      "id": "F080",
+      "label": "安全工器具检测记录·编号",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F080",
+      "dictionary_key": "F080"
+    },
+    {
+      "id": "F081",
+      "label": "安全工器具检测记录·名称",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F081",
+      "dictionary_key": "F081"
+    },
+    {
+      "id": "F082",
+      "label": "安全工器具检测记录·型号与规格",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F082",
+      "dictionary_key": "F082"
+    },
+    {
+      "id": "F083",
+      "label": "安全工器具检测记录·制造厂家",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F083",
+      "dictionary_key": "F083"
+    },
+    {
+      "id": "F084",
+      "label": "安全工器具检测记录·试验日期",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F084",
+      "dictionary_key": "F084"
+    },
+    {
+      "id": "F085",
+      "label": "安全工器具检测记录·试验结果",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F085",
+      "dictionary_key": "F085"
+    },
+    {
+      "id": "F086",
+      "label": "安全工器具检测记录·下次检验时间",
+      "kind": "循环列",
+      "unit": "文本/见原文",
+      "placeholder": "F086",
+      "dictionary_key": "F086"
+    },
+    {
+      "id": "F087",
+      "label": "1.1正文电站名称",
+      "kind": "单值",
+      "unit": "文本",
+      "placeholder": "F087",
+      "dictionary_key": "F087"
+    },
+    {
+      "id": "F088",
+      "label": "运行概况受累电量说明",
+      "kind": "单值",
+      "unit": "文本",
+      "placeholder": "F088",
+      "dictionary_key": "F088"
+    },
+    {
+      "id": "F089",
+      "label": "发电损失表合计填写位置",
+      "kind": "单值",
+      "unit": "万kWh",
+      "placeholder": "F089",
+      "dictionary_key": "F089"
+    },
+    {
+      "id": "F090",
+      "label": "现场照片",
+      "kind": "图片",
+      "unit": "图片集合",
+      "placeholder": "F090",
+      "dictionary_key": "F090"
+    }
+  ],
+  "repeat_groups": [
+    {
+      "key": "records.1",
+      "table_index": 1,
+      "prototype_row_index": 1,
+      "field_ids": [
+        "F052",
+        "F053",
+        "F054",
+        "F055",
+        "F056",
+        "F057",
+        "F058"
+      ],
+      "repeat": "按本站当期记录数扩展；空白备用行不算记录"
+    },
+    {
+      "key": "records.2",
+      "table_index": 2,
+      "prototype_row_index": 1,
+      "field_ids": [
+        "F059",
+        "F060",
+        "F061",
+        "F062",
+        "F063"
+      ],
+      "repeat": "按本站当期记录数扩展；空白备用行不算记录"
+    },
+    {
+      "key": "records.3",
+      "table_index": 3,
+      "prototype_row_index": 1,
+      "field_ids": [
+        "F064",
+        "F065",
+        "F066",
+        "F067"
+      ],
+      "repeat": "按本站当期记录数扩展；空白备用行不算记录"
+    },
+    {
+      "key": "records.6",
+      "table_index": 5,
+      "prototype_row_index": 1,
+      "field_ids": [
+        "F072",
+        "F073",
+        "F074",
+        "F075"
+      ],
+      "repeat": "按本站当期记录数扩展；空白备用行不算记录"
+    },
+    {
+      "key": "records.7",
+      "table_index": 8,
+      "prototype_row_index": 1,
+      "field_ids": [
+        "F076",
+        "F077",
+        "F078"
+      ],
+      "repeat": "按本站当期记录数扩展；空白备用行不算记录"
+    },
+    {
+      "key": "records.8",
+      "table_index": 9,
+      "prototype_row_index": 1,
+      "field_ids": [
+        "F079",
+        "F080",
+        "F081",
+        "F082",
+        "F083",
+        "F084",
+        "F085",
+        "F086"
+      ],
+      "repeat": "按本站当期记录数扩展；空白备用行不算记录"
+    },
+    {
+      "key": "records.4",
+      "table_index": 4,
+      "prototype_row_index": 1,
+      "field_ids": [
+        "F068",
+        "F069"
+      ],
+      "repeat": "按当期记录扩展"
+    },
+    {
+      "key": "records.5",
+      "table_index": 4,
+      "prototype_row_index": 3,
+      "field_ids": [
+        "F070",
+        "F071"
+      ],
+      "repeat": "按当期记录扩展"
+    }
+  ],
+  "photo_region": {
+    "field_id": "F090",
+    "table_index": 10,
+    "slots": 8,
+    "overflow": "append_rows",
+    "fit": "contain",
+    "max_width_cm": 7.2,
+    "max_height_cm": 5.0
+  },
+  "pending_rules": [
+    {
+      "id": "loss_total_position",
+      "field": "F089",
+      "current": "保留标准表6合计行停电原因列C3",
+      "needs": "确认是否移到损失电量列C4；不得默认按月损失直接填入"
+    },
+    {
+      "id": "appendix_delivery",
+      "current": "未内嵌巡检附件；原目录缓存含附表",
+      "needs": "确认内嵌或独立附件及目录更新"
+    },
+    {
+      "id": "source_wording",
+      "current": "出具单位、须知、证件类别及表头沿用指定标准",
+      "needs": "固定性由业务确认"
+    }
+  ],
+  "placeholder_display_overrides": [
+    {
+      "field_id": "F052",
+      "table_index": 1,
+      "row_index": 1,
+      "cell_index": 0,
+      "original_rPr_xml": "<w:rPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\"><w:rFonts w:hint=\"eastAsia\" w:ascii=\"宋体\" w:hAnsi=\"宋体\" w:cs=\"宋体\"/><w:b/><w:color w:val=\"000000\"/><w:kern w:val=\"0\"/><w:szCs w:val=\"21\"/><w:highlight w:val=\"none\"/><w:lang w:val=\"en-US\" w:eastAsia=\"zh-CN\"/></w:rPr>",
+      "instruction": "仅编号标注使用7.5pt；填入实际值时恢复原rPr"
+    },
+    {
+      "field_id": "F059",
+      "table_index": 2,
+      "row_index": 1,
+      "cell_index": 0,
+      "original_rPr_xml": "<w:rPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\"><w:rFonts w:hint=\"eastAsia\" w:ascii=\"宋体\" w:hAnsi=\"宋体\" w:eastAsia=\"宋体\" w:cs=\"宋体\"/><w:b w:val=\"0\"/><w:bCs w:val=\"0\"/><w:color w:val=\"auto\"/><w:sz w:val=\"21\"/><w:szCs w:val=\"21\"/><w:highlight w:val=\"none\"/><w:lang w:val=\"en-US\" w:eastAsia=\"zh-CN\"/></w:rPr>",
+      "instruction": "仅编号标注使用7.5pt；填入实际值时恢复原rPr"
+    },
+    {
+      "field_id": "F064",
+      "table_index": 3,
+      "row_index": 1,
+      "cell_index": 0,
+      "original_rPr_xml": "<w:rPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\"><w:rFonts w:hint=\"eastAsia\" w:ascii=\"宋体\" w:hAnsi=\"宋体\" w:cs=\"宋体\"/><w:color w:val=\"000000\"/><w:szCs w:val=\"21\"/><w:highlight w:val=\"none\"/><w:lang w:val=\"en-US\" w:eastAsia=\"zh-CN\"/></w:rPr>",
+      "instruction": "仅编号标注使用7.5pt；填入实际值时恢复原rPr"
+    },
+    {
+      "field_id": "F065",
+      "table_index": 3,
+      "row_index": 1,
+      "cell_index": 1,
+      "original_rPr_xml": "<w:rPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\"><w:rFonts w:hint=\"eastAsia\" w:ascii=\"宋体\" w:hAnsi=\"宋体\" w:cs=\"宋体\"/><w:color w:val=\"000000\"/><w:szCs w:val=\"21\"/><w:highlight w:val=\"none\"/><w:lang w:val=\"en-US\" w:eastAsia=\"zh-CN\"/></w:rPr>",
+      "instruction": "仅编号标注使用7.5pt；填入实际值时恢复原rPr"
+    },
+    {
+      "field_id": "F068",
+      "table_index": 4,
+      "row_index": 1,
+      "cell_index": 0,
+      "original_rPr_xml": "<w:rPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\"><w:rFonts w:hint=\"eastAsia\" w:ascii=\"宋体\" w:hAnsi=\"宋体\" w:cs=\"宋体\"/><w:color w:val=\"000000\"/><w:szCs w:val=\"21\"/><w:highlight w:val=\"none\"/></w:rPr>",
+      "instruction": "仅编号标注使用7.5pt；填入实际值时恢复原rPr"
+    },
+    {
+      "field_id": "F070",
+      "table_index": 4,
+      "row_index": 3,
+      "cell_index": 0,
+      "original_rPr_xml": "<w:rPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\"><w:rFonts w:hint=\"eastAsia\" w:ascii=\"宋体\" w:hAnsi=\"宋体\" w:cs=\"宋体\"/><w:color w:val=\"000000\"/><w:szCs w:val=\"21\"/><w:highlight w:val=\"none\"/></w:rPr>",
+      "instruction": "仅编号标注使用7.5pt；填入实际值时恢复原rPr"
+    },
+    {
+      "field_id": "F076",
+      "table_index": 8,
+      "row_index": 1,
+      "cell_index": 0,
+      "original_rPr_xml": "<w:rPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\"><w:rFonts w:hint=\"eastAsia\"/><w:szCs w:val=\"21\"/><w:lang w:val=\"en-US\" w:eastAsia=\"zh-CN\"/></w:rPr>",
+      "instruction": "仅编号标注使用7.5pt；填入实际值时恢复原rPr"
+    },
+    {
+      "field_id": "F079",
+      "table_index": 9,
+      "row_index": 1,
+      "cell_index": 0,
+      "original_rPr_xml": "<w:rPr xmlns:w=\"http://schemas.openxmlformats.org/wordprocessingml/2006/main\" xmlns:wpc=\"http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas\" xmlns:mc=\"http://schemas.openxmlformats.org/markup-compatibility/2006\" xmlns:o=\"urn:schemas-microsoft-com:office:office\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" xmlns:m=\"http://schemas.openxmlformats.org/officeDocument/2006/math\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:wp14=\"http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing\" xmlns:wp=\"http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing\" xmlns:w14=\"http://schemas.microsoft.com/office/word/2010/wordml\" xmlns:w10=\"urn:schemas-microsoft-com:office:word\" xmlns:w15=\"http://schemas.microsoft.com/office/word/2012/wordml\" xmlns:wpg=\"http://schemas.microsoft.com/office/word/2010/wordprocessingGroup\" xmlns:wpi=\"http://schemas.microsoft.com/office/word/2010/wordprocessingInk\" xmlns:wne=\"http://schemas.microsoft.com/office/word/2006/wordml\" xmlns:wps=\"http://schemas.microsoft.com/office/word/2010/wordprocessingShape\" xmlns:wpsCustomData=\"http://www.wps.cn/officeDocument/2013/wpsCustomData\"><w:rFonts w:hint=\"eastAsia\" w:ascii=\"宋体\" w:hAnsi=\"宋体\" w:eastAsia=\"宋体\" w:cs=\"宋体\"/><w:b w:val=\"0\"/><w:bCs w:val=\"0\"/><w:color w:val=\"auto\"/><w:kern w:val=\"2\"/><w:sz w:val=\"20\"/><w:szCs w:val=\"20\"/><w:lang w:val=\"en-US\" w:eastAsia=\"zh-CN\" w:bidi=\"ar-SA\"/></w:rPr>",
+      "instruction": "仅编号标注使用7.5pt；填入实际值时恢复原rPr"
+    }
+  ],
+  "source_reference": {
+    "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/钉钉南网/附件/08-《运维月报》/01-附件3-运维月报-月度-月底.docx",
+    "sha256": "5c44f06623e9015a2e86d2c8f56c3626733ee62b984c9d9a76bc6704c9d3dd70",
+    "copy_retained": false
+  },
+  "retrieval_rules": "通用取值规则.json",
+  "rules_version": "3.5",
+  "retrieval_rules_readme": "报告字段取值规则.md",
+  "retrieval_rules_version": "3.5"
+}

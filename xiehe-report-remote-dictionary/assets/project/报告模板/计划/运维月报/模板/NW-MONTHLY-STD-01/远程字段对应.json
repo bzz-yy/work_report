@@ -1,0 +1,274 @@
+{
+  "schema_version": 1,
+  "template_id": "NW-MONTHLY-STD-01",
+  "reviewed_publication": "DICT-R4803",
+  "scope": "月报模板对远程公共字段的对应及已实现读取器绑定；不包含公共定义、接口取法副本或业务数值。",
+  "mapping_evidence": {
+    "colleague": "钟星茹",
+    "message_id": "msgrX91ws1+YhAetWo4m2/acQ==",
+    "attachment_message_id": "msgYXvyHpWLnXA//wzm97YKbw==",
+    "attachment_sha256": "7b263be0121fc00d3026bd7bd702425573bbf625f4018a814375f2694d7577d9",
+    "reviewed_at": "2026-09-11",
+    "note": "以服务器当前发布实际合同及此命名适配器的验证范围为准；表内候选说明不覆盖发布状态。"
+  },
+  "bindings": {
+    "D001": {
+      "standard_id": "STD-POWER-0ED902FD4DF6",
+      "prop": "stationCode",
+      "reader": "station_archive.v1",
+      "executable": true,
+      "reason": "",
+      "reviewed_contract_sha256": "9c903729980cef38fd076ccb9594633676f03701b6319e66ac91568ad9433f0f"
+    },
+    "D002": {
+      "standard_id": "STD-PAGE-stationManage-2F870FC854",
+      "prop": "stationName",
+      "reader": "station_archive.v1",
+      "executable": true,
+      "reason": "",
+      "reviewed_contract_sha256": "3dff6660f62f77529ca723008158ce4befb9b0280e8616f0c98875936fd0395b"
+    },
+    "D003": {
+      "standard_id": "STD-BASIC-001",
+      "prop": "stationCapacity",
+      "reader": "not_enabled",
+      "executable": false,
+      "reason": "当前发布只给装机容量位置，未登记stationCapacity返回键；附件线索不代替服务器取法。报告期容量继续待填。",
+      "reviewed_contract_sha256": "5c40f3d1c450c412e4427c80a5ec6ebd9fd4b55554ed273690230f38e1379764"
+    },
+    "D006": {
+      "standard_id": "STD-WF-Electricitybill-2583909B90",
+      "prop": "totalpower_name",
+      "reader": "electricitybill_settlement.v1",
+      "executable": true,
+      "reason": "",
+      "reviewed_contract_sha256": "7133f5e4f82614a34362ab052a2003aa35cdf58eef36e51ac8a9f338d1542359"
+    },
+    "D007": {
+      "standard_id": "STD-WF-Electricitybill-C3F83D7904",
+      "prop": "totalowner_name",
+      "reader": "electricitybill_settlement.v1",
+      "executable": true,
+      "reason": "",
+      "reviewed_contract_sha256": "b1522c146220d944261a2f1f94d585e650a0d7b10deeb058a2e385a078580e4c"
+    },
+    "D008": {
+      "standard_id": "STD-WF-Electricitybill-421EC0DE30",
+      "prop": "totalonline_name",
+      "reader": "electricitybill_settlement.v1",
+      "executable": true,
+      "reason": "",
+      "reviewed_contract_sha256": "d59fce344598c0747523b4915e2ee8a9aba236b060e72c39222051b8c9885778"
+    },
+    "D009": {
+      "standard_id": "STD-WF-Electricitybill-5863B24DAA",
+      "prop": "tbl_number",
+      "reader": "electricitybill_parent.v1",
+      "executable": true,
+      "reason": "",
+      "reviewed_contract_sha256": "0aad0bbbf774c2b08e823b94015378da538080a87f0d0947f6edd30253d8ef61"
+    },
+    "D010": {
+      "standard_id": "STD-WF-Electricitybill-2F789FA6ED",
+      "prop": "settlement_month",
+      "reader": "electricitybill_parent.v1",
+      "executable": true,
+      "reason": "",
+      "reviewed_contract_sha256": "f6ac359936b01d9e45f05c9f264761f1cd1af2c846f88a66e0cf5819ec9377cc"
+    },
+    "D011": {
+      "standard_id": "STD-WF-Electricitybill-BA16644E31",
+      "prop": "settlement_month_start",
+      "reader": "electricitybill_parent.v1",
+      "executable": true,
+      "reason": "",
+      "reviewed_contract_sha256": "d16cc077e8d4c5b9f9db97c4d220e10bd8fd34e11329f96c785d0e83de6cde81"
+    },
+    "D012": {
+      "standard_id": "STD-WF-Electricitybill-C51CED2A80",
+      "prop": "settlement_month_end",
+      "reader": "electricitybill_parent.v1",
+      "executable": true,
+      "reason": "",
+      "reviewed_contract_sha256": "1c8a96abc210a079276c7715cb9b0d65a03f7e81910e5ec6224745453ce0fe26"
+    },
+    "D013": {
+      "standard_id": "STD-WF-Electricitybill-EA968F7416",
+      "prop": "loss_of_electricity_due_to_malfunction",
+      "reader": "not_enabled",
+      "executable": false,
+      "reason": "合同只给字段位置，未提供可执行的故障记录选择/期间/单位规则；不自动作为报告损失合计。",
+      "reviewed_contract_sha256": "0a4bcb55699c2f09cb64a49a74e3ccd6d73c81b581946af2dcf9a08335fb3733"
+    },
+    "D018": {
+      "standard_id": "STD-WF-OtherWorkOrder-867BBD5F85",
+      "prop": "tbl_category",
+      "reader": "not_enabled",
+      "executable": false,
+      "reason": "仅工单类别字段已对应；执行记录文字、时间和照片尚未匹配，不以父工单类别冒充已完成工作。",
+      "reviewed_contract_sha256": "ca5a3fa7684a73bbb6fc3f385738c0cb167547b7542f9fed7db38ca58b19e5a5"
+    },
+    "D019": {
+      "standard_id": "STD-WF-Electricitybill-F2620E8D4D",
+      "prop": "meter_reading_photos",
+      "reader": "electricitybill_photos.v1",
+      "executable": true,
+      "reason": "",
+      "reviewed_contract_sha256": "63fae12c4c6fb65434d6798972085c361810fb16f85c2a3de0650a246691ea5a"
+    },
+    "D021": {
+      "standard_id": "STD-FORM-PlanIssuanceTrigger-1D852017C7",
+      "prop": "tbl_description",
+      "reader": "not_enabled",
+      "executable": false,
+      "reason": "只支持按recordId查计划描述；未提供本月计划选择及版本截止口径，不自动填本月工作计划。",
+      "reviewed_contract_sha256": "be46c3458789fdeb64883174c8fcb39baeea269b8b6531a19605760d6134a09e"
+    }
+  },
+  "photo_contract_dependencies": [
+    "D006",
+    "D007",
+    "D008"
+  ],
+  "unmatched_source_mapping_ids": [
+    "SM015",
+    "SM004",
+    "SM005",
+    "SM021",
+    "SM022",
+    "SM023",
+    "SM016",
+    "SM017",
+    "SM018",
+    "SM024"
+  ],
+  "report_value_bindings": {
+    "F004": "D006",
+    "F005": "D007",
+    "F006": "D008",
+    "F054": "D006"
+  },
+  "report_photo_binding": "D019",
+  "source_bindings": {
+    "SM001": {
+      "previous_standard_id": "D001",
+      "standard_id": "STD-POWER-0ED902FD4DF6",
+      "matched": true
+    },
+    "SM002": {
+      "previous_standard_id": "D002",
+      "standard_id": "STD-PAGE-stationManage-2F870FC854",
+      "matched": true
+    },
+    "SM015": {
+      "previous_standard_id": "D002",
+      "standard_id": null,
+      "matched": false
+    },
+    "SM003": {
+      "previous_standard_id": "D003",
+      "standard_id": "STD-BASIC-001",
+      "matched": true
+    },
+    "SM004": {
+      "previous_standard_id": "D004",
+      "standard_id": null,
+      "matched": false
+    },
+    "SM005": {
+      "previous_standard_id": "D005",
+      "standard_id": null,
+      "matched": false
+    },
+    "SM006": {
+      "previous_standard_id": "D006",
+      "standard_id": "STD-WF-Electricitybill-2583909B90",
+      "matched": true
+    },
+    "SM021": {
+      "previous_standard_id": "D006",
+      "standard_id": null,
+      "matched": false
+    },
+    "SM007": {
+      "previous_standard_id": "D007",
+      "standard_id": "STD-WF-Electricitybill-C3F83D7904",
+      "matched": true
+    },
+    "SM022": {
+      "previous_standard_id": "D007",
+      "standard_id": null,
+      "matched": false
+    },
+    "SM008": {
+      "previous_standard_id": "D008",
+      "standard_id": "STD-WF-Electricitybill-421EC0DE30",
+      "matched": true
+    },
+    "SM023": {
+      "previous_standard_id": "D008",
+      "standard_id": null,
+      "matched": false
+    },
+    "SM009": {
+      "previous_standard_id": "D009",
+      "standard_id": "STD-WF-Electricitybill-5863B24DAA",
+      "matched": true
+    },
+    "SM010": {
+      "previous_standard_id": "D010",
+      "standard_id": "STD-WF-Electricitybill-2F789FA6ED",
+      "matched": true
+    },
+    "SM011": {
+      "previous_standard_id": "D011",
+      "standard_id": "STD-WF-Electricitybill-BA16644E31",
+      "matched": true
+    },
+    "SM012": {
+      "previous_standard_id": "D012",
+      "standard_id": "STD-WF-Electricitybill-C51CED2A80",
+      "matched": true
+    },
+    "SM013": {
+      "previous_standard_id": "D013",
+      "standard_id": "STD-WF-Electricitybill-EA968F7416",
+      "matched": true
+    },
+    "SM016": {
+      "previous_standard_id": "D015",
+      "standard_id": null,
+      "matched": false
+    },
+    "SM017": {
+      "previous_standard_id": "D016",
+      "standard_id": null,
+      "matched": false
+    },
+    "SM018": {
+      "previous_standard_id": "D017",
+      "standard_id": null,
+      "matched": false
+    },
+    "SM019": {
+      "previous_standard_id": "D018",
+      "standard_id": "STD-WF-OtherWorkOrder-867BBD5F85",
+      "matched": true
+    },
+    "SM020": {
+      "previous_standard_id": "D019",
+      "standard_id": "STD-WF-Electricitybill-F2620E8D4D",
+      "matched": true
+    },
+    "SM024": {
+      "previous_standard_id": "D020",
+      "standard_id": null,
+      "matched": false
+    },
+    "SM025": {
+      "previous_standard_id": "D021",
+      "standard_id": "STD-FORM-PlanIssuanceTrigger-1D852017C7",
+      "matched": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": 3,
+  "report_type": "组件清洗报告",
+  "template_id": "QX-01",
+  "rules_ref": "模板/QX-01/通用取值规则.json",
+  "status": "主报告Word模板已提取；当期取数和自动填写未接通",
+  "formal_template_ready": true,
+  "auto_generation_ready": false,
+  "pending_station_ids": [
+    "SZ065"
+  ],
+  "note": "兼容入口；字段、单位、显示和填写规则唯一维护在模板旁。"
+}

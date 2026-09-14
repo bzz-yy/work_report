@@ -1,0 +1,5 @@
+﻿报告类型,模板编号,电站编码,电站名称,识别别名,模板文件,电站配置,关联状态,本站维护规则,模板通用取值规则
+运维月报,NW-MONTHLY-STD-01,XNY086,济南迈大,XNY086|济南迈大|济南迈大食品|迈大食品|南网济南迈大食品,模板/NW-MONTHLY-STD-01/运维月报模板.docx,电站/XNY086_济南迈大/电站配置.json,主体共用已核验；交付规则待确认,电站/XNY086_济南迈大/AGENTS.md,模板/NW-MONTHLY-STD-01/通用取值规则.json
+运维月报,NW-MONTHLY-STD-01,XNY080,中石油济柴,XNY080|中石油济柴|济柴|南网中石油济柴,模板/NW-MONTHLY-STD-01/运维月报模板.docx,电站/XNY080_中石油济柴/电站配置.json,主体共用已核验；交付规则待确认,电站/XNY080_中石油济柴/AGENTS.md,模板/NW-MONTHLY-STD-01/通用取值规则.json
+运维月报,NW-MONTHLY-STD-01,SZ065,德州保龄宝,SZ065|德州保龄宝|保龄宝|南网德州保龄宝,模板/NW-MONTHLY-STD-01/运维月报模板.docx,电站/SZ065_德州保龄宝/电站配置.json,主体共用已核验；交付规则待确认,电站/SZ065_德州保龄宝/AGENTS.md,模板/NW-MONTHLY-STD-01/通用取值规则.json
+运维月报,NW-MONTHLY-STD-01,XNY108,潍坊伊利,XNY108|潍坊伊利|潍坊伊利乳业|南网潍坊伊利乳业,模板/NW-MONTHLY-STD-01/运维月报模板.docx,电站/XNY108_潍坊伊利/电站配置.json,主体共用已核验；交付规则待确认,电站/XNY108_潍坊伊利/AGENTS.md,模板/NW-MONTHLY-STD-01/通用取值规则.json

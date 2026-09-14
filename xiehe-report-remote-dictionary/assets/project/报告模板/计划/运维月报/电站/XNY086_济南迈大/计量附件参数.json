@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "policy_id": "XNY086_BILL_METER_2026_02_03",
+  "station_code": "3600411",
+  "station_aliases": [
+    "迈大食品"
+  ],
+  "allowed_container_periods": [
+    "2026-02",
+    "2026-03"
+  ],
+  "allowed_metric_periods": [
+    "2026-02",
+    "2026-03"
+  ],
+  "generation_meters": [
+    {
+      "meter_id": "3730001000000857185075",
+      "multiplier": "4000"
+    },
+    {
+      "meter_id": "3730001000000857208262",
+      "multiplier": "4000"
+    }
+  ],
+  "export_meters": [
+    {
+      "meter_id": "3730001000000648472346",
+      "multiplier": "6000"
+    },
+    {
+      "meter_id": "3730001000000336396466",
+      "multiplier": "6000"
+    }
+  ],
+  "auxiliary_station_use": {
+    "sheet_name": "迈大站用电",
+    "date_column": "B",
+    "value_column": "C",
+    "first_data_row": 3,
+    "unit_header_cell": "C2",
+    "unit_header_text": "电量KWH",
+    "title_cell": "A1",
+    "title_text": "光伏用电电费结算单",
+    "purpose_text": "用途：光伏运营用电",
+    "allowed_business_periods": [
+      "2026-01"
+    ]
+  }
+}

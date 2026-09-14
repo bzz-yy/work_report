@@ -1,0 +1,6 @@
+interface:
+  display_name: "协合运维报告·服务器字典版"
+  short_description: "实时读取同事服务器字典，核对模板与执行契约，明确报告生成的当前缺口"
+  default_prompt: "使用 $xiehe-report-remote-dictionary 拉取同事服务器的最新发布字典，检查它能否用于济南迈大2026年8月运维月报，并说明实际结果和缺口。"
+policy:
+  allow_implicit_invocation: true

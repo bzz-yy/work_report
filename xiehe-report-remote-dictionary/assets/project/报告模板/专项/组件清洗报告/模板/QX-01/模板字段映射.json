@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "template_id": "QX-01",
+  "name": "组件清洗通用主报告",
+  "version": "1.0",
+  "template_file": "组件清洗报告模板.docx",
+  "template_sha256": "80a7363fa09c94d4c8f40d33b2f311d09f9a7e1f39ea0d2a3d161e78795c5f80",
+  "source_reference": {
+    "id": "C04",
+    "station": "济南迈大",
+    "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/组件清洗报告/济南迈大/南网能源-济南迈大食品分布式电站-2026年度第2次清洗报告(1).docx",
+    "sha256": "8d91add35bc71a6f0080d9b1c803775a46690fb9af558359c26bd116d499a87f",
+    "format": ".docx",
+    "sha256_now": "8d91add35bc71a6f0080d9b1c803775a46690fb9af558359c26bd116d499a87f",
+    "signatures": {
+      "word/styles.xml": "7672876621744e7b95129bef376296c3206ea3f21007af4abf3a23c400700bc9",
+      "word/numbering.xml": "9a5b94cf3bc9d93dd9f6a567213d2b172339f3bdc858a7944946823519e9389d",
+      "word/theme/theme1.xml": "877930300f41fcf60d3edea108678078177c4c20b65ced288432470652e6b4a1"
+    },
+    "flow": [
+      "清洗原则及概述",
+      "↓",
+      "办理进厂施工手续",
+      "↓",
+      "办理签署清洗安全协议书、清洗工作票、安全交底",
+      "↓",
+      "清洗过程安全监护、拍照、录视频",
+      "↓",
+      "清洗验收",
+      "↓",
+      "电站效率分析"
+    ],
+    "table_count": 7,
+    "photo_pairs": 5,
+    "overview_labels": [
+      "清洗起止时间",
+      "清洗装机容量（MW）",
+      "项目污染物类型",
+      "清洗方式（干洗、清洗剂、清水等）",
+      "清洗设备（拖布、电动毛刷等）",
+      "清洗人数"
+    ],
+    "safety_labels": [
+      "作业安全风险控制卡",
+      "清洗工作票",
+      "安全交底"
+    ],
+    "efficiency_headers": [
+      "日期/清洗前",
+      "日发电量(kWh）",
+      "满发小时数（h）",
+      "辐照(MJ/m2）",
+      "系统效率（%）"
+    ],
+    "section_geometry": [
+      {
+        "width": 7560310,
+        "height": 10692130,
+        "left": 1143000,
+        "right": 1143000,
+        "top": 914400,
+        "bottom": 914400
+      }
+    ]
+  },
+  "fields": {
+    "Q001": [
+      {
+        "token": "{{Q001}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:p[1]/w:r/w:t"
+      }
+    ],
+    "Q002": [
+      {
+        "token": "{{Q002}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:p[2]/w:r/w:t"
+      }
+    ],
+    "Q003": [
+      {
+        "token": "{{Q003}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:p[3]/w:r/w:t[1]"
+      }
+    ],
+    "Q004": [
+      {
+        "token": "{{Q004}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:p[3]/w:r/w:t[1]"
+      }
+    ],
+    "Q005": [
+      {
+        "token": "{{Q005.trigger}}",
+        "subkey": ".trigger",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:p[17]/w:r/w:t"
+      },
+      {
+        "token": "{{Q005.frequency}}",
+        "subkey": ".frequency",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:p[18]/w:r/w:t"
+      }
+    ],
+    "Q006": [
+      {
+        "token": "{{Q006}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[1]/w:tr[1]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q007": [
+      {
+        "token": "{{Q007}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[1]/w:tr[2]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q008": [
+      {
+        "token": "{{Q008}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[1]/w:tr[3]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q009": [
+      {
+        "token": "{{Q009}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[1]/w:tr[4]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q010": [
+      {
+        "token": "{{Q010}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[1]/w:tr[5]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q011": [
+      {
+        "token": "{{Q011}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[1]/w:tr[6]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q012": [
+      {
+        "token": "{{Q012}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:p[21]/w:r/w:t"
+      }
+    ],
+    "Q013": [
+      {
+        "token": "{{Q013}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[2]/w:tr[1]/w:tc[1]/w:p/w:r/w:t[1]"
+      }
+    ],
+    "Q014": [
+      {
+        "token": "{{Q014}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[2]/w:tr[1]/w:tc[2]/w:p/w:r/w:t[1]"
+      }
+    ],
+    "Q015": [
+      {
+        "token": "{{Q015}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[2]/w:tr[1]/w:tc[3]/w:p/w:r/w:t[1]"
+      }
+    ],
+    "Q016": [
+      {
+        "token": "{{Q016[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[3]/w:tr[1]/w:tc[1]/w:p/w:r/w:t"
+      },
+      {
+        "token": "{{Q016[2]}}",
+        "subkey": "[2]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[3]/w:tr[1]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q018": [
+      {
+        "token": "{{Q018[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[4]/w:tr[1]/w:tc[1]/w:p/w:r/w:t"
+      }
+    ],
+    "Q019": [
+      {
+        "token": "{{Q019[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[4]/w:tr[1]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q017": [
+      {
+        "token": "{{Q017[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[4]/w:tr[2]/w:tc[1]/w:p/w:r/w:t"
+      },
+      {
+        "token": "{{Q017[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[4]/w:tr[2]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q020": [
+      {
+        "token": "{{Q020}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[5]/w:tr/w:tc[2]/w:p/w:r/w:t[1]"
+      }
+    ],
+    "Q021": [
+      {
+        "token": "{{Q021}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[6]/w:tr/w:tc[2]/w:p/w:r/w:t[1]"
+      }
+    ],
+    "Q022": [
+      {
+        "token": "{{Q022[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[3]/w:tc[1]/w:p/w:r/w:t"
+      }
+    ],
+    "Q023": [
+      {
+        "token": "{{Q023[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[3]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q024": [
+      {
+        "token": "{{Q024[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[3]/w:tc[3]/w:p/w:r/w:t"
+      }
+    ],
+    "Q025": [
+      {
+        "token": "{{Q025[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[3]/w:tc[4]/w:p/w:r/w:t"
+      }
+    ],
+    "Q026": [
+      {
+        "token": "{{Q026[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[3]/w:tc[5]/w:p/w:r/w:t"
+      }
+    ],
+    "Q032": [
+      {
+        "token": "{{Q032.B.E}}",
+        "subkey": ".B.E",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[4]/w:tc[2]/w:p/w:r/w:t"
+      },
+      {
+        "token": "{{Q032.B.H}}",
+        "subkey": ".B.H",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[4]/w:tc[3]/w:p/w:r/w:t"
+      },
+      {
+        "token": "{{Q032.B.R}}",
+        "subkey": ".B.R",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[4]/w:tc[4]/w:p/w:r/w:t"
+      },
+      {
+        "token": "{{Q032.B.PR}}",
+        "subkey": ".B.PR",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[4]/w:tc[5]/w:p/w:r/w:t"
+      },
+      {
+        "token": "{{Q032.A.E}}",
+        "subkey": ".A.E",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[8]/w:tc[2]/w:p/w:r/w:t"
+      },
+      {
+        "token": "{{Q032.A.H}}",
+        "subkey": ".A.H",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[8]/w:tc[3]/w:p/w:r/w:t"
+      },
+      {
+        "token": "{{Q032.A.R}}",
+        "subkey": ".A.R",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[8]/w:tc[4]/w:p/w:r/w:t"
+      },
+      {
+        "token": "{{Q032.A.PR}}",
+        "subkey": ".A.PR",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[8]/w:tc[5]/w:p/w:r/w:t"
+      }
+    ],
+    "Q027": [
+      {
+        "token": "{{Q027[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[7]/w:tc[1]/w:p/w:r/w:t"
+      }
+    ],
+    "Q028": [
+      {
+        "token": "{{Q028[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[7]/w:tc[2]/w:p/w:r/w:t"
+      }
+    ],
+    "Q029": [
+      {
+        "token": "{{Q029[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[7]/w:tc[3]/w:p/w:r/w:t"
+      }
+    ],
+    "Q030": [
+      {
+        "token": "{{Q030[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[7]/w:tc[4]/w:p/w:r/w:t"
+      }
+    ],
+    "Q031": [
+      {
+        "token": "{{Q031[1]}}",
+        "subkey": "[1]",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[7]/w:tc[5]/w:p/w:r/w:t"
+      }
+    ],
+    "Q033": [
+      {
+        "token": "{{Q033}}",
+        "subkey": "",
+        "part": "word/document.xml",
+        "xpath": "/w:document/w:body/w:tbl[7]/w:tr[9]/w:tc/w:p/w:r/w:t"
+      }
+    ]
+  },
+  "field_ids": [
+    "Q001",
+    "Q002",
+    "Q003",
+    "Q004",
+    "Q005",
+    "Q006",
+    "Q007",
+    "Q008",
+    "Q009",
+    "Q010",
+    "Q011",
+    "Q012",
+    "Q013",
+    "Q014",
+    "Q015",
+    "Q016",
+    "Q017",
+    "Q018",
+    "Q019",
+    "Q020",
+    "Q021",
+    "Q022",
+    "Q023",
+    "Q024",
+    "Q025",
+    "Q026",
+    "Q027",
+    "Q028",
+    "Q029",
+    "Q030",
+    "Q031",
+    "Q032",
+    "Q033"
+  ],
+  "table_count": 7,
+  "section_count": 1,
+  "rules_ref": "通用取值规则.json",
+  "validated_station_ids": [
+    "XNY080",
+    "XNY086",
+    "XNY108"
+  ],
+  "pending_station_ids": [
+    "SZ065"
+  ],
+  "repeat_groups": {
+    "work_photos": {
+      "table": 3,
+      "unit": "照片及说明成组",
+      "initial_photos": 2
+    },
+    "photo_pairs": {
+      "table": 4,
+      "rows": [
+        1,
+        2
+      ],
+      "field_ids": [
+        "Q017",
+        "Q018",
+        "Q019"
+      ],
+      "initial_records": 1,
+      "count_rule": "按实际日期或作业记录，前后必须对应"
+    },
+    "before_data": {
+      "table": 7,
+      "row": 3,
+      "field_ids": [
+        "Q022",
+        "Q023",
+        "Q024",
+        "Q025",
+        "Q026"
+      ],
+      "initial_records": 1
+    },
+    "after_data": {
+      "table": 7,
+      "row": 7,
+      "field_ids": [
+        "Q027",
+        "Q028",
+        "Q029",
+        "Q030",
+        "Q031"
+      ],
+      "initial_records": 1
+    }
+  },
+  "data_source_ready": false,
+  "business_approved": false,
+  "rules_version": "1.0.2"
+}

@@ -1,0 +1,123 @@
+{
+  "station_id": "XNY080",
+  "sample_periods": [
+    "2026-H1"
+  ],
+  "profiles": {
+    "DJ-01": {
+      "source_reference": {
+        "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/南网资料/目前整理较好的材料/优先级高报告整理/定检报告/中石油济柴/中石油济柴光伏电站2026年上半年定检报告.docx",
+        "sha256": "587bfda495e4330c4fe8a1fe7f00cc9dd49d7c6017a13101d3a093e9bee7f323",
+        "period": "2026-H1"
+      },
+      "result_record_counts": {
+        "hv": 2,
+        "transformer": 5,
+        "inverter": 2,
+        "secondary": 7,
+        "other": 1
+      },
+      "result_record_labels": {
+        "hv": [
+          "柴光线001并网柜",
+          "汇流线004进线柜"
+        ],
+        "transformer": [
+          "#1箱变",
+          "#2箱变",
+          "#3箱变",
+          "#4箱变",
+          "#5箱变"
+        ],
+        "inverter": [
+          "组串式逆变器",
+          "组串式逆变器"
+        ],
+        "secondary": [
+          "频率电压及防孤岛保护柜",
+          "  交流电源屏",
+          "AGC/AVC控制柜",
+          "蓄电池屏",
+          "直流充电屏",
+          "公用测控及电能质量柜",
+          "视频图像监控柜"
+        ],
+        "other": [
+          "气象站"
+        ]
+      },
+      "equipment_modules": [
+        "hv",
+        "transformer",
+        "inverter",
+        "secondary",
+        "other"
+      ],
+      "signature_order": [
+        "定检员",
+        "编制人",
+        "审核人",
+        "批准人"
+      ],
+      "known_issues": []
+    },
+    "DJ-02": {
+      "source_reference": {
+        "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/南网资料/目前整理较好的材料/优先级高报告整理/定检报告/中石油济柴/中石油济柴光伏电站2026上半年定检报告.docx",
+        "sha256": "de980eb56e91d98e5730a1b30cff3dd0d28bc188c1334a3274c2a978446c91c6",
+        "period": "2026-H1"
+      },
+      "result_record_counts": {
+        "hv": 2,
+        "transformer": 4,
+        "inverter": 2,
+        "secondary": 6,
+        "other": 1
+      },
+      "result_record_labels": {
+        "hv": [
+          "柴光线001并网柜",
+          "汇流线004进线柜"
+        ],
+        "transformer": [
+          "#1箱变",
+          "#2箱变",
+          "#3箱变",
+          "#4箱变"
+        ],
+        "inverter": [
+          "组串式逆变器",
+          "组串式逆变器"
+        ],
+        "secondary": [
+          "频率电压及防孤岛保护柜",
+          "  交流电源屏",
+          "AGC/AVC控制柜",
+          "蓄电池屏",
+          "直流充电屏",
+          "公用测控及电能质量柜"
+        ],
+        "other": [
+          "气象站"
+        ]
+      },
+      "equipment_modules": [
+        "hv",
+        "transformer",
+        "inverter",
+        "secondary",
+        "other"
+      ],
+      "signature_order": [
+        "定检员",
+        "编制人",
+        "批准人",
+        "审核人"
+      ],
+      "known_issues": [
+        "原目录存在SVG条目与正文不对应及编号跳号；组装目录仅按实际启用模块产生。",
+        "高压标准与迈大相差35kV条目及互感器表述，必须选JC条款版本。"
+      ]
+    }
+  }
+}

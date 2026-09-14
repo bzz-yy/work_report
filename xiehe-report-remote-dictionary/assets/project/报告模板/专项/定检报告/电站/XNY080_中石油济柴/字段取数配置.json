@@ -1,0 +1,672 @@
+{
+  "schema_version": 2,
+  "station_id": "XNY080",
+  "dictionary_id": "DJ-FIELDS-01",
+  "parameters": {
+    "station_id": "$station.station_id",
+    "powerplus_station_id": "$station.powerplus_station_id",
+    "period": "$request.period"
+  },
+  "profiles": {
+    "DJ-01": {
+      "template_rules": "../../模板/DJ-01/通用取值规则.json",
+      "field_notes": {
+        "J001": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J002": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J003": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J004": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J005": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J006": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J007": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J008": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J009": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J010": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J011": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J012": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J013": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J014": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J015": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J016": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J017": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J018": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J019": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J020": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J021": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J022": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J023": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J024": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J025": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J026": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J027": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J028": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J029": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J030": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J031": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J032": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J033": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J034": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J035": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J036": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J037": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J038": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J039": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        }
+      },
+      "field_overrides": {}
+    },
+    "DJ-02": {
+      "template_rules": "../../模板/DJ-02/通用取值规则.json",
+      "field_notes": {
+        "J001": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J002": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J003": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J004": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J005": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J006": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J007": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J008": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J009": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J010": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J011": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J012": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J013": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J014": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J015": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J016": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J017": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J018": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J019": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J020": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J021": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J022": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J023": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J024": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J025": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J026": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J027": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J028": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J029": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J030": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J031": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J032": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J033": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J034": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J035": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J036": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J037": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J038": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J039": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J040": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J041": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        },
+        "J042": {
+          "business_confirmation": {
+            "status": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          }
+        }
+      },
+      "field_overrides": {}
+    }
+  }
+}

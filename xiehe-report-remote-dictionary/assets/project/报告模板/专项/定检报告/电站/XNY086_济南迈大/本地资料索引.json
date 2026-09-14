@@ -1,0 +1,12 @@
+{
+  "station_id": "XNY086",
+  "sources": [
+    {
+      "template_id": "DJ-02",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/定检报告/济南迈大/济南迈大食品光伏电站2026年上半年定检报告.docx",
+      "sha256": "f727dc830dd3514026115b4d8c70480902a35db580dac3f987e36f7e4e096d25",
+      "period": "2026-H1",
+      "source_type": "historical_filled_report"
+    }
+  ]
+}

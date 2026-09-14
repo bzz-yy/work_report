@@ -1,0 +1,942 @@
+{
+  "schema_version": 2,
+  "station_id": "SZ065",
+  "dictionary_id": "NW-MONTHLY-FIELDS-01",
+  "parameters": {
+    "station_id": "$station.station_id",
+    "powerplus_station_id": "$station.powerplus_station_id",
+    "period": "$request.period"
+  },
+  "profiles": {
+    "NW-MONTHLY-STD-01": {
+      "template_rules": "../../模板/NW-MONTHLY-STD-01/通用取值规则.json",
+      "field_notes": {
+        "F001": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "本站全称、简称、正文名称/容量的正式口径是什么？是否允许多种名称？"
+        },
+        "F002": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "报告年月与统计截止日如何确定？"
+        },
+        "F003": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "报告年月与统计截止日如何确定？"
+        },
+        "F004": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F005": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F006": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F007": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F008": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F009": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F010": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F011": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "首年累计、当年累计的范围如何统一？重复位置是否必须完全一致？"
+        },
+        "F012": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "首年累计、当年累计的范围如何统一？重复位置是否必须完全一致？"
+        },
+        "F013": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "首年累计、当年累计的范围如何统一？重复位置是否必须完全一致？"
+        },
+        "F014": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "可研小时按哪份文件和哪个年度生效？"
+        },
+        "F015": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "本站全称、简称、正文名称/容量的正式口径是什么？是否允许多种名称？"
+        },
+        "F016": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "相同文字是否对应当月实际工作？无记录时应写无还是待补？"
+        },
+        "F017": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "相同文字是否对应当月实际工作？无记录时应写无还是待补？"
+        },
+        "F018": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F019": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "首年累计、当年累计的范围如何统一？重复位置是否必须完全一致？"
+        },
+        "F020": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "首年累计、当年累计的范围如何统一？重复位置是否必须完全一致？"
+        },
+        "F021": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "相同文字是否对应当月实际工作？无记录时应写无还是待补？"
+        },
+        "F022": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "人数按驻站、片区还是实际入场人员？取证进展空白是否合规？"
+        },
+        "F023": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "人数按驻站、片区还是实际入场人员？取证进展空白是否合规？"
+        },
+        "F024": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "人数按驻站、片区还是实际入场人员？取证进展空白是否合规？"
+        },
+        "F025": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "人数按驻站、片区还是实际入场人员？取证进展空白是否合规？"
+        },
+        "F026": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "人数按驻站、片区还是实际入场人员？取证进展空白是否合规？"
+        },
+        "F027": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "人数按驻站、片区还是实际入场人员？取证进展空白是否合规？"
+        },
+        "F028": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "人数按驻站、片区还是实际入场人员？取证进展空白是否合规？"
+        },
+        "F029": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "人数按驻站、片区还是实际入场人员？取证进展空白是否合规？"
+        },
+        "F030": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "人数按驻站、片区还是实际入场人员？取证进展空白是否合规？"
+        },
+        "F031": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F032": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F033": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F034": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F035": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F036": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F037": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F038": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F039": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F040": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F041": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F042": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F043": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F044": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F045": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F046": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F047": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F048": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F049": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F050": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月均空白",
+          "question": "按开票、执行、回收还是审核日期统计？零票时合格率写空白、/还是100%？"
+        },
+        "F051": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "本站全称、简称、正文名称/容量的正式口径是什么？是否允许多种名称？"
+        },
+        "F052": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F053": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F054": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F055": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F056": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F057": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F058": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F059": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "序号能否由记录顺序生成？分组及重复编号规则是什么？"
+        },
+        "F060": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F061": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F062": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F063": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F064": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "序号能否由记录顺序生成？分组及重复编号规则是什么？"
+        },
+        "F065": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F066": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F067": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F068": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "序号能否由记录顺序生成？分组及重复编号规则是什么？"
+        },
+        "F069": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F070": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "序号能否由记录顺序生成？分组及重复编号规则是什么？"
+        },
+        "F071": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F072": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F073": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F074": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F075": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F076": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "序号能否由记录顺序生成？分组及重复编号规则是什么？"
+        },
+        "F077": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F078": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "重复出现的类别、风险和措施是固定标准还是本月事实？无事项及空白如何表示？"
+        },
+        "F079": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "序号能否由记录顺序生成？分组及重复编号规则是什么？"
+        },
+        "F080": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "台账归本站还是片区？新增、更换、报废如何处理？"
+        },
+        "F081": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "台账归本站还是片区？新增、更换、报废如何处理？"
+        },
+        "F082": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "台账归本站还是片区？新增、更换、报废如何处理？"
+        },
+        "F083": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "台账归本站还是片区？新增、更换、报废如何处理？"
+        },
+        "F084": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "使用最近有效试验还是只填本月试验？日期空白、到期如何填？"
+        },
+        "F085": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "记录集合变化，共同记录未变",
+          "question": "使用最近有效试验还是只填本月试验？日期空白、到期如何填？"
+        },
+        "F086": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "使用最近有效试验还是只填本月试验？日期空白、到期如何填？"
+        },
+        "F087": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "六个月未变",
+          "question": "本站全称、简称、正文名称/容量的正式口径是什么？是否允许多种名称？"
+        },
+        "F088": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "数据来源、单位和统计范围是什么？与正文/表格重复位置如何核对？"
+        },
+        "F089": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "合计数应写损失电量列还是当前示例的停电原因列？合计与正文是什么口径？"
+        },
+        "F090": {
+          "business_confirmation": {
+            "classification": "pending",
+            "reply": null,
+            "confirmed_by": null,
+            "effective_scope": null
+          },
+          "observation_2026_02_to_07": "观察到变化",
+          "question": "照片必须来自哪些作业、多少张、是否必须带日期与站点水印？"
+        }
+      },
+      "field_overrides": {},
+      "source_controls": {
+        "SM007": {
+          "blocked_periods": [
+            {
+              "period": "2026-03",
+              "reason": "历史月报与Power+非零数值冲突，保留双方证据。"
+            }
+          ],
+          "confirmed_zeros": []
+        },
+        "SM008": {
+          "blocked_periods": [
+            {
+              "period": "2026-02",
+              "reason": "历史月报与Power+非零数值冲突，保留双方证据。"
+            }
+          ],
+          "confirmed_zeros": []
+        }
+      },
+      "fixedness_decisions": {}
+    }
+  },
+  "template_id": "NW-MONTHLY-STD-01",
+  "local_source_index": "本地资料索引.json",
+  "maintenance_entry": "AGENTS.md"
+}

@@ -1,0 +1,65 @@
+{
+  "station_id": "XNY086",
+  "sample_periods": [
+    "2026-H1"
+  ],
+  "profiles": {
+    "DJ-02": {
+      "source_reference": {
+        "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/南网资料/目前整理较好的材料/优先级高报告整理/定检报告/济南迈大/济南迈大食品光伏电站2026年上半年定检报告.docx",
+        "sha256": "f727dc830dd3514026115b4d8c70480902a35db580dac3f987e36f7e4e096d25",
+        "period": "2026-H1"
+      },
+      "result_record_counts": {
+        "hv": 3,
+        "transformer": 5,
+        "inverter": 3,
+        "secondary": 3,
+        "other": 1
+      },
+      "result_record_labels": {
+        "hv": [
+          "高压开关柜梅花触头",
+          "高压开关柜体",
+          "高压开关柜避雷器引下线"
+        ],
+        "transformer": [
+          "变压室内干式变压器",
+          "干式变压器铁芯",
+          "高压开关柜接地刀闸、避雷器",
+          "高压开关柜电缆室内",
+          "2-2箱变低压侧逆变器断路器"
+        ],
+        "inverter": [
+          "#1-#40组串逆变器箱体",
+          "#1-#40组串逆变器",
+          "#1-#40组串逆变器线缆防火封堵"
+        ],
+        "secondary": [
+          "直流充馈电屏充电模块",
+          "直流充馈电屏柜",
+          "蓄电池柜"
+        ],
+        "other": [
+          "环境监测仪"
+        ]
+      },
+      "equipment_modules": [
+        "hv",
+        "transformer",
+        "inverter",
+        "secondary",
+        "other"
+      ],
+      "signature_order": [
+        "定检员",
+        "编制人",
+        "审核人",
+        "批准人"
+      ],
+      "known_issues": [
+        "标准有35kV开关柜条款，不代表该站实际存在35kV设备；适用性待业务确认。"
+      ]
+    }
+  }
+}

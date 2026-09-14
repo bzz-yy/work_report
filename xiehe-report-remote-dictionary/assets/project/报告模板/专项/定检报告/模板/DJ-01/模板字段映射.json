@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "template_id": "DJ-01",
+  "name": "定检结果版",
+  "version": "1.1",
+  "file": "定检报告模板.docx",
+  "sha256": "27cbe68211bd5981387ab2d795e5a2615d2b99a0eaaf10bd5696a88f4f38df9f",
+  "source_reference": {
+    "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/钉钉南网/附件/18-《年度定检报告》/01-附件-6年度定检报告-年度-半年度末.docx",
+    "sha256": "dbbafc1eaca7ebedb8c5e56415fa87d1acd166f896d3b9b5f938896e692f5335",
+    "copy_retained": false
+  },
+  "requires_station_profile": true,
+  "field_ids": [
+    "J001",
+    "J002",
+    "J003",
+    "J004",
+    "J005",
+    "J006",
+    "J007",
+    "J008",
+    "J009",
+    "J010",
+    "J011",
+    "J012",
+    "J013",
+    "J014",
+    "J015",
+    "J016",
+    "J017",
+    "J018",
+    "J019",
+    "J020",
+    "J021",
+    "J022",
+    "J023",
+    "J024",
+    "J025",
+    "J026",
+    "J027",
+    "J028",
+    "J029",
+    "J030",
+    "J031",
+    "J032",
+    "J033",
+    "J034",
+    "J035",
+    "J036",
+    "J037",
+    "J038",
+    "J039"
+  ],
+  "placeholder_syntax": "J001等为专用编号；结果行的J035—J039在不同设备模块内复用，必须连同module_id解释",
+  "equipment_modules": [
+    "hv",
+    "lv",
+    "transformer",
+    "inverter",
+    "secondary",
+    "other"
+  ],
+  "clause_modules": [],
+  "native_tags": {
+    "equipment": "equipment:<module_id>",
+    "clause": "clause:<module_id>",
+    "signatures": "signature:<role>",
+    "tickets": "tickets"
+  },
+  "loops": {
+    "workload": {
+      "field_ids": [
+        "J020",
+        "J021",
+        "J022",
+        "J023",
+        "J024",
+        "J025",
+        "J026",
+        "J027"
+      ],
+      "anchor": "一、定检工作量及完成情况统计"
+    },
+    "defects": {
+      "field_ids": [
+        "J028",
+        "J029",
+        "J030",
+        "J031",
+        "J032"
+      ],
+      "anchor": "二、定检缺陷隐患及处理"
+    },
+    "results": {
+      "field_ids": [
+        "J035",
+        "J036",
+        "J037",
+        "J038",
+        "J039"
+      ],
+      "context": "每个启用的设备模块各有独立记录数组"
+    }
+  },
+  "pending": [
+    "正式交付版本/设备范围/条款适用范围需业务核实",
+    "签字和照片从真实独立来源取得，不能填造签章"
+  ],
+  "toc_policy": "完整可见分级目录、正文书签链接和PAGEREF页码域；按本站模块重建，填值后更新页码",
+  "toc_entries": [
+    {
+      "key": "basic",
+      "label": "一、电站基本信息",
+      "level": 0,
+      "bookmark": "DJTOC_001",
+      "page": 4
+    },
+    {
+      "key": "overview",
+      "label": "二、报告概况",
+      "level": 0,
+      "bookmark": "DJTOC_002",
+      "page": 4
+    },
+    {
+      "key": "overview.workload",
+      "label": "定检工作量及完成情况统计",
+      "level": 1,
+      "bookmark": "DJTOC_003",
+      "page": 4
+    },
+    {
+      "key": "overview.defects",
+      "label": "定检缺陷隐患及处理",
+      "level": 1,
+      "bookmark": "DJTOC_004",
+      "page": 4
+    },
+    {
+      "key": "overview.plan",
+      "label": "遗留问题整改计划",
+      "level": 1,
+      "bookmark": "DJTOC_005",
+      "page": 5
+    },
+    {
+      "key": "overview.conclusion",
+      "label": "结论",
+      "level": 1,
+      "bookmark": "DJTOC_006",
+      "page": 5
+    },
+    {
+      "key": "inspection",
+      "label": "三、定检报告",
+      "level": 0,
+      "bookmark": "DJTOC_007",
+      "page": 5
+    },
+    {
+      "key": "equipment.hv",
+      "label": "1、高压开关柜",
+      "level": 1,
+      "bookmark": "DJTOC_008",
+      "page": 5
+    },
+    {
+      "key": "result.hv",
+      "label": "定检结果表",
+      "level": 2,
+      "bookmark": "DJTOC_009",
+      "page": 6
+    },
+    {
+      "key": "equipment.lv",
+      "label": "2、低压开关柜",
+      "level": 1,
+      "bookmark": "DJTOC_010",
+      "page": 6
+    },
+    {
+      "key": "result.lv",
+      "label": "定检结果表",
+      "level": 2,
+      "bookmark": "DJTOC_011",
+      "page": 6
+    },
+    {
+      "key": "equipment.transformer",
+      "label": "3、变压器",
+      "level": 1,
+      "bookmark": "DJTOC_012",
+      "page": 6
+    },
+    {
+      "key": "result.transformer",
+      "label": "定检结果表",
+      "level": 2,
+      "bookmark": "DJTOC_013",
+      "page": 6
+    },
+    {
+      "key": "equipment.inverter",
+      "label": "4、组串式逆变器",
+      "level": 1,
+      "bookmark": "DJTOC_014",
+      "page": 7
+    },
+    {
+      "key": "result.inverter",
+      "label": "定检结果表",
+      "level": 2,
+      "bookmark": "DJTOC_015",
+      "page": 7
+    },
+    {
+      "key": "equipment.secondary",
+      "label": "5、二次设备",
+      "level": 1,
+      "bookmark": "DJTOC_016",
+      "page": 7
+    },
+    {
+      "key": "result.secondary",
+      "label": "定检结果表",
+      "level": 2,
+      "bookmark": "DJTOC_017",
+      "page": 7
+    },
+    {
+      "key": "equipment.other",
+      "label": "6、其他设备",
+      "level": 1,
+      "bookmark": "DJTOC_018",
+      "page": 7
+    },
+    {
+      "key": "result.other",
+      "label": "定检结果表",
+      "level": 2,
+      "bookmark": "DJTOC_019",
+      "page": 7
+    }
+  ],
+  "toc_page_validation": "已按渲染PDF内部跳转目标页逐项核对",
+  "retrieval_rules": "通用取值规则.json",
+  "rules_version": "2.0.2"
+}

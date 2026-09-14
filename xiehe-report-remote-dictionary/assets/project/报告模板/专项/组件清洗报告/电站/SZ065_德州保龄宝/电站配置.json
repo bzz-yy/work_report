@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "station_id": "SZ065",
+  "report_type": "组件清洗报告",
+  "station_ref": "../../../../../电站/SZ065_德州保龄宝/基础配置.json",
+  "template_id": null,
+  "template_status": "sample_missing",
+  "template_rules": null,
+  "observed_source_ids": [],
+  "maintenance_rules": "填写规则.json",
+  "field_configuration": "字段取数配置.json",
+  "source_index": "本地资料索引.json",
+  "auto_generation_ready": false,
+  "business_approved": false
+}

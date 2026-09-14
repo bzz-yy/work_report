@@ -1,0 +1,56 @@
+{
+  "station_id": "XNY108",
+  "sample_periods": [
+    "2026-H1"
+  ],
+  "profiles": {
+    "DJ-01": {
+      "source_reference": {
+        "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/南网资料/目前整理较好的材料/优先级高报告整理/定检报告/潍坊伊利/潍坊伊利乳业光伏电站2026年上半年定检报告.docx",
+        "sha256": "7c9f3fcedc35c505e1dac3ef08e130c80a1c2206c01f0bad479072118764cee2",
+        "period": "2026-H1"
+      },
+      "result_record_counts": {
+        "lv": 6,
+        "inverter": 2,
+        "secondary": 1,
+        "other": 1
+      },
+      "result_record_labels": {
+        "lv": [
+          "并网计量柜P01",
+          "并网计量柜P02",
+          "并网计量柜P03",
+          "并网计量柜P04",
+          "并网计量柜P05",
+          "并网计量柜P06"
+        ],
+        "inverter": [
+          "组串式逆变器",
+          "组串式逆变器"
+        ],
+        "secondary": [
+          "视频监控柜"
+        ],
+        "other": [
+          "气象站"
+        ]
+      },
+      "equipment_modules": [
+        "lv",
+        "inverter",
+        "secondary",
+        "other"
+      ],
+      "signature_order": [
+        "定检员",
+        "编制人",
+        "审核人",
+        "批准人"
+      ],
+      "known_issues": [
+        "原件低压章节的结果表名及备注误用高压；模块选择依据正文和工作量表，不据错误表名启用高压。"
+      ]
+    }
+  }
+}

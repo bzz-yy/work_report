@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "template_rules_ref": "../../模板/QX-01/通用取值规则.json",
+  "parameters": {
+    "station_id": "XNY108"
+  },
+  "notes": [
+    "两次主报告主体相同。配套验收单分别登记QX-AC-01、QX-AC-02；当期版本、场景填写含义与签字角色需确认。"
+  ],
+  "overrides": {},
+  "status": "template_only"
+}

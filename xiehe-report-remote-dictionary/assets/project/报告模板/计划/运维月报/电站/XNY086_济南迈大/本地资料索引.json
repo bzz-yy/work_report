@@ -1,0 +1,47 @@
+{
+  "station_id": "XNY086",
+  "sources": [
+    {
+      "period": "2026-02",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/济南迈大/济南迈大食品光伏项目2026年02月运维月报.docx",
+      "sha256": "73f28991e3ec415b0e3a5ef09180746d4c59eb1d97bc6df547693e00211417b8",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    },
+    {
+      "period": "2026-03",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/济南迈大/济南迈大食品光伏项目2026年03月运维月报.docx",
+      "sha256": "3ae8feb2348f9605855019e6712eaaad9b4a82ad672107c7a4028dabf491bb8b",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    },
+    {
+      "period": "2026-04",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/济南迈大/济南迈大食品光伏项目2026年04月运维月报.docx",
+      "sha256": "75499de4e90b86fe61153df1f1f2975611d5b136223249c0cdce2e194c1ecf62",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    },
+    {
+      "period": "2026-05",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/济南迈大/济南迈大食品光伏项目2026年05月运维月报.docx",
+      "sha256": "3263283788edbe14213664fb76a00f9de18166bcbefce884aa375015a6cc9718",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    },
+    {
+      "period": "2026-06",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/济南迈大/济南迈大食品光伏项目2026年06月运维月报.docx",
+      "sha256": "20a41ba9275de65a4c90a7fde7212458b2c0bc29379584764478fdbb27e3d320",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    },
+    {
+      "period": "2026-07",
+      "path": "/Users/yeyuanbozhizhu/Desktop/工作/1-分布式业务/项目/1-ai报告/1-过程文件/南网资料/目前整理较好的材料/优先级高报告整理/月度运维月报/济南迈大/济南迈大食品光伏项目2026年07月运维月报.docx",
+      "sha256": "4793ddd57df6a6d4ce48be407e863eefb9202dba3b6dfe5516f7e54f73d0370a",
+      "source_type": "historical_monthly_report",
+      "usage": "仅用于本地回放验证，不代表线上取数"
+    }
+  ]
+}
